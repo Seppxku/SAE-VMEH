@@ -1,0 +1,209 @@
+*{
+
+    box-sizing: border-box;
+
+}
+
+p{
+    font-size: large;
+}
+
+h1{
+    margin-top: 20px;
+    color: #3CAA64;
+}
+
+.histoire{
+    max-width: 1350px;
+    margin: auto 100px ;
+
+
+}
+/***************************************************************************/
+/********************************Histoire **********************************/
+
+.histoire img{
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    margin:15px 10px 10px 10px;
+
+}
+
+.histoire-personnage{
+    display: flex;
+    flex-direction:row;
+
+}
+
+
+
+/***************************************************************************/
+/***************************Frise chronologique*****************************/
+
+.frise-chrono{
+    position: relative;
+    max-width: 1350px;
+    margin:auto;
+
+}
+
+.frise-chrono-contenu{
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+    border-radius:6px;
+
+}
+
+.frise-chrono-contenu .frise-chrono{
+    padding:20px 30px;
+    position: relative;
+    border-radius:6px;
+    font-size: 15px;
+}
+
+.frise-chrono-text{
+    padding: 30px 50px;
+    background: #FFDACC;
+    position: relative;
+    border-radius:6px;
+    font-size: 15px;
+}
+
+.frise-chrono-contenu-droite{
+    left: 50%;
+}
+
+.frise-chrono-contenu-gauche{
+    left:0;
+}
+
+.frise-chrono img{
+    position: absolute;
+    width:40px;
+    border-radius: 50%;
+    right: -20px;
+    top: 32px;
+    z-index: 10;
+}
+
+.frise-chrono-contenu-droite img{
+    left:-20px;
+}
+
+.frise-chrono::after{
+    content:'';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background: #000000;
+    top: 50px;
+    left: 50%;
+    margin-left: -1px;
+    z-index: -1;
+}
+
+.frise-chrono-gauche-fleche{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: -1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #FFDACC;
+    right: -14px;
+}
+
+.frise-chrono-droite-fleche{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: -1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #FFDACC;
+    left: -14px;
+}
+
+.date-histoire{
+    position: relative;
+    max-width: 1350px;
+    margin:auto;
+}
+
+.date-histoire h1{
+    margin-left:100px;
+}
+
+/***************************************************************************/
+/***********************************FOOTER**********************************/
+
+footer{
+    color: #fff;
+    background: #3CAA64;
+    display: flex;
+    padding-top:10px;
+}
+
+.footer-plan{
+
+    margin: 20px;
+    padding: 0 10% 0 10%;
+
+}
+
+
+.footer-asso{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+    padding-right: 10%;
+    padding-left: 10px;
+    flex-direction: column;
+}
+
+
+footer img{
+    max-width: 300px;
+    max-height: 200px;
+    position: relative;
+}
+
+
+footer ul{
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    padding-inline-start: 40px;
+
+}
+
+
+footer li{
+    display: list-item;
+}
+
+
+.footer-reseaux li{
+    display: inline-block;
+}
+
+.reseaux img{
+    width: 40px;
+    height: 40px;
+}
+
+
+
+.espace{
+    margin: 100px;
+}
+
+
+
+
