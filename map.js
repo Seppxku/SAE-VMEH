@@ -24,10 +24,8 @@ for (let key in data) {
 	var marker = L.marker(agence.coo,{
 	title: agence.titre,
 	}).addTo(map);
-
-	marker.bindPopup(
-		'<span class="popup"><b class="cliquable" onclick="afficherAgence(',agence.titre,')">'+ agence.titre+ '</b><br>'+agence.president+'</br></></span>'
-	);
+	
+	marker.bindPopup('<span class="popup" onclick="afficherAgence('.concat(agence.titre,')">', agence.titre,'</span>'));
 };
 
 function afficherAgence(agence){
