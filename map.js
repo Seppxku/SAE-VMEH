@@ -9,6 +9,27 @@ var Stadia_StamenTonerBackground = L.tileLayer('https://tiles.stadiamaps.com/til
 
 Stadia_StamenTonerBackground.addTo(map);
 
-var marker = L.marker([48.856614, 2.3522219]).addTo(map);
-marker.bindPopup("<b>Paris paris en t'encule</b><br>je vais me tailler les veine");
-//plus qu'a mettre beaucoup de marker
+const data = {
+	paris: {
+		coo: [48.856614, 2.3522219],
+		titre: "Paris",
+		president: "Nom Prenom"
+	}
+}
+
+for (let key in data) {
+
+	const agence= data[key];
+
+	var marker = L.marker(agence.coo,{
+	title: agence.titre,
+	}).addTo(map);
+
+	marker.bindPopup(
+		'<span class="popup"><b class="cliquable" onclick="afficherAgence(',agence.titre,')">'+ agence.titre+ '</b><br>'+agence.president+'</br></></span>'
+	);
+};
+
+function afficherAgence(agence){
+	//afficher les info de l'agence
+}
