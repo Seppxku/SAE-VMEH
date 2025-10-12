@@ -1,2 +1,8 @@
 #map { height: 350px;
 width: 350px; }
+
+.popup{
+    color: green;
+    text-decoration: underline;
+    cursor: pointer;
+}
