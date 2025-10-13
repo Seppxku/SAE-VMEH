@@ -9,10 +9,7 @@ p{
     font-size: large;
 }
 
-h1{
-    margin-top: 20px;
-    color: #3CAA64;
-}
+
 
 .image-intro img{
     height: 100%;
@@ -150,66 +147,6 @@ h1{
 
 .date-histoire h1{
     margin:1em;
-}
-
-/***************************************************************************/
-/***********************************FOOTER**********************************/
-
-footer{
-    color: #fff;
-    background: #3CAA64;
-    display: flex;
-    padding-top:10px;
-}
-
-.footer-plan{
-
-    margin: 20px;
-    padding: 0 10% 0 10%;
-
-}
-
-
-.footer-asso{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 50%;
-    padding-right: 10%;
-    padding-left: 10px;
-    flex-direction: column;
-}
-
-
-footer img{
-    max-width: 300px;
-    max-height: 200px;
-    position: relative;
-}
-
-
-footer ul{
-    display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    padding-inline-start: 40px;
-
-}
-
-
-footer li{
-    display: list-item;
-}
-
-
-.footer-reseaux li{
-    display: inline-block;
-}
-
-.reseaux img{
-    width: 40px;
-    height: 40px;
 }
 
 

@@ -1,0 +1,181 @@
+*{
+    margin:0;
+
+}
+body{
+    font-family: 'Raleway', Helvetica, Arial, Lucida, sans-serif;
+    font-size: 16px;
+    line-height: 1.7em;
+    font-weight: 500;
+
+}
+
+
+
+
+h1{
+    margin-top: 20px;
+    color: #3CAA64;
+    text-decoration: none;
+
+}
+
+/***************************************************************************/
+/*******************************CHIFFRE-CLE*********************************/
+
+.chiffe-cle h1{
+    margin: auto;
+    max-width: 1350px;
+}
+
+.bande{
+    background-color: #FFDACC;
+
+
+
+}
+
+.bande-box{
+    display: flex;
+    width: 75%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: auto;
+    font-size: medium;
+    padding: 1%;
+}
+
+
+.bande-contenu{
+    margin: auto 15px;
+    padding: 20px 2%;
+
+}
+
+
+
+
+
+/***************************************************************************/
+/*******************************PARTENAIRE**********************************/
+
+.partenaire{
+    max-width: 1350px;
+    display: block;
+    margin: auto auto 20px;
+}
+.partenaire-contenu {
+    display: flex;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    column-gap: 110px;
+    margin: auto;
+    width: 1400px;
+}
+
+.partenaire-box{
+    padding: 30px;
+    margin: 20px;
+}
+
+.partenaire img{
+
+    width: 150px;
+    height: 150px;
+
+}
+
+
+
+.partenaire-bouton{
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+
+/***************************************************************************/
+/***********************************FOOTER**********************************/
+
+footer{
+    color: #fff;
+    background: #3CAA64;
+    display: flex;
+    padding-top:2%;
+    font-size:medium;
+    justify-content: space-between;
+    padding-right: 15%;
+    align-items: flex-start;
+}
+
+.footer-plan{
+    margin: 20px;
+    padding: 0 10% 0 10%;
+
+}
+
+
+.footer-asso{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+    padding-right: 10%;
+    padding-left: 10px;
+    flex-direction: column;
+}
+
+
+footer img{
+    max-width: 300px;
+    max-height: 200px;
+    position: relative;
+}
+
+
+footer ul{
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    padding-inline-start: 40px;
+
+}
+
+
+footer li{
+    display: list-item;
+}
+/***background-image: url("../image/reseaux/pave-reseaux-sociaux.svg");**/
+.footer-reseaux{
+
+    background-image: url("../image/reseaux/pave-reseaux-sociaux.png");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    width: 600px;
+    max-width: 600px;
+    height: 300px;
+    color: black;
+}
+
+
+.footer-reseaux li{
+    display: inline-block;
+
+}
+
+.reseaux img{
+    width: 40px;
+    height: 40px;
+}
+
+
