@@ -1,13 +1,10 @@
 *{
 
     box-sizing: border-box;
-    margin: 0px;
+    margin: 0;
 
 }
 
-p{
-    font-size: large;
-}
 
 
 
@@ -78,7 +75,7 @@ p{
     background: #FFDACC;
     position: relative;
     border-radius:6px;
-    font-size: 15px;
+
 }
 
 .frise-chrono-contenu-droite{
@@ -91,16 +88,16 @@ p{
 
 .frise-chrono img{
     position: absolute;
-    width:40px;
+    width:60px;
 
     border-radius: 50%;
-    right: -20px;
+    right: -30px;
     top: 32px;
     z-index: 10;
 }
 
 .frise-chrono-contenu-droite img{
-    left:-20px;
+    left:-30px;
 }
 
 .frise-chrono::after{
@@ -151,9 +148,6 @@ p{
 
 
 
-.espace{
-    margin: 100px;
-}
 
 
 
