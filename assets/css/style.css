@@ -29,8 +29,6 @@ h1{
 .bande{
     background-color: #FFDACC;
 
-
-
 }
 
 .bande-box{
@@ -46,8 +44,10 @@ h1{
 
 
 .bande-contenu{
-    margin: auto 15px;
+
+    margin: 0 15px;
     padding: 20px 2%;
+    align-content: flex-start;
 
 }
 
@@ -84,8 +84,8 @@ h1{
 
 .partenaire img{
 
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
 
 }
 
@@ -187,8 +187,6 @@ footer li{
     align-items: center;
     flex-direction: column;
     font-size: x-large;
-
-
 }
 
 
