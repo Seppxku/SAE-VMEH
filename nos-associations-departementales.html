@@ -19,8 +19,30 @@
             <h1> Map </h1>
         </div>
 
-        <div id="map"></div>
+        <!--  ici grande divition cacher au debut puis contenant les info de l'agence pares click sur la carte-->
+
+        <article>
+            <h3 class="titre">Présidence</h3>
+            <p id="presidence"></p> 
+            <p><strong class="label">Courriel : </strong> <span id="courriel"></span></p>
+            <p><strong class="label">Tél. : </strong><span id="tel"></span></p>
+        </article>
     
+        <article>
+            <h3 class="titre">Composition du bureau</h3>
+            <p id="Bureau"></p>
+        </article>
+    
+        <article>
+            <h3 class="titre">Section local</h3>
+            <div id="Section local"></div>
+        </article>
+    
+        <article>
+            <h3 class="titre">Dernières actualités</h3>
+            <p id="actualites"></p>
+        </article>
+
         <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" 
         crossorigin=""></script>
         <script src="./map.js"></script>
