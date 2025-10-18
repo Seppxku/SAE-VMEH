@@ -6,3 +6,11 @@ width: 350px; }
     text-decoration: underline;
     cursor: pointer;
 }
+
+.label{
+    color: rgb(255, 227, 13);
+}
+
+.titre{
+    color: green;
+}
