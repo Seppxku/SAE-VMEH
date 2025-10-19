@@ -31,7 +31,6 @@ h1{
 .presentation_container{
     max-width: 1280px;
     width: 80%;
-
     margin: auto;
 
 
@@ -41,6 +40,8 @@ h1{
     padding-bottom: 1em;
     font-size: 18px;
 }
+
+
 
 
 
@@ -79,6 +80,10 @@ h1{
 
 }
 
+.bande h3{
+    font-size: x-large;
+}
+
 
 
 
@@ -91,6 +96,7 @@ h1{
     display: block;
     margin: auto auto 20px;
 }
+
 .partenaire-contenu {
     display: flex;
 
@@ -274,4 +280,140 @@ footer li{
     text-align: right;
 }
 
+/***************************************************************************/
+/***********************************RESPONSIVE**********************************/
+
+@media (max-width: 768px)  {
+
+
+    h1{
+       text-align: center;
+        font-size: xxx-large;
+
+    }
+
+
+    body{
+        max-width: 768px;
+    }
+
+
+    /***************************************************************************/
+    /*******************************PRESENTATION********************************/
+    .presentation{
+        text-align: center;
+        width: 100%;
+        padding:5em 0;
+
+        background-image: url("../image/accueil/trois-bulles.svg") !important;
+        background-repeat: no-repeat;
+        background-size: max(50%, 50%);
+        background-position: right 4% top 10%;
+
+
+    }
+
+
+    /***************************************************************************/
+    /*******************************CHIFFRE-CLE*********************************/
+
+    .bande {
+        width: 100%;
+        margin: 0;
+    }
+
+
+        .bande h1 {
+            padding-top: 5%;
+
+        }
+
+        .bande h3{
+            font-size: xx-large;
+        }
+
+        .bande-box {
+            display: flex;
+            width: 75%;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            margin: auto;
+            font-size: medium;
+            padding: 1%;
+
+
+        }
+
+        .bande-contenu {
+            text-align: center;
+
+        }
+
+        /***************************************************************************/
+        /*******************************PARTENAIRE**********************************/
+
+        .partenaire {
+            justify-content: center;
+
+            display: block;
+            margin: 0;
+
+        }
+
+
+        .partenaire-contenu {
+            display: flex;
+            justify-content: center;
+            width: 50%;
+            margin: auto;
+
+        }
+
+        .partenaire-bouton {
+            display: flex;
+            background-color: #f51818;
+
+            border-radius: 30px;
+            width: 40%;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            padding: 1%;
+
+
+        }
+
+        .partenaire-bouton a {
+            text-decoration: none;
+            font-size: larger;
+            color: white;
+            text-align: center;
+
+        }
+
+
+        /***************************************************************************/
+        /***********************************FOOTER**********************************/
+
+        .footer {
+            max-width: 768px;
+
+        }
+
+        .footer-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .footer-plan {
+            padding: 2em;
+        }
+
+
+
+}
 
