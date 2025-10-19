@@ -55,26 +55,34 @@ for (let key in data) {
 };
 
 function afficherAgence(titreAgence){
+	const grille = document.querySelector(".grille"); // on affiche les conteneur de l'agence
+    grille.classList.remove("cacher");
+
+	const image = document.getElementById("nomDepartement"); // on affiche l'image avec le nom du departement
+    image.classList.remove("cacher");
+
 	let agence = null;
 	for (let key in data) {
 		agence= data[key];
 		if (agence.titre==titreAgence) break;
 	}
 	let container = document.getElementById("presidence");
-	container.innerHTML = agence.president.nom
+	container.innerHTML = agence.president.nom;
 
 	container = document.getElementById("courriel");
-	container.innerHTML = agence.president.courriel
+	container.innerHTML = agence.president.courriel;
 
 	container = document.getElementById("tel");
-	container.innerHTML = agence.president.tel
+	container.innerHTML = agence.president.tel;
 
 	container = document.getElementById("Bureau");
+	container.innerHTML = "";
 	for (let i in agence.bureau){
 		container.innerHTML +=`<p><strong class="label">${agence.bureau[i].role} : </strong> <span>${agence.bureau[i].nom}</span></p>`
 	}
 
 	container = document.getElementById("Section local");
+	container.innerHTML = "";
 	for (let i in agence.sectionLocal){
 		container.innerHTML +=`<p>${agence.sectionLocal[i]}</p>`
 	}
