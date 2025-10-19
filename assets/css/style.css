@@ -19,9 +19,37 @@ h1{
 }
 
 /***************************************************************************/
+/*******************************PRESENTATION********************************/
+.presentation{
+    padding:5em 0;
+    margin: 0;
+    background-image: url("../image/accueil/trois-bulles.svg") !important;
+    background-repeat: no-repeat;
+    background-size: initial;
+    background-position: right 5% center;
+}
+.presentation_container{
+    max-width: 1280px;
+    width: 80%;
+
+    margin: auto;
+
+
+}
+
+.presentation_container p {
+    padding-bottom: 1em;
+    font-size: 18px;
+}
+
+
+
+
+/***************************************************************************/
 /*******************************CHIFFRE-CLE*********************************/
 
 .chiffe-cle h1{
+    padding-top: 1%;
     margin: auto;
     max-width: 1350px;
 }
@@ -125,14 +153,23 @@ footer{
     margin-top: 5%;
     color: #fff;
     background: #3CAA64;
-    display: flex;
-    padding-top:2%;
     font-size:medium !important;
-    justify-content: space-between;
-    padding-right: 15%;
-    align-items: flex-start;
+
+
 }
 
+.footer-container{
+    padding-top:2%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.footer-info{
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+}
 .footer-plan{
     margin: 20px;
     padding: 0 10% 0 10%;
@@ -172,7 +209,7 @@ footer li{
     display: list-item;
 
 }
-/***background-image: url("../image/reseaux/pave-reseaux-sociaux.svg");**/
+
 .footer-reseaux{
     display: flex;
     justify-content: center;
@@ -197,6 +234,44 @@ footer li{
 .reseaux img{
     width: 50px;
     height: 50px;
+}
+
+
+
+.footer-mention{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: 300;
+    align-items: center;
+
+}
+
+.footer-mention a{
+    color: white;
+
+}
+
+.mention-legale a{
+    text-decoration: #FFDACC !important;
+}
+
+.footer-mention p{
+    display: block;
+    margin-block-start: 3em;
+    margin-block-end: 1em;
+    margin-inline-start: 2em;
+    margin-inline-end: 1em;
+    unicode-bidi: isolate;
+    font-size: 90%;
+    line-height: 1em;
+
+
+}
+
+.mention-legale{
+    justify-content: right;
+    text-align: right;
 }
 
 
