@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/map.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/map.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     
@@ -15,38 +15,49 @@
         
     </header>
     <main>
-        <div>
-            <h1> Map </h1>
-        </div>
 
-        <!--  ici grande divition cacher au debut puis contenant les info de l'agence pares click sur la carte-->
+        <section class="banniere">
+            <img src="/assets/image/map/asso_departementale.png" alt="Nos associations départementales">
+        </section>
+        <section class="texte">
+            <h1>Nos associations départementales</h1>
+            <p>Retrouvez la VMEH dans vos départements de Métropole et d’outre-mer.</p>
+            <p> méthodes via la barre de recherche ci-dessous OU la carte.</p>
+            <h1>Sélectionner votre département</h1>
+        </section>
+        <div id="map"></div>
+        <!--   cacher au debut puis contenant les info de l'agence pares click sur la carte-->
+        <img src="dinosaur.jpg" class="cacher" id="nomDepartement"/>
 
-        <article>
-            <h3 class="titre">Présidence</h3>
-            <p id="presidence"></p> 
-            <p><strong class="label">Courriel : </strong> <span id="courriel"></span></p>
-            <p><strong class="label">Tél. : </strong><span id="tel"></span></p>
-        </article>
-    
-        <article>
-            <h3 class="titre">Composition du bureau</h3>
-            <p id="Bureau"></p>
-        </article>
-    
-        <article>
-            <h3 class="titre">Section local</h3>
-            <div id="Section local"></div>
-        </article>
-    
-        <article>
-            <h3 class="titre">Dernières actualités</h3>
-            <p id="actualites"></p>
-        </article>
+        <section class="grille cacher">
+            <article>
+                <h1>Présidence</h1>
+                <p id="presidence"></p> 
+                <p><strong class="label">Courriel : </strong> <span id="courriel"></span></p>
+                <p><strong class="label">Tél. : </strong><span id="tel"></span></p>
+            </article>
 
+            <article>
+                <h1>Composition du bureau</h1>
+                <p id="Bureau"></p>
+            </article>
+
+            <article>
+                <h1>Section local</h1>
+                <div id="Section local"></div>
+            </article>
+
+            <article>
+                <h1>Dernières actualités</h1>
+                <p id="actualites"></p>
+            </article>
+        </section>
+        <!-- fini de la section cacher-->
         <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" 
         crossorigin=""></script>
         <script src="./map.js"></script>
     </main>
+
     <footer>
 
         <div class="footer-container">
