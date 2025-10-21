@@ -27,6 +27,9 @@ margin: 20px;
 .cacher{   
     display: none;
 }
+.labelPresident{
+    display: none;
+}
 
 .texte{
     padding: auto 10px;
