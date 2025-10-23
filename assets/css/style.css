@@ -173,6 +173,45 @@ h1 {
 
 
 /***************************************************************************/
+/*********************************CARROUSEL*********************************/
+
+.carousel{
+    width: 50%;
+}
+.carousel-caption{
+    text-shadow: 1px 1px black;
+}
+
+img{
+    max-height: 450px;
+}
+#carrousel_portrait{
+    width: 33%;
+}
+#carrousel_portrait img{
+    max-height: 600px;
+}
+.btn-voir-articles {
+    display: block;
+    margin: 1em auto 2em auto; /* centré et espacé du carrousel */
+    text-align: center;
+    width: fit-content;
+    background-color: #3CAA64;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: clamp(0.5em, 1vw, 1em);
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    padding: clamp(0.6em, 1.5vw, 1em) clamp(1.5em, 4vw, 3em);
+    border-radius: 50px;
+}
+
+.btn-voir-articles:hover {
+    background-color: #2a7c49;
+}
+
+
+/***************************************************************************/
 /***********************************FOOTER**********************************/
 
 footer{
