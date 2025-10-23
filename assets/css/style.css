@@ -14,12 +14,13 @@ body{
 
 .nav-link  {
     color: white;
-    margin: 0 1em;
+    margin: 0 2em;
 }
 
 .nav-btns {
-    margin: 0 0.8em;
+    margin: 0 0.5em;
     padding: 1em 1em;
+    display: flex;
 }
 
 .btn {
@@ -36,7 +37,6 @@ body{
 
 .btn img {
     margin-right: 0.5em;
-
 }
 
 #espace-membre {
