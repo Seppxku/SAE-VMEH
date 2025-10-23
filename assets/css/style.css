@@ -1,44 +1,23 @@
 * {
-    margin:0;
+    margin: 0;
     box-sizing: border-box;
 }
+
+html {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
 body{
     font-family: 'Raleway', Helvetica, Arial, Lucida, sans-serif;
     font-size: 20px;
     line-height: 1.7em;
     font-weight: 500;
-
 }
 
-.navbar {
+nav {
     background-color: #3CAA64;
-}
-
-.nav-link  {
-    color: white;
-    margin: 0 2em;
-}
-
-.nav-btns {
-    margin: 0 0.5em;
-    padding: 1em 1em;
-    display: flex;
-}
-
-.btn {
-    text-align: start;
-    border-radius: 10em;
-    margin: 0 2em;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.6em 2em 0.6em 0.5em;
-    font-weight: 500;
-    font-size: 1.1rem;
-}
-
-.btn img {
-    margin-right: 0.5em;
 }
 
 #espace-membre {
@@ -47,19 +26,16 @@ body{
 
 #faire-un-don {
     background-color: #D82727;
-    color: white;
 }
+
 
 h1 {
     margin-top: 20px;
     color: #3CAA64;
     text-decoration: none;
-
 }
 
-
 .baseline{
-
 }
 
 /***************************************************************************/
