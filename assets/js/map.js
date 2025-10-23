@@ -160,7 +160,7 @@ const data = {
 		sectionLocal: null,
 	},
 	Ariège: {
-		coo: [46.05, 5.20],
+		coo: [42.932629, 1.443469],
 		titre: "09 – Ariège",
 		president: { nom:"Pierre De ROBERT",
 			courriel: "pierre-de-robert@orange.fr",
@@ -171,7 +171,7 @@ const data = {
 		actu: null
 	},
 	Aube: {
-		coo: [46.05, 5.20],
+		coo: [48.299999, 4.08333],
 		titre: "10 – Aube",
 		president: null,
 		bureau: null,
@@ -179,7 +179,7 @@ const data = {
 		actu: null
 	},
 	Aude: {
-		coo: [46.05, 5.20],
+		coo: [43.183331, 3],
 		titre: "11 – Aude",
 		president: { nom:"Geneviève CANAPA",
 			courriel: "vmeh11@outlook.fr",
@@ -190,7 +190,7 @@ const data = {
 		actu:null
 	},
 	BouchesduRhône: {
-		coo: [46.05, 5.20],
+		coo: [43.5911679, 5.3102505],
 		titre: "13 – Bouches-du-Rhône",
 		president: { nom:"Danièle TIRAN",
 			courriel: "vmeh13@orange.fr",
@@ -215,488 +215,7 @@ const data = {
 		bureau: null,
 		sectionLocal: null,
 		actu: null
-	},/*
-	Cantal: {
-		coo: [46.05, 5.20],
-		titre: "01 – Ain",
-		president: { nom:"Ludovic ORGÉ",
-			courriel: "vmeh01.contact@gmail.com",
-			tel: "06 87 19 12 17"
-			},
-		bureau: null,
-		sectionLocal: null,
-		actu: `Ludovic Orge – Bénévole – VMEH 01 (23/01/2023)
-		Les bénévoles VMEH étaient présents à la Journée Annuelle de l'Expérience Patient 2023 - (JAXP 2023). Nous sommes ressortis plus motivés que jamais pour continuer à travailler avec dévouement et à plaider en faveur de l'amélioration de l'expérience des patients dans tous les aspects des soins de santé.
-		`
 	},
-	Charente: {
-		coo: [46.05, 5.20],
-		titre: "01 – Ain",
-		president: { nom:"Ludovic ORGÉ",
-			courriel: "vmeh01.contact@gmail.com",
-			tel: "06 87 19 12 17"
-			},
-		bureau: null,
-		sectionLocal: null,
-		actu: `Ludovic Orge – Bénévole – VMEH 01 (23/01/2023)
-		Les bénévoles VMEH étaient présents à la Journée Annuelle de l'Expérience Patient 2023 - (JAXP 2023). Nous sommes ressortis plus motivés que jamais pour continuer à travailler avec dévouement et à plaider en faveur de l'amélioration de l'expérience des patients dans tous les aspects des soins de santé.
-		`
-	},
-	CharenteMaritime: {
-		coo: [46.05, 5.20],
-		titre: "01 – Ain",
-		president: { nom:"Ludovic ORGÉ",
-			courriel: "vmeh01.contact@gmail.com",
-			tel: "06 87 19 12 17"
-			},
-		bureau: null,
-		sectionLocal: null,
-		actu: `Ludovic Orge – Bénévole – VMEH 01 (23/01/2023)
-		Les bénévoles VMEH étaient présents à la Journée Annuelle de l'Expérience Patient 2023 - (JAXP 2023). Nous sommes ressortis plus motivés que jamais pour continuer à travailler avec dévouement et à plaider en faveur de l'amélioration de l'expérience des patients dans tous les aspects des soins de santé.
-		`
-	},
-	Cher: {
-		coo: [46.05, 5.20],
-		titre: "01 – Ain",
-		president: { nom:"Ludovic ORGÉ",
-			courriel: "vmeh01.contact@gmail.com",
-			tel: "06 87 19 12 17"
-			},
-		bureau: null,
-		sectionLocal: null,
-		actu: `Ludovic Orge – Bénévole – VMEH 01 (23/01/2023)
-		Les bénévoles VMEH étaient présents à la Journée Annuelle de l'Expérience Patient 2023 - (JAXP 2023). Nous sommes ressortis plus motivés que jamais pour continuer à travailler avec dévouement et à plaider en faveur de l'amélioration de l'expérience des patients dans tous les aspects des soins de santé.
-		`
-	},
-	Corrèze: {
-		coo: [46.05, 5.20],
-		titre: "01 – Ain",
-		president: { nom:"Ludovic ORGÉ",
-			courriel: "vmeh01.contact@gmail.com",
-			tel: "06 87 19 12 17"
-			},
-		bureau: null,
-		sectionLocal: null,
-		actu: `Ludovic Orge – Bénévole – VMEH 01 (23/01/2023)
-		Les bénévoles VMEH étaient présents à la Journée Annuelle de l'Expérience Patient 2023 - (JAXP 2023). Nous sommes ressortis plus motivés que jamais pour continuer à travailler avec dévouement et à plaider en faveur de l'amélioration de l'expérience des patients dans tous les aspects des soins de santé.
-		`
-	},
-	CôtedOr: {
-		coo: [46.05, 5.20],
-		titre: "01 – Ain",
-		president: { nom:"Ludovic ORGÉ",
-			courriel: "vmeh01.contact@gmail.com",
-			tel: "06 87 19 12 17"
-			},
-		bureau: null,
-		sectionLocal: null,
-		actu: `Ludovic Orge – Bénévole – VMEH 01 (23/01/2023)
-		Les bénévoles VMEH étaient présents à la Journée Annuelle de l'Expérience Patient 2023 - (JAXP 2023). Nous sommes ressortis plus motivés que jamais pour continuer à travailler avec dévouement et à plaider en faveur de l'amélioration de l'expérience des patients dans tous les aspects des soins de santé.
-		`
-	},
-	CôtesdArmor: {
-		coo: [46.05, 5.20],
-		titre: "01 – Ain",
-		president: { nom:"Ludovic ORGÉ",
-			courriel: "vmeh01.contact@gmail.com",
-			tel: "06 87 19 12 17"
-			},
-		bureau: null,
-		sectionLocal: null,
-		actu: `Ludovic Orge – Bénévole – VMEH 01 (23/01/2023)
-		Les bénévoles VMEH étaient présents à la Journée Annuelle de l'Expérience Patient 2023 - (JAXP 2023). Nous sommes ressortis plus motivés que jamais pour continuer à travailler avec dévouement et à plaider en faveur de l'amélioration de l'expérience des patients dans tous les aspects des soins de santé.
-		`
-	},
-	Creuse: {
-		coo: [46.05, 5.20],
-		titre: "01 – Ain",
-		president: { nom:"Ludovic ORGÉ",
-			courriel: "vmeh01.contact@gmail.com",
-			tel: "06 87 19 12 17"
-			},
-		bureau: null,
-		sectionLocal: null,
-		actu: `Ludovic Orge – Bénévole – VMEH 01 (23/01/2023)
-		Les bénévoles VMEH étaient présents à la Journée Annuelle de l'Expérience Patient 2023 - (JAXP 2023). Nous sommes ressortis plus motivés que jamais pour continuer à travailler avec dévouement et à plaider en faveur de l'amélioration de l'expérience des patients dans tous les aspects des soins de santé.
-		`
-	},
-	Dordogne: {
-		coo: [46.05, 5.20],
-		titre: "01 – Ain",
-		president: { nom:"Ludovic ORGÉ",
-			courriel: "vmeh01.contact@gmail.com",
-			tel: "06 87 19 12 17"
-			},
-		bureau: null,
-		sectionLocal: null,
-		actu: `Ludovic Orge – Bénévole – VMEH 01 (23/01/2023)
-		Les bénévoles VMEH étaient présents à la Journée Annuelle de l'Expérience Patient 2023 - (JAXP 2023). Nous sommes ressortis plus motivés que jamais pour continuer à travailler avec dévouement et à plaider en faveur de l'amélioration de l'expérience des patients dans tous les aspects des soins de santé.
-		`
-	},
-	Drôme: {
-		coo: [46.05, 5.20],
-		titre: "01 – Ain",
-		president: { nom:"Ludovic ORGÉ",
-			courriel: "vmeh01.contact@gmail.com",
-			tel: "06 87 19 12 17"
-			},
-		bureau: null,
-		sectionLocal: null,
-		actu: `Ludovic Orge – Bénévole – VMEH 01 (23/01/2023)
-		Les bénévoles VMEH étaient présents à la Journée Annuelle de l'Expérience Patient 2023 - (JAXP 2023). Nous sommes ressortis plus motivés que jamais pour continuer à travailler avec dévouement et à plaider en faveur de l'amélioration de l'expérience des patients dans tous les aspects des soins de santé.
-		`
-	},
-	Eure: {
-		coo: [46.05, 5.20],
-		titre: "01 – Ain",
-		president: { nom:"Ludovic ORGÉ",
-			courriel: "vmeh01.contact@gmail.com",
-			tel: "06 87 19 12 17"
-			},
-		bureau: null,
-		sectionLocal: null,
-		actu: `Ludovic Orge – Bénévole – VMEH 01 (23/01/2023)
-		Les bénévoles VMEH étaient présents à la Journée Annuelle de l'Expérience Patient 2023 - (JAXP 2023). Nous sommes ressortis plus motivés que jamais pour continuer à travailler avec dévouement et à plaider en faveur de l'amélioration de l'expérience des patients dans tous les aspects des soins de santé.
-		`
-	},
-	EureetLoir: {
-		coo: [46.05, 5.20],
-		titre: "01 – Ain",
-		president: { nom:"Ludovic ORGÉ",
-			courriel: "vmeh01.contact@gmail.com",
-			tel: "06 87 19 12 17"
-			},
-		bureau: null,
-		sectionLocal: null,
-		actu: `Ludovic Orge – Bénévole – VMEH 01 (23/01/2023)
-		Les bénévoles VMEH étaient présents à la Journée Annuelle de l'Expérience Patient 2023 - (JAXP 2023). Nous sommes ressortis plus motivés que jamais pour continuer à travailler avec dévouement et à plaider en faveur de l'amélioration de l'expérience des patients dans tous les aspects des soins de santé.
-		`
-	},
-	Gard: {
-		coo: [46.05, 5.20],
-		titre: "01 – Ain",
-		president: { nom:"Ludovic ORGÉ",
-			courriel: "vmeh01.contact@gmail.com",
-			tel: "06 87 19 12 17"
-			},
-		bureau: null,
-		sectionLocal: null,
-		actu: `Ludovic Orge – Bénévole – VMEH 01 (23/01/2023)
-		Les bénévoles VMEH étaient présents à la Journée Annuelle de l'Expérience Patient 2023 - (JAXP 2023). Nous sommes ressortis plus motivés que jamais pour continuer à travailler avec dévouement et à plaider en faveur de l'amélioration de l'expérience des patients dans tous les aspects des soins de santé.
-		`
-	},
-	HauteGaronne: {
-		coo: [46.05, 5.20],
-		titre: "01 – Ain",
-		president: { nom:"Ludovic ORGÉ",
-			courriel: "vmeh01.contact@gmail.com",
-			tel: "06 87 19 12 17"
-			},
-		bureau: null,
-		sectionLocal: null,
-		actu: `Ludovic Orge – Bénévole – VMEH 01 (23/01/2023)
-		Les bénévoles VMEH étaient présents à la Journée Annuelle de l'Expérience Patient 2023 - (JAXP 2023). Nous sommes ressortis plus motivés que jamais pour continuer à travailler avec dévouement et à plaider en faveur de l'amélioration de l'expérience des patients dans tous les aspects des soins de santé.
-		`
-	},
-	Gers: {
-		coo: [46.05, 5.20],
-		titre: "01 – Ain",
-		president: { nom:"Ludovic ORGÉ",
-			courriel: "vmeh01.contact@gmail.com",
-			tel: "06 87 19 12 17"
-			},
-		bureau: null,
-		sectionLocal: null,
-		actu: `Ludovic Orge – Bénévole – VMEH 01 (23/01/2023)
-		Les bénévoles VMEH étaient présents à la Journée Annuelle de l'Expérience Patient 2023 - (JAXP 2023). Nous sommes ressortis plus motivés que jamais pour continuer à travailler avec dévouement et à plaider en faveur de l'amélioration de l'expérience des patients dans tous les aspects des soins de santé.
-		`
-	},
-	Gironde: {
-		coo: [46.05, 5.20],
-		titre: "01 – Ain",
-		president: { nom:"Ludovic ORGÉ",
-			courriel: "vmeh01.contact@gmail.com",
-			tel: "06 87 19 12 17"
-			},
-		bureau: null,
-		sectionLocal: null,
-		actu: `Ludovic Orge – Bénévole – VMEH 01 (23/01/2023)
-		Les bénévoles VMEH étaient présents à la Journée Annuelle de l'Expérience Patient 2023 - (JAXP 2023). Nous sommes ressortis plus motivés que jamais pour continuer à travailler avec dévouement et à plaider en faveur de l'amélioration de l'expérience des patients dans tous les aspects des soins de santé.
-		`
-	},
-	Hérault: {
-		coo: [46.05, 5.20],
-		titre: "01 – Ain",
-		president: { nom:"Ludovic ORGÉ",
-			courriel: "vmeh01.contact@gmail.com",
-			tel: "06 87 19 12 17"
-			},
-		bureau: null,
-		sectionLocal: null,
-		actu: `Ludovic Orge – Bénévole – VMEH 01 (23/01/2023)
-		Les bénévoles VMEH étaient présents à la Journée Annuelle de l'Expérience Patient 2023 - (JAXP 2023). Nous sommes ressortis plus motivés que jamais pour continuer à travailler avec dévouement et à plaider en faveur de l'amélioration de l'expérience des patients dans tous les aspects des soins de santé.
-		`
-	},
-	IlleetVilaine: {
-		coo: [46.05, 5.20],
-		titre: "01 – Ain",
-		president: { nom:"Ludovic ORGÉ",
-			courriel: "vmeh01.contact@gmail.com",
-			tel: "06 87 19 12 17"
-			},
-		bureau: null,
-		sectionLocal: null,
-		actu: `Ludovic Orge – Bénévole – VMEH 01 (23/01/2023)
-		Les bénévoles VMEH étaient présents à la Journée Annuelle de l'Expérience Patient 2023 - (JAXP 2023). Nous sommes ressortis plus motivés que jamais pour continuer à travailler avec dévouement et à plaider en faveur de l'amélioration de l'expérience des patients dans tous les aspects des soins de santé.
-		`
-	},
-	Indre: {
-		coo: [46.05, 5.20],
-		titre: "01 – Ain",
-		president: { nom:"Ludovic ORGÉ",
-			courriel: "vmeh01.contact@gmail.com",
-			tel: "06 87 19 12 17"
-			},
-		bureau: null,
-		sectionLocal: null,
-		actu: `Ludovic Orge – Bénévole – VMEH 01 (23/01/2023)
-		Les bénévoles VMEH étaient présents à la Journée Annuelle de l'Expérience Patient 2023 - (JAXP 2023). Nous sommes ressortis plus motivés que jamais pour continuer à travailler avec dévouement et à plaider en faveur de l'amélioration de l'expérience des patients dans tous les aspects des soins de santé.
-		`
-	},
-	 IndreetLoire: {
-		coo: [46.05, 5.20],
-		titre: "01 – Ain",
-		president: { nom:"Ludovic ORGÉ",
-			courriel: "vmeh01.contact@gmail.com",
-			tel: "06 87 19 12 17"
-			},
-		bureau: null,
-		sectionLocal: null,
-		actu: `Ludovic Orge – Bénévole – VMEH 01 (23/01/2023)
-		Les bénévoles VMEH étaient présents à la Journée Annuelle de l'Expérience Patient 2023 - (JAXP 2023). Nous sommes ressortis plus motivés que jamais pour continuer à travailler avec dévouement et à plaider en faveur de l'amélioration de l'expérience des patients dans tous les aspects des soins de santé.
-		`
-	},
-	Landes: {
-		coo: [46.05, 5.20],
-		titre: "01 – Ain",
-		president: { nom:"Ludovic ORGÉ",
-			courriel: "vmeh01.contact@gmail.com",
-			tel: "06 87 19 12 17"
-			},
-		bureau: null,
-		sectionLocal: null,
-		actu: `Ludovic Orge – Bénévole – VMEH 01 (23/01/2023)
-		Les bénévoles VMEH étaient présents à la Journée Annuelle de l'Expérience Patient 2023 - (JAXP 2023). Nous sommes ressortis plus motivés que jamais pour continuer à travailler avec dévouement et à plaider en faveur de l'amélioration de l'expérience des patients dans tous les aspects des soins de santé.
-		`
-	},
-	LoiretCher: {
-		coo: [46.05, 5.20],
-		titre: "01 – Ain",
-		president: { nom:"Ludovic ORGÉ",
-			courriel: "vmeh01.contact@gmail.com",
-			tel: "06 87 19 12 17"
-			},
-		bureau: null,
-		sectionLocal: null,
-		actu: `Ludovic Orge – Bénévole – VMEH 01 (23/01/2023)
-		Les bénévoles VMEH étaient présents à la Journée Annuelle de l'Expérience Patient 2023 - (JAXP 2023). Nous sommes ressortis plus motivés que jamais pour continuer à travailler avec dévouement et à plaider en faveur de l'amélioration de l'expérience des patients dans tous les aspects des soins de santé.
-		`
-	},
-	Loire: {
-		coo: [46.05, 5.20],
-		titre: "01 – Ain",
-		president: { nom:"Ludovic ORGÉ",
-			courriel: "vmeh01.contact@gmail.com",
-			tel: "06 87 19 12 17"
-			},
-		bureau: null,
-		sectionLocal: null,
-		actu: `Ludovic Orge – Bénévole – VMEH 01 (23/01/2023)
-		Les bénévoles VMEH étaient présents à la Journée Annuelle de l'Expérience Patient 2023 - (JAXP 2023). Nous sommes ressortis plus motivés que jamais pour continuer à travailler avec dévouement et à plaider en faveur de l'amélioration de l'expérience des patients dans tous les aspects des soins de santé.
-		`
-	},
-	HauteLoire: {
-		coo: [46.05, 5.20],
-		titre: "01 – Ain",
-		president: { nom:"Ludovic ORGÉ",
-			courriel: "vmeh01.contact@gmail.com",
-			tel: "06 87 19 12 17"
-			},
-		bureau: null,
-		sectionLocal: null,
-		actu: `Ludovic Orge – Bénévole – VMEH 01 (23/01/2023)
-		Les bénévoles VMEH étaient présents à la Journée Annuelle de l'Expérience Patient 2023 - (JAXP 2023). Nous sommes ressortis plus motivés que jamais pour continuer à travailler avec dévouement et à plaider en faveur de l'amélioration de l'expérience des patients dans tous les aspects des soins de santé.
-		`
-	},
-	LoireAtlantiquedre: {
-		coo: [46.05, 5.20],
-		titre: "01 – Ain",
-		president: { nom:"Ludovic ORGÉ",
-			courriel: "vmeh01.contact@gmail.com",
-			tel: "06 87 19 12 17"
-			},
-		bureau: null,
-		sectionLocal: null,
-		actu: `Ludovic Orge – Bénévole – VMEH 01 (23/01/2023)
-		Les bénévoles VMEH étaient présents à la Journée Annuelle de l'Expérience Patient 2023 - (JAXP 2023). Nous sommes ressortis plus motivés que jamais pour continuer à travailler avec dévouement et à plaider en faveur de l'amélioration de l'expérience des patients dans tous les aspects des soins de santé.
-		`
-	},
-	Loiret: {
-		coo: [46.05, 5.20],
-		titre: "01 – Ain",
-		president: { nom:"Ludovic ORGÉ",
-			courriel: "vmeh01.contact@gmail.com",
-			tel: "06 87 19 12 17"
-			},
-		bureau: null,
-		sectionLocal: null,
-		actu: `Ludovic Orge – Bénévole – VMEH 01 (23/01/2023)
-		Les bénévoles VMEH étaient présents à la Journée Annuelle de l'Expérience Patient 2023 - (JAXP 2023). Nous sommes ressortis plus motivés que jamais pour continuer à travailler avec dévouement et à plaider en faveur de l'amélioration de l'expérience des patients dans tous les aspects des soins de santé.
-		`
-	},
-	Lot: {
-		coo: [46.05, 5.20],
-		titre: "01 – Ain",
-		president: { nom:"Ludovic ORGÉ",
-			courriel: "vmeh01.contact@gmail.com",
-			tel: "06 87 19 12 17"
-			},
-		bureau: null,
-		sectionLocal: null,
-		actu: `Ludovic Orge – Bénévole – VMEH 01 (23/01/2023)
-		Les bénévoles VMEH étaient présents à la Journée Annuelle de l'Expérience Patient 2023 - (JAXP 2023). Nous sommes ressortis plus motivés que jamais pour continuer à travailler avec dévouement et à plaider en faveur de l'amélioration de l'expérience des patients dans tous les aspects des soins de santé.
-		`
-	},
-	LotetGaronne: {
-		coo: [46.05, 5.20],
-		titre: "01 – Ain",
-		president: { nom:"Ludovic ORGÉ",
-			courriel: "vmeh01.contact@gmail.com",
-			tel: "06 87 19 12 17"
-			},
-		bureau: null,
-		sectionLocal: null,
-		actu: `Ludovic Orge – Bénévole – VMEH 01 (23/01/2023)
-		Les bénévoles VMEH étaient présents à la Journée Annuelle de l'Expérience Patient 2023 - (JAXP 2023). Nous sommes ressortis plus motivés que jamais pour continuer à travailler avec dévouement et à plaider en faveur de l'amélioration de l'expérience des patients dans tous les aspects des soins de santé.
-		`
-	},
-	Lozère: {
-		coo: [46.05, 5.20],
-		titre: "01 – Ain",
-		president: { nom:"Ludovic ORGÉ",
-			courriel: "vmeh01.contact@gmail.com",
-			tel: "06 87 19 12 17"
-			},
-		bureau: null,
-		sectionLocal: null,
-		actu: `Ludovic Orge – Bénévole – VMEH 01 (23/01/2023)
-		Les bénévoles VMEH étaient présents à la Journée Annuelle de l'Expérience Patient 2023 - (JAXP 2023). Nous sommes ressortis plus motivés que jamais pour continuer à travailler avec dévouement et à plaider en faveur de l'amélioration de l'expérience des patients dans tous les aspects des soins de santé.
-		`
-	},
-	MaineetLoire: {
-		coo: [46.05, 5.20],
-		titre: "01 – Ain",
-		president: { nom:"Ludovic ORGÉ",
-			courriel: "vmeh01.contact@gmail.com",
-			tel: "06 87 19 12 17"
-			},
-		bureau: null,
-		sectionLocal: null,
-		actu: `Ludovic Orge – Bénévole – VMEH 01 (23/01/2023)
-		Les bénévoles VMEH étaient présents à la Journée Annuelle de l'Expérience Patient 2023 - (JAXP 2023). Nous sommes ressortis plus motivés que jamais pour continuer à travailler avec dévouement et à plaider en faveur de l'amélioration de l'expérience des patients dans tous les aspects des soins de santé.
-		`
-	},
-	Manche: {
-		coo: [46.05, 5.20],
-		titre: "01 – Ain",
-		president: { nom:"Ludovic ORGÉ",
-			courriel: "vmeh01.contact@gmail.com",
-			tel: "06 87 19 12 17"
-			},
-		bureau: null,
-		sectionLocal: null,
-		actu: `Ludovic Orge – Bénévole – VMEH 01 (23/01/2023)
-		Les bénévoles VMEH étaient présents à la Journée Annuelle de l'Expérience Patient 2023 - (JAXP 2023). Nous sommes ressortis plus motivés que jamais pour continuer à travailler avec dévouement et à plaider en faveur de l'amélioration de l'expérience des patients dans tous les aspects des soins de santé.
-		`
-	},
-	Marne: {
-		coo: [46.05, 5.20],
-		titre: "01 – Ain",
-		president: { nom:"Ludovic ORGÉ",
-			courriel: "vmeh01.contact@gmail.com",
-			tel: "06 87 19 12 17"
-			},
-		bureau: null,
-		sectionLocal: null,
-		actu: `Ludovic Orge – Bénévole – VMEH 01 (23/01/2023)
-		Les bénévoles VMEH étaient présents à la Journée Annuelle de l'Expérience Patient 2023 - (JAXP 2023). Nous sommes ressortis plus motivés que jamais pour continuer à travailler avec dévouement et à plaider en faveur de l'amélioration de l'expérience des patients dans tous les aspects des soins de santé.
-		`
-	},
-	MeurtheetMoselle: {
-		coo: [46.05, 5.20],
-		titre: "01 – Ain",
-		president: { nom:"Ludovic ORGÉ",
-			courriel: "vmeh01.contact@gmail.com",
-			tel: "06 87 19 12 17"
-			},
-		bureau: null,
-		sectionLocal: null,
-		actu: `Ludovic Orge – Bénévole – VMEH 01 (23/01/2023)
-		Les bénévoles VMEH étaient présents à la Journée Annuelle de l'Expérience Patient 2023 - (JAXP 2023). Nous sommes ressortis plus motivés que jamais pour continuer à travailler avec dévouement et à plaider en faveur de l'amélioration de l'expérience des patients dans tous les aspects des soins de santé.
-		`
-	},
-	Morbihan: {
-		coo: [46.05, 5.20],
-		titre: "01 – Ain",
-		president: { nom:"Ludovic ORGÉ",
-			courriel: "vmeh01.contact@gmail.com",
-			tel: "06 87 19 12 17"
-			},
-		bureau: null,
-		sectionLocal: null,
-		actu: `Ludovic Orge – Bénévole – VMEH 01 (23/01/2023)
-		Les bénévoles VMEH étaient présents à la Journée Annuelle de l'Expérience Patient 2023 - (JAXP 2023). Nous sommes ressortis plus motivés que jamais pour continuer à travailler avec dévouement et à plaider en faveur de l'amélioration de l'expérience des patients dans tous les aspects des soins de santé.
-		`
-	},
-	Metz: {
-		coo: [46.05, 5.20],
-		titre: "01 – Ain",
-		president: { nom:"Ludovic ORGÉ",
-			courriel: "vmeh01.contact@gmail.com",
-			tel: "06 87 19 12 17"
-			},
-		bureau: null,
-		sectionLocal: null,
-		actu: `Ludovic Orge – Bénévole – VMEH 01 (23/01/2023)
-		Les bénévoles VMEH étaient présents à la Journée Annuelle de l'Expérience Patient 2023 - (JAXP 2023). Nous sommes ressortis plus motivés que jamais pour continuer à travailler avec dévouement et à plaider en faveur de l'amélioration de l'expérience des patients dans tous les aspects des soins de santé.
-		`
-	},
-	Thionville: {
-		coo: [46.05, 5.20],
-		titre: "01 – Ain",
-		president: { nom:"Ludovic ORGÉ",
-			courriel: "vmeh01.contact@gmail.com",
-			tel: "06 87 19 12 17"
-			},
-		bureau: null,
-		sectionLocal: null,
-		actu: `Ludovic Orge – Bénévole – VMEH 01 (23/01/2023)
-		Les bénévoles VMEH étaient présents à la Journée Annuelle de l'Expérience Patient 2023 - (JAXP 2023). Nous sommes ressortis plus motivés que jamais pour continuer à travailler avec dévouement et à plaider en faveur de l'amélioration de l'expérience des patients dans tous les aspects des soins de santé.
-		`
-	},
-	Nord: {
-		coo: [46.05, 5.20],
-		titre: "01 – Ain",
-		president: { nom:"Ludovic ORGÉ",
-			courriel: "vmeh01.contact@gmail.com",
-			tel: "06 87 19 12 17"
-			},
-		bureau: null,
-		sectionLocal: null,
-		actu: `Ludovic Orge – Bénévole – VMEH 01 (23/01/2023)
-		Les bénévoles VMEH étaient présents à la Journée Annuelle de l'Expérience Patient 2023 - (JAXP 2023). Nous sommes ressortis plus motivés que jamais pour continuer à travailler avec dévouement et à plaider en faveur de l'amélioration de l'expérience des patients dans tous les aspects des soins de santé.
-		`
-	},*/
 }
 
 for (let key in data) {
@@ -713,7 +232,7 @@ for (let key in data) {
     </span>
 	`);
 
-};
+}
 
 function afficherAgence(titreAgence){
 	const grille = document.querySelector(".grille"); // on affiche les conteneur de l'agence
@@ -743,6 +262,10 @@ function afficherAgence(titreAgence){
     	});
 	}else {
 		container.innerHTML = `<p class="label">info a venir</p>`;
+		const labels = document.querySelectorAll('.labelPresident');
+		labels.forEach(label => {
+			label.style.display = 'none';
+		});
 	}
 
 	container = document.getElementById("Bureau");
