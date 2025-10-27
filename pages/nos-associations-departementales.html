@@ -3,29 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/map.css">
+
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+          crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
     
     <title>Document</title>
 </head>
 <body>
-    <header>
-        
-    </header>
-    <main>
+<header>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assets/image/navbar/VMEH_Logo.webp"
+                     alt="Main verte qui soutient un coeur avec deux personnes à l'intérieur qui semblent s'entrainer. Il y a en dessous écrit VMEH en noir suivi de la description de l'acronyme"
+                     height="100"
+                     width="150">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-4">
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            L'ASSOCIATION
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./histoire.html">HISTOIRE</a></li>
+                            <li><a class="dropdown-item" href="#">MISSIONS ET VALEURS</a></li>
+                            <li><a class="dropdown-item" href="#">NOTRE ORGANISATION</a></li>
+                            <li><a class="dropdown-item" href="./nos-associations-departementales.html">NOS ASSOCIATIONS DÉPARTEMENTALES</a></li>
+                            <li><a class="dropdown-item" href="#">NOS PARTENAIRES</a></li>
+                            <li><a class="dropdown-item" href="#">NOTRE DOCUMENTATION</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            ACTUALITÉS
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">VMEH EN RÉGION</a></li>
+                            <li><a class="dropdown-item" href="#">VMEH EN VIDÉO</a></li>
+                            <li><a class="dropdown-item" href="#">VMEH LA PRESSE EN PARLE</a></li>
+                            <li><a class="dropdown-item" href="#">VMEH PORTRAIT DE NOS BÉNÉVOLES</a></li>
+                            <li><a class="dropdown-item" href="#">VMEH NATIONAL</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="./devenir-benevole.html">DEVENIR BÉNÉVOLE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">NOS ACTIONS</a>
+                    </li>
+
+                </ul>
+                <form class="d-flex justify-content-around w-25">
+                    <a class="btn rounded-pill d-flex align-items-center text-start gap-2 px-4 py-2 ps-3" id="espace-membre" href="#">
+                        <img src="../assets/image/navbar/photo-profil-utiisateur.webp" alt="">Espace <br>membre
+                    </a>
+                    <a class="btn rounded-pill d-flex align-items-center text-start gap-2 text-white px-4 py-2 ps-3" id="faire-un-don" href="#">
+                        <img src="../assets/image/navbar/White-Heart-Emoji-PNG.webp"
+                             alt=""
+                             height="30"
+                             width="30"
+                        >Faire un <br>don
+                    </a>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
 
         <section class="banniere">
             <img src="/assets/image/map/asso_departementale.png" alt="Nos associations départementales">
         </section>
-        <section class="texte">
+        <section class="intro">
             <h1>Nos associations départementales</h1>
-            <p>Retrouvez la VMEH dans vos départements de Métropole et d’outre-mer.</p>
-            <p> méthodes via la barre de recherche ci-dessous OU la carte.</p>
-            <h1>Sélectionner votre département</h1>
+            <div class="intro-text">
+                <p>Retrouvez la VMEH dans vos départements de Métropole et d’outre-mer.</p>
+                <p> méthodes via la barre de recherche ci-dessous OU la carte.</p>
+            </div>
+
         </section>
-        <div id="map"></div>
+
+        <section class="map-interactif">
+            <h1>Sélectionner votre département</h1>
+            <div class="map-interactif-containt">
+                <div id="map"></div>
+                <div id="recherche-list">
+
+                    <input
+                            type="search"
+                            id="recherche"
+                            name="name"
+                            required
+                            minlength="0"
+                            maxlength="25"
+                            size="15"
+                            placeholder="Recherche . . ."
+                    />
+
+
+                    <button>Filtre</button>
+
+                </div>
+            </div>
+
+
+        </section>
+
         <!--   cacher au debut puis contenant les info de l'agence pares click sur la carte-->
         <img src="dinosaur.jpg" class="cacher" id="nomDepartement"/>
 
@@ -63,7 +158,7 @@
         <div class="footer-container">
             <div class="footer-info">
                 <div class="footer-asso">
-                    <div> <img src="../assets/image/reseaux/Logo-VMEH.webp" alt="logo VMEH"></div>
+                    <div> <img src="../assets/image/navbar/VMEH_Logo.webp" alt="logo VMEH"></div>
                     <p><strong>Fédération Nationale VMEH <br> Hôpital La Collégiale AP-HP</strong>  <br> 33 rue du Fer à Moulin, 75005 Paris <br> contact@federationvmeh.fr</p>
                 </div>
                 <div class="footer-plan">
@@ -106,6 +201,7 @@
 
 
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     
 </body>
 </html>

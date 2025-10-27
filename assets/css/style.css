@@ -94,7 +94,7 @@ h1 {
 .bande-contenu{
 
     margin: 0 15px;
-    padding: 20px 2%;
+    padding: 20px 0;
     align-content: flex-start;
 
 }
@@ -644,6 +644,7 @@ img{
     height: 50%;
     max-width: 100%;
     background-color: rgba(251, 186, 0, 0.2);
+    width: -webkit-fill-available;
 }
 /***************************************************************************/
 /********************************Histoire **********************************/
@@ -777,5 +778,91 @@ img{
 .date-histoire h1{
     margin:1em;
 }
+
+/********************************************************************************/
+/***************************ASSO-DEPARTEMENT.html********************************/
+
+
+
+#map { height: 350px;
+    width: 350px;
+
+}
+
+
+
+/***************************************************************************/
+/***************************map-interactif**********************************/
+.intro{
+    max-width: 1350px;
+    margin:auto;
+    padding: 1% 0;
+}
+
+.intro-text{
+    padding: 2% 2% 0;
+
+}
+
+.map-interactif{
+    max-width: 1350px;
+    margin:auto;
+
+}
+
+.map-interactif-containt{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3%;
+}
+
+#recherche-list {
+    background-color: #96E596;
+}
+
+.popup{
+    color: green;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.label{
+    color: rgb(255, 227, 13);
+}
+
+.titre{
+    color: green;
+}
+
+.grille{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1350px;
+    margin:auto;
+}
+
+.cacher{
+    display: none;
+}
+.labelPresident{
+    display: none;
+}
+.articlePresident{
+}
+
+
+.banniere img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    max-height: 400px; /* Ajustable selon besoin */
+}
+
+
+
 
 
