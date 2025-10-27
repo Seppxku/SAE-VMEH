@@ -1,4 +1,4 @@
-var map = L.map("map").setView([46.6, 2.3522219], 4.5);
+var map = L.map("map").setView([46.6, 2.3522219], 5.5);
 
 var Stadia_StamenTonerBackground = L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_toner_background/{z}/{x}/{y}{r}.{ext}', {
 	minZoom: 0,
@@ -231,8 +231,28 @@ for (let key in data) {
         ${agence.titre}
     </span>
 	`);
+    let container = document.getElementById("liste-departements");
+    container.innerHTML += `<li>${agence.titre}</li>`
 
 }
+// Après avoir créé les <li>, on récupère leur liste et on ajoute l'affichage du departement
+const items = document.querySelectorAll('#liste-departements li');
+items.forEach(li => {
+    li.addEventListener('click', () => {
+        afficherAgence(li.textContent);
+    });
+});
+
+const input = document.getElementById('recherche');
+
+input.addEventListener('input', () => {
+    const val = input.value.toLowerCase();
+    items.forEach(li => {
+        li.style.display = li.textContent.toLowerCase().includes(val) ? '' : 'none';
+    });
+});
+
+
 
 function afficherAgence(titreAgence){
 	const grille = document.querySelector(".grille"); // on affiche les conteneur de l'agence
