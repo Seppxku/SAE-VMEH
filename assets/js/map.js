@@ -255,6 +255,13 @@ input.addEventListener('input', () => {
 
 
 function afficherAgence(titreAgence){
+
+    document.querySelector('#nomDepartement').scrollIntoView({ // on deplace la vision vers se qu'on affiche
+        behavior: 'smooth',
+        block: 'start'
+    });
+
+
 	const grille = document.querySelector(".grille"); // on affiche les conteneur de l'agence
     grille.classList.remove("cacher");
 
@@ -298,6 +305,8 @@ function afficherAgence(titreAgence){
 			container.innerHTML +=`<p><strong class="label">${agence.bureau[i].role} : </strong> <span>${agence.bureau[i].nom}</span></p>`
 		}
 	}
+    container = document.getElementById("nomDepartement");
+    container.innerHTML = `<h1> ${agence.titre}</h1>`;
 
 	container = document.getElementById("Section local");
 	if(agence.sectionLocal == null){
