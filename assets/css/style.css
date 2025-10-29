@@ -901,15 +901,17 @@ img{
     max-height: 400px;
 }
 
-nomDepartement{
-    background-image: linear-gradient(130deg, #3caa64 25%, #d4bab0 75%) !important;
+#nomDepartement{
+    background-image: linear-gradient(130deg, #3caa64 25%, #d4bab0 75%);
     height: 250px; /* hauteur de la bannière */
     display: flex;
-    justify-content: center; /* centre horizontalement */
-    align-items: center;     /* centre verticalement */
-    color: white;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+#nomDepartement h1{
+    color: white;
 }
 
 
