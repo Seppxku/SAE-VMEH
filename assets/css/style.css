@@ -516,7 +516,7 @@ footer li{
     .bande-box{
         text-align: center;
         display: flex;
-        width: 75%;
+        width: 65%;
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: center;
@@ -528,7 +528,6 @@ footer li{
 
 
     .bande-contenu{
-
         margin: 0 15px;
         padding: 20px 2%;
         align-content: center;
@@ -546,7 +545,6 @@ footer li{
 
     .partenaire-contenu {
         display: flex;
-
         flex-direction: row;
         flex-wrap: wrap;
         align-content: center;
@@ -708,7 +706,6 @@ img{
     background: #FFDACC;
     position: relative;
     border-radius:6px;
-
 }
 
 .frise-chrono-contenu-droite{
@@ -867,14 +864,14 @@ img{
 }
 
 .label{
-    color: rgb(255, 227, 13);
+    color: rgb(41, 115, 38);
 }
 
 .titre{
-    color: green;
+    color: #67be15;
 }
 
-.grille{
+.grille-containt{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
