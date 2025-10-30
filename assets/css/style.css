@@ -346,292 +346,10 @@ footer li{
 /***************************************************************************/
 /***********************************RESPONSIVE**********************************/
 
-@media (max-width: 768px)  {
 
 
 
 
-    h1{
-       text-align: center;
-        font-size: xxx-large;
-
-    }
-
-
-    body{
-        max-width: 768px;
-    }
-
-
-    /***************************************************************************/
-    /*******************************PRESENTATION********************************/
-    .presentation{
-        text-align: center;
-        width: 100%;
-        padding:5em 0;
-
-        background-image: url("../image/accueil/trois-bulles.svg");
-        background-repeat: no-repeat;
-        background-size: max(50%, 50%);
-        background-position: right 4% top 10%;
-
-
-
-    }
-
-
-    /***************************************************************************/
-    /*******************************CHIFFRE-CLE*********************************/
-
-    .bande {
-        width: 100%;
-        margin: 0;
-    }
-
-
-        .bande h1 {
-            padding-top: 5%;
-
-        }
-
-        .bande h3{
-            font-size: xx-large;
-        }
-
-        .bande-box {
-            display: flex;
-            width: 75%;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            margin: auto;
-            font-size: medium;
-            padding: 1%;
-
-
-        }
-
-        .bande-contenu {
-            text-align: center;
-
-        }
-
-        /***************************************************************************/
-        /*******************************PARTENAIRE**********************************/
-
-        .partenaire {
-            justify-content: center;
-            display: block;
-            margin: 0;
-
-        }
-
-
-        .partenaire-contenu {
-            display: flex;
-            justify-content: center;
-            width: 50%;
-            margin: auto;
-
-        }
-
-        .partenaire-bouton {
-            display: flex;
-            background-color: #f51818;
-            border-radius: 30px;
-            width: 30%;
-            justify-content: center;
-            align-items: center;
-            margin: auto;
-            padding: 1%;
-
-
-        }
-
-        .partenaire-bouton a {
-            text-decoration: none;
-            font-size: larger;
-            color: white;
-            text-align: center;
-
-        }
-
-
-        /***************************************************************************/
-        /***********************************FOOTER**********************************/
-
-        .footer {
-            max-width: 768px;
-
-        }
-
-        .footer-info {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-        }
-
-        .footer-plan {
-            padding: 2em;
-        }
-
-
-
-}
-
-
-@media (min-width: 768px) and (max-width: 1200px) {
-
-    h1{
-
-        margin:auto;
-    }
-
-    /***************************************************************************/
-    /*******************************PRESENTATION********************************/
-    .presentation{
-        text-align: center;
-        width: 100%;
-        padding:5em 0;
-
-        background-image: url("../image/accueil/trois-bulles.svg") ;
-        background-repeat: no-repeat;
-        background-size: max(50%, 50%);
-        background-position: right 4% top 10%;
-
-
-
-    }
-    /***************************************************************************/
-    /*******************************CHIFFRE-CLE*********************************/
-
-    .bande {
-        padding-top: 1%;
-        width: 100%;
-        margin: 0;
-    }
-
-    .bande-box{
-        text-align: center;
-        display: flex;
-        width: 65%;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
-        font-size: medium;
-        padding: 1%;
-    }
-
-
-    .bande-contenu{
-        margin: 0 15px;
-        padding: 20px 2%;
-        align-content: center;
-
-    }
-
-    /***************************************************************************/
-    /*******************************PARTENAIRE**********************************/
-    .partenaire{
-        padding-top: 1%;
-        max-width: 1350px;
-        display: block;
-        margin: auto auto 20px;
-    }
-
-    .partenaire-contenu {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-content: center;
-        justify-content: center;
-        align-items: center;
-        column-gap: 110px;
-        margin: auto;
-    }
-
-
-
-
-    .partenaire-bouton {
-        display: flex;
-        background-color: #f51818;
-
-        border-radius: 30px;
-        width: 40%;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
-        padding: 1%;
-
-
-
-    }
-
-
-
-    /***************************************************************************/
-    /*********************************CARROUSEL*********************************/
-
-
-    .carousel{
-    width: 50%;
-}
-img{
-    max-height: 500px;
-}
-.main-carrousel{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-.btn-voir-articles {
-    display: block;
-    margin: 1em auto 2em auto; /* centré et espacé du carrousel */
-    text-align: center;
-    width: fit-content;
-    background-color: #3CAA64;
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    margin-top: clamp(0.5em, 1vw, 1em);
-    font-size: clamp(0.9rem, 2vw, 1.2rem);
-    padding: clamp(0.6em, 1.5vw, 1em) clamp(1.5em, 4vw, 3em);
-    border-radius: 50px;
-}
-
-.btn-voir-articles:hover {
-    background-color: #2a7c49;
-}
-
-
-
-    /***************************************************************************/
-    /***********************************FOOTER**********************************/
-
-    .footer {
-        max-width: 1200px;
-
-    }
-
-    .footer-info {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-
-    }
-
-    .footer-plan {
-        padding: 2em;
-    }
-
-}
 
 
 
@@ -647,15 +365,19 @@ img{
 /***************************************************************************/
 /********************************Histoire **********************************/
 .histoire{
-    max-width: 1350px;
+    max-width: 1200px;
     margin: auto;
 
 }
 
 .histoire-texte{
-    padding: 1em !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    padding:  10px 2em ;
+    margin-left: auto ;
+    margin-right: auto ;
+}
+
+.histoire h1{
+    padding-left: 1em;
 }
 
 .histoire img{
@@ -911,6 +633,371 @@ img{
     color: white;
 }
 
+@media (min-width: 768px) and (max-width: 1200px) {
+
+    h1{
+
+        margin:auto;
+    }
+
+    /***************************************************************************/
+    /*******************************PRESENTATION********************************/
+    .presentation{
+        text-align: center;
+        width: 100%;
+
+        background-image: url("../image/accueil/trois-bulles.svg") ;
+        background-repeat: no-repeat;
+        background-size: max(50%, 50%);
+        background-position: right 4% top 10%;
 
 
 
+    }
+    /***************************************************************************/
+    /*******************************CHIFFRE-CLE*********************************/
+
+    .bande {
+        padding-top: 1%;
+        width: 100%;
+        margin: 0;
+    }
+
+    .bande-box{
+        text-align: center;
+
+        width: 65%;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        font-size: medium;
+        padding: 1%;
+    }
+
+
+    .bande-contenu{
+        margin: 0 15px;
+        padding: 20px 2%;
+        align-content: center;
+
+    }
+
+    /***************************************************************************/
+    /*******************************PARTENAIRE**********************************/
+    .partenaire{
+        padding-top: 1%;
+        max-width: 1100px;
+
+    }
+
+
+    .partenaire-bouton {
+        width: 40%;
+    }
+
+
+
+    /***************************************************************************/
+    /*********************************CARROUSEL*********************************/
+
+
+    .carousel{
+        width: 50%;
+    }
+    img{
+        max-height: 500px;
+    }
+    .main-carrousel{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn-voir-articles {
+        display: block;
+        margin: 1em auto 2em auto; /* centré et espacé du carrousel */
+        text-align: center;
+        width: fit-content;
+        background-color: #3CAA64;
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        margin-top: clamp(0.5em, 1vw, 1em);
+        font-size: clamp(0.9rem, 2vw, 1.2rem);
+        padding: clamp(0.6em, 1.5vw, 1em) clamp(1.5em, 4vw, 3em);
+        border-radius: 50px;
+    }
+
+    .btn-voir-articles:hover {
+        background-color: #2a7c49;
+    }
+
+
+
+    /***************************************************************************/
+    /***********************************FOOTER**********************************/
+
+    .footer {
+        max-width: 1200px;
+
+    }
+
+    .footer-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .footer-plan {
+        padding: 2em;
+    }
+    /***************************************************************************/
+    /***************************Histoire.html*****************************/
+
+    .histoire {
+        max-width: 1200px;
+        margin: auto;
+
+    }
+
+    .histoire h1{
+        padding-left: 2em;
+    }
+
+    .histoire-texte{
+        padding: 2em ;
+        margin-left: auto ;
+        margin-right: auto ;
+    }
+
+    .histoire img{
+        width: 100px;
+        height: auto;
+        border-radius: 30px;
+        margin:15px 10px 10px 10px;
+
+    }
+
+    .histoire-personnage{
+        display: flex;
+        flex-direction:row;
+        padding: 1em;
+        align-items: center;
+
+    }
+
+
+
+
+}
+
+
+
+@media screen and (max-width: 768px)  {
+
+
+
+
+    h1{
+        text-align: center;
+        font-size: xxx-large;
+
+    }
+
+
+    body{
+        max-width: 768px;
+    }
+
+
+    /***************************************************************************/
+    /*******************************PRESENTATION********************************/
+    .presentation{
+        text-align: center;
+        width: 100%;
+
+
+        background-image: url("../image/accueil/trois-bulles.svg");
+        background-repeat: no-repeat;
+        background-size: max(50%, 50%);
+        background-position: right 4% top 10%;
+
+
+
+    }
+
+
+    /***************************************************************************/
+    /*******************************CHIFFRE-CLE*********************************/
+
+    .bande {
+        width: 100%;
+        margin: 0;
+    }
+
+
+    .bande h1 {
+        padding-top: 5%;
+
+    }
+
+    .bande h3{
+        font-size: xx-large;
+    }
+
+    .bande-box {
+        flex-direction: column;
+        align-items: center;
+        font-size: medium;
+    }
+
+    .bande-contenu {
+        text-align: center;
+    }
+
+    /***************************************************************************/
+    /*******************************PARTENAIRE**********************************/
+
+    .partenaire {
+
+        margin: 0;
+
+    }
+
+
+    .partenaire-contenu {
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        margin: auto;
+
+    }
+
+    .partenaire-bouton {
+
+
+        width: 30%;
+        align-items: center;
+        margin: auto;
+        padding: 1%;
+
+
+    }
+
+
+
+    /***************************************************************************/
+    /***********************************FOOTER**********************************/
+
+    .footer {
+        max-width: 768px;
+
+    }
+
+    .footer-info {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-plan {
+        padding: 2em;
+    }
+
+    /*!***************************************************************************!*/
+    /*!********************************Histoire **********************************!*/
+
+
+    .histoire-texte{
+        padding:2em;
+    }
+
+
+    /***************************************************************************/
+    /***************************Frise chronologique*****************************/
+
+
+    .frise-chrono-contenu{
+
+        width: 100%;
+        padding-right: 20px;
+
+    }
+
+
+    .frise-chrono-contenu .frise-chrono{
+        display: flex;
+        flex-direction: column;
+
+
+    }
+
+    .frise-chrono{
+        max-width: 700px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .frise-chrono-text{
+        background: #FFDACC;
+        border-radius:6px;
+    }
+
+
+
+    .frise-chrono-contenu-gauche{
+        left:0;
+    }
+
+    .frise-chrono img{
+        position: initial;
+    }
+
+
+
+    .frise-chrono::after{
+        visibility: hidden;
+
+
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 100%;
+        background: #000000;
+        top: 50px;
+        left: 50%;
+        margin-left: -1px;
+        z-index: -1;
+    }
+    .frise-chrono-contenu-droite img{
+        left:0;
+    }
+    .frise-chrono-contenu-droite{
+        left: 0;
+
+    }
+
+    .frise-chrono-gauche-fleche{
+        visibility: hidden;
+
+    }
+
+    .frise-chrono-droite-fleche{
+        visibility: hidden;
+    }
+
+    .date-histoire{
+       max-width: 768px;
+    }
+
+
+
+
+
+
+}
