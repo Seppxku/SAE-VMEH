@@ -503,7 +503,8 @@ footer li{
 
 
 
-#map { height: 600px;
+#map {
+    height: 600px;
     width: 600px;
 
 }
@@ -539,15 +540,23 @@ footer li{
 #recherche-list {
     text-align: left;
     margin-top: 20px;
-    background-color: #96E596;
+    background-color: #a8efa8;
     padding: 15px;
-    border-radius: 15px;
     width: 300px;
     height: 400px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.barre-recherche{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.barre-recherche button{
+    background-color: #a8efa8;
+
 }
 
 /* Input */
@@ -790,6 +799,13 @@ footer li{
 
     }
 
+    /***************************************************************************/
+    /***************************ASSO-DEP.html***********************************/
+
+        .map-interactif-containt{
+            display: flex;
+            flex-direction: column;
+        }
 
 
 
@@ -901,6 +917,7 @@ footer li{
     .footer-info {
         justify-content: center;
         align-items: center;
+        flex-direction: column;
     }
 
     .footer-plan {
@@ -993,6 +1010,28 @@ footer li{
 
     .date-histoire{
        max-width: 768px;
+    }
+    /***************************************************************************/
+    /***************************ASSO-DEP.html***********************************/
+
+
+    #map {
+        max-width: 700px;
+        height: 300px;
+        width: 300px;
+
+    }
+    .map-interactif{
+        padding: 10px;
+    }
+
+    .map-interactif-containt{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .intro-text{
+        padding: 1em;
     }
 
 

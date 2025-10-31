@@ -8,6 +8,9 @@
           rel="stylesheet"
           integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
           crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
     <title>VMEH</title>
@@ -113,6 +116,31 @@
                 </div>
 
             </div>
+
+        </section>
+        <section class="map-interactif">
+            <h1>Sélectionner votre département</h1>
+            <div class="map-interactif-containt">
+                <div id="map"></div>
+                <div id="recherche-list">
+
+                    <input
+                            type="search"
+                            id="recherche"
+                            name="name"
+                            required
+                            minlength="0"
+                            maxlength="25"
+                            size="15"
+                            placeholder="Recherche . . ."
+                    />
+                    <ul id="liste-departements"></ul>
+
+
+
+                </div>
+            </div>
+
 
         </section>
         <section class="chiffe-cle">
@@ -228,7 +256,9 @@
 
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+<script src="../assets/js/map.js"></script>
 
 </body>
 </html>
