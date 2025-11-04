@@ -619,13 +619,19 @@ footer li{
 .articlePresident{
 }
 
+.banniere{
+    background-image:url(https://www.vmeh.fr/wp-content/uploads/2023/11/Bandeau-associations_departementales3.jpg);
+    height: 250px; /* hauteur de la bannière */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
 
-.banniere img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-    max-height: 400px;
+.banniere h1 {
+    color:black;
+    text-align: center;
 }
 
 #nomDepartement{
@@ -1057,6 +1063,7 @@ footer li{
         padding: 20px;
         max-width: 1350px;
         margin:auto;
+        text-align: center;
     }
 
 
