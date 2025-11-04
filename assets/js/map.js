@@ -256,11 +256,11 @@ input.addEventListener('input', () => {
 
 function afficherAgence(titreAgence){
 
-    document.querySelector('#nomDepartement').scrollIntoView({ // on deplace la vision vers se qu'on affiche
-        behavior: 'smooth',
-        block: 'start'
-    });
-
+    // si on est deja sur la page de la map on fait rien mais si on vien d'ailleur on va sur la page de la map
+    if (document.title !== "VMEH - NOS ASSOCIATIONS DÉPARTEMENTALES") {
+        window.location.href = `./pages/nos-associations-departementales.html?agence=${encodeURIComponent(titreAgence)}`;
+        return; // le reste va pas s'exec de toute façon mais au cas ou
+    }
 
 	const grille = document.querySelector(".grille"); // on affiche les conteneur de l'agence
     grille.classList.remove("cacher");
@@ -271,7 +271,7 @@ function afficherAgence(titreAgence){
 	let agence = null;
 	for (let key in data) {
 		agence= data[key];
-		if (agence.titre==titreAgence) break;
+		if (agence.titre===titreAgence) break;
 	}
 	let container = document.getElementById("presidence");
 	if(agence.president != null){
@@ -318,4 +318,9 @@ function afficherAgence(titreAgence){
 			container.innerHTML +=`<p>${agence.sectionLocal[i]}</p>`
 		}
 	}
+
+    document.querySelector('#nomDepartement').scrollIntoView({ // on deplace la vision vers se qu'on affiche
+        behavior: 'smooth',
+        block: 'start'
+    });
 }

@@ -808,6 +808,22 @@ footer li{
 
 
 
+    /********************************************************************************/
+    /**********************asso departemental.html **********************************/
+    .grille-containt{
+        display: inline;
+        gap: 30px;
+        padding: 20px;
+        max-width: 1350px;
+        margin:auto;
+        text-align: center;
+    }
+    .grille-containt p{
+        text-align: center;
+    }
+
+
+
 }
 
 
@@ -1033,7 +1049,15 @@ footer li{
         padding: 1em;
     }
 
-
+    /********************************************************************************/
+    /**********************asso departemental.html **********************************/
+    .grille-containt{
+        display: inline;
+        gap: 30px;
+        padding: 20px;
+        max-width: 1350px;
+        margin:auto;
+    }
 
 
 
