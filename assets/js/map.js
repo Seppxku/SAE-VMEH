@@ -313,7 +313,7 @@ function afficherAgence(titreAgence){
 		}
 	}
 
-    container = document.getElementById("carrousel_actu");
+    container = document.getElementById("carouselInner");
     if(agence.actualiter == null){
         container.innerHTML = `<p class="label">info a venir</p>`;
     } else{
