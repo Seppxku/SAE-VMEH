@@ -17,11 +17,6 @@ const data = {
 			courriel: "vmeh01.contact@gmail.com",
 			tel: "06 87 19 12 17"
 			},
-		bureau: null,
-		sectionLocal: null,
-		actu: `Ludovic Orge – Bénévole – VMEH 01 (23/01/2023)
-		Les bénévoles VMEH étaient présents à la Journée Annuelle de l'Expérience Patient 2023 - (JAXP 2023). Nous sommes ressortis plus motivés que jamais pour continuer à travailler avec dévouement et à plaider en faveur de l'amélioration de l'expérience des patients dans tous les aspects des soins de santé.
-		`
 	},
 
 	Aisne: {
@@ -54,6 +49,20 @@ const data = {
 			"Saint-Quentin",
 			"Soissons (Monique Vigues)"
 		],
+        actualiter: [
+            {
+                lien:"https://www.vmeh.fr/festival-des-solidarites-2024/",
+                img: "Festivale_Solidariter.jpg" ,
+                titre: "Festival des Solidarités 2024 (15/11/2024)",
+                text: "Découverte et visite en EHPAD de la maison de retraite Bellevue les 19 et 26 novembre 2024."
+            },
+            {
+                lien:"https://www.vmeh.fr/vmeh02-un-pas-en-avant-pour-la-communication/",
+                img: "FredericFauveau.jpg" ,
+                titre: "VMEH02, « Un pas en avant » pour la Communication (22/03/2024)",
+                text: "le 20 mars 2024 les benevole du 02 on accueilli Frédéric Fauveau, vice-président de la Fédération Nationale VMEH."
+            }
+        ]
 		
 	},
 	Allier: {
@@ -114,8 +123,6 @@ const data = {
 			courriel: "alberturbani@yahoo.fr",
 			tel: "06 11 18 96 29"
 			},
-		bureau: null,
-		sectionLocal: null,
 	},
 	Ardeche:{
 		coo: [44.40, 4.25],
@@ -124,13 +131,11 @@ const data = {
 			courriel: "francoisebalay07@gmail.com",
 			tel: "06 66 99 96 24"
 			},
-		bureau: null,
-		sectionLocal: null,
+
 	},
 	Ardennes:{
 		coo: [49.35, 4.40],
 		titre: "08 – Ardennes",
-		president: null,
 		bureau: [
 			{
 				role:"Vice-présidente",
@@ -157,7 +162,7 @@ const data = {
 				nom:"03 24 26 44 07"
 			},
 		],
-		sectionLocal: null,
+
 	},
 	Ariège: {
 		coo: [42.932629, 1.443469],
@@ -166,17 +171,10 @@ const data = {
 			courriel: "pierre-de-robert@orange.fr",
 			tel: "06 10 92 76 18"
 			},
-		bureau: null,
-		sectionLocal: null,
-		actu: null
 	},
 	Aube: {
 		coo: [48.299999, 4.08333],
 		titre: "10 – Aube",
-		president: null,
-		bureau: null,
-		sectionLocal: null,
-		actu: null
 	},
 	Aude: {
 		coo: [43.183331, 3],
@@ -185,9 +183,6 @@ const data = {
 			courriel: "vmeh11@outlook.fr",
 			tel: "04 68 94 78 54 <p>Moblie : 07 83 00 81 31</p>"
 			},
-		bureau: null,
-		sectionLocal: null,
-		actu:null
 	},
 	BouchesduRhône: {
 		coo: [43.5911679, 5.3102505],
@@ -202,8 +197,6 @@ const data = {
 				nom:"Monique BLANCHARD-MORTUAIRE"
 			}
 		],
-		sectionLocal: null,
-		actu: null
 	},
 	Calvados: {
 		coo: [49.02, 0.15],
@@ -212,9 +205,7 @@ const data = {
 			courriel: "koncewieczmonique@gmail.com",
 			tel: "02 31 78 84 90<p>Moblie : 06 98 82 64 95</p>"
 			},
-		bureau: null,
-		sectionLocal: null,
-		actu: null
+
 	},
 }
 
@@ -260,6 +251,10 @@ function afficherAgence(titreAgence){
     if (document.title !== "VMEH - NOS ASSOCIATIONS DÉPARTEMENTALES") {
         window.location.href = `./pages/nos-associations-departementales.html?agence=${encodeURIComponent(titreAgence)}`;
         return; // le reste va pas s'exec de toute façon mais au cas ou
+    }else{
+        const url = new URL(window.location);
+        url.searchParams.set('agence', titreAgence);
+        history.replaceState(null, '', url);
     }
 
 	const grille = document.querySelector(".grille"); // on affiche les conteneur de l'agence
@@ -311,13 +306,32 @@ function afficherAgence(titreAgence){
 	container = document.getElementById("Section local");
 	if(agence.sectionLocal == null){
 		container.innerHTML = `<p class="label">info a venir</p>`;
-	}
-	else{
+	} else{
 		container.innerHTML = "";
 		for (let i in agence.sectionLocal){
 			container.innerHTML +=`<p>${agence.sectionLocal[i]}</p>`
 		}
 	}
+
+    container = document.getElementById("carousel_actu");
+    if(agence.actualiter == null){
+        container.innerHTML = `<p class="label">info a venir</p>`;
+    } else{
+        container.innerHTML = "";
+        for (let i in agence.actualiter){
+            container.innerHTML +=`
+                <a href="${agence.actualiter[i].lien}" target="_blank" class="carousel-link">
+                    <div class="carousel-item active">
+                        <img src="../assets/image/map/${agence.actualiter[i].img}" class="d-block w-100" alt="...">
+                            <div class="carousel-caption bottom-0 d-none d-md-block">
+                                <h3>${agence.actualiter[i].titre}</h3>
+                                <p class="fs-5 d-none d-lg-block">${agence.actualiter[i].text}</p>
+                            </div>
+                    </div>
+                </a>`
+        }
+    }
+
 
     document.querySelector('#nomDepartement').scrollIntoView({ // on deplace la vision vers se qu'on affiche
         behavior: 'smooth',

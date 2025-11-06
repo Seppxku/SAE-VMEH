@@ -49,7 +49,7 @@
                             ACTUALITÉS
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">VMEH EN RÉGION</a></li>
+                            <li><a class="dropdown-item" href="./carrousel.html">VMEH EN RÉGION</a></li>
                             <li><a class="dropdown-item" href="#">VMEH EN VIDÉO</a></li>
                             <li><a class="dropdown-item" href="#">VMEH LA PRESSE EN PARLE</a></li>
                             <li><a class="dropdown-item" href="#">VMEH PORTRAIT DE NOS BÉNÉVOLES</a></li>
@@ -142,13 +142,21 @@
                     <div id="Section local"></div>
                 </article>
 
-                <article>
+                <article id="article_actu">
                     <h1>Dernières actualités</h1>
-                    <p id="actu"></p>
+                    <div class="carousel slide">
+                        <div id="carousel_actu" class="carousel-inner"></div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carrousel_portrait" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carrousel_portrait" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
                 </article>
-
             </div>
-
         </section>
         <!-- fini de la section cacher-->
     </main>
