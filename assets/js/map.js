@@ -60,7 +60,7 @@ const data = {
                 lien:"https://www.vmeh.fr/vmeh02-un-pas-en-avant-pour-la-communication/",
                 img: "FredericFauveau.jpg" ,
                 titre: "VMEH02, « Un pas en avant » pour la Communication (22/03/2024)",
-                text: "le 20 mars 2024 les benevole du 02 on accueilli Frédéric Fauveau, vice-président de la Fédération Nationale VMEH."
+                text: "les benevole du 02 on accueilli Frédéric Fauveau, vice-président de VMEH."
             }
         ]
 		
@@ -313,15 +313,17 @@ function afficherAgence(titreAgence){
 		}
 	}
 
-    container = document.getElementById("carousel_actu");
+    container = document.getElementById("carrousel_actu");
     if(agence.actualiter == null){
         container.innerHTML = `<p class="label">info a venir</p>`;
     } else{
         container.innerHTML = "";
+        let first=true;
         for (let i in agence.actualiter){
+
             container.innerHTML +=`
                 <a href="${agence.actualiter[i].lien}" target="_blank" class="carousel-link">
-                    <div class="carousel-item active">
+                    <div class="carousel-item ${first? "active":""}">
                         <img src="../assets/image/map/${agence.actualiter[i].img}" class="d-block w-100" alt="...">
                             <div class="carousel-caption bottom-0 d-none d-md-block">
                                 <h3>${agence.actualiter[i].titre}</h3>
@@ -329,7 +331,17 @@ function afficherAgence(titreAgence){
                             </div>
                     </div>
                 </a>`
+            first= false;
         }
+
+        // Supprimer l'instance existante si elle existe
+        const elem = document.getElementById("carrousel_actu");
+        const existing = bootstrap.Carousel.getInstance(elem);
+        if (existing) existing.dispose();
+
+// Réinitialiser proprement le carrousel
+        new bootstrap.Carousel(elem);
+
     }
 
 
