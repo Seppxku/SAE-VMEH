@@ -3,17 +3,16 @@
     box-sizing: border-box;
 }
 
-html {
+html, body {
     width: 100%;
-    padding: 0;
+    height: 100%;
     margin: 0;
-}
-
-body{
+    padding: 0;
     font-family: 'Raleway', Helvetica, Arial, Lucida, sans-serif;
     font-size: 20px;
     line-height: 1.7em;
     font-weight: 500;
+    overflow-x: hidden; /* évite le scroll horizontal */
 }
 
 nav {
@@ -30,9 +29,10 @@ nav {
 
 
 h1 {
-    margin-top: 20px;
     color: #3CAA64;
     text-decoration: none;
+    font-weight: bold;
+    margin-top: 1em;
 }
 
 .baseline{
@@ -343,7 +343,299 @@ footer li{
 }
 
 /***************************************************************************/
-/***********************************RESPONSIVE**********************************/
+/*********************************DEVENIR-BENEVOLE*********************************/
+
+#devenir-benevole h1 {
+    font-size: 2rem;
+}
+
+#devenir-benevole h2 {
+    color: #3CAA64;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1em;
+    width: 100%;
+    font-size: 1.7rem;
+    text-align: center;
+    padding: 0 2em;
+}
+
+#devenir-benevole p, ul {
+    padding: 0 3em;
+}
+
+#que-m\'apporte-le-benevolat-VMEH h2 {
+    padding: 0;
+}
+
+.formation-card {
+    text-align: center;
+}
+
+.formation-title {
+    font-weight: 700;
+    font-size: 1.4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    padding-top: 1em;
+}
+
+.formation-card p {
+    max-width: 90%;
+    font-size: 1rem;
+}
+
+
+
+
+#videos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+#videos img {
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+#videos img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+.modal-body iframe {
+    width: 100%;
+    height: 60vh;
+}
+
+#temoignages-de-benevoles {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+#temoignages-de-benevoles h2 {
+    color: #3CAA64;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+
+#carouselTemoignages {
+    max-width: 100%;
+    width: 100%;
+}
+
+
+#carouselTemoignages .card {
+    background-color: #ffe9e0;
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 350px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.6;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+
+
+#carouselTemoignages .card img.rounded-circle {
+    display: block;
+    margin: 0 auto 1rem;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+
+#carouselTemoignages p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+#carouselTemoignages h6 {
+    margin: 0;
+    font-weight: 700;
+}
+
+#carouselTemoignages small {
+    color: #555;
+}
+
+
+#carouselTemoignages img.rounded-circle {
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+}
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+    width: 2rem;
+    height: 2rem;
+}
+
+
+
+
+.formulaire-rejoindre {
+    background-color: #34A853;
+}
+
+.form-card {
+    background-color: #34A853;
+    max-width: 400px;
+    border-radius: 6px;
+}
+
+.form-control,
+.form-select {
+    border: none;
+    border-radius: 4px;
+    height: 40px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.3);
+    outline: none;
+}
+
+.btn-dark {
+    background-color: #327C4D;
+    border: none;
+}
+
+.btn-dark:hover {
+    background-color: #223a33;
+}
+
+.text-white-50 {
+    opacity: 0.8;
+}
+
+@media (min-width: 992px) {
+    #devenir-benevole h1 {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 0.5em;
+    }
+
+    #devenir-benevole h2 {
+        text-align: start;
+        padding-left: 1.7em;
+
+    }
+
+    #devenir-benevole ul {
+        padding-left: 5em;
+    }
+
+    .formation-card {
+        margin-right: 2.5em;
+    }
+
+    .formation-card p {
+        padding: 0;
+    }
+
+    .formation-terrain h3 {
+        padding-bottom: 1em;
+    }
+
+    #videos {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 7rem;
+
+    }
+
+    #videos img {
+        max-width: 1000px;
+        height: auto;
+    }
+
+    .form-card{
+        max-width: 800px;
+        padding: 3rem 4rem;
+        margin: 0 auto;
+    }
+
+
+    .form-card form{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+        row-gap: 1.25rem;
+    }
+
+    .form-card form .mb-3 { margin-bottom: 0; }
+
+    .form-card form .mb-3:has(#mail),
+    .form-card form .mb-3:has(#confirmMail),
+    .form-card form .mb-3:has(#adresse),
+    .form-card form .mb-3:has(#password),
+    .form-card form .mb-3:has(#confirmPassword),
+    .form-card form .text-center,
+    .form-card p.small {
+        grid-column: 1 / -1;
+    }
+
+
+
+    .form-card input,
+    .form-card select {
+        width: 100%;
+        height: 46px;
+        font-size: 1rem;
+    }
+
+    .form-card .text-center {
+        display: flex;
+        justify-content: center;
+        margin-top: .5rem;
+    }
+
+    .form-card button {
+        background-color: #2b7042;
+        border: none;
+        padding: 1rem 3rem;
+        font-size: 1.2rem;
+        font-weight: 700;
+        border-radius: 8px;
+        transition: all 0.2s ease-in-out;
+        min-width: 250px;
+    }
+
+    .form-card button:hover {
+        background-color: #225b36;
+        transform: scale(1.03);
+    }
+
+
+
+
+
+
+
+
+
+}
+
+
 
 
 
@@ -845,12 +1137,10 @@ footer li{
 
     h1{
         text-align: center;
-        font-size: xxx-large;
-
     }
 
 
-    body{
+    //*body{
         max-width: 768px;
     }
 
