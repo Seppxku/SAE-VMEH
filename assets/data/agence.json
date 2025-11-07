@@ -1,0 +1,186 @@
+{
+  "01 – Ain": {
+    "coo": [46.05, 5.20],
+    "president": { "nom":"Ludovic ORGÉ",
+      "courriel": "vmeh01.contact@gmail.com",
+      "tel": "06 87 19 12 17"
+    }
+  },
+
+  "02 – Aisne": {
+    "coo": [49.30, 3.40],
+    "president": { "nom":"René OUBRY",
+      "courriel": "moniqueviguesbillon@gmail.com",
+      "tel": "06 89 60 47 65 (SMS de préférence)"
+    },
+    "bureau": [
+      {
+        "role": "Coordinateur",
+        "nom":"Hubert ISTER"
+
+      },
+      {
+        "role":"Vice-président",
+        "nom":"Monique Vigues"
+      },
+      {
+        "role":"Trésorier",
+        "nom":"Hubert Ister"
+      }
+    ],
+    "sectionLocal": ["Château-Thierry (Christiane Krabal)",
+      "Chauny",
+      "Crécy sur Serre",
+      "Laon (Catherine Religieux)",
+      "Le Nouvion en Thiérache (en sommeil)",
+      "Saint-Quentin",
+      "Soissons (Monique Vigues)"
+    ],
+    "actualiter": [
+      {
+        "lien":"https://www.vmeh.fr/festival-des-solidarites-2024/",
+        "img": "Festivale_Solidariter.jpg" ,
+        "titre": "Festival des Solidarités 2024 (15/11/2024)",
+        "text": "Découverte et visite en EHPAD de la maison de retraite Bellevue les 19 et 26 novembre 2024."
+      },
+      {
+        "lien":"https://www.vmeh.fr/vmeh02-un-pas-en-avant-pour-la-communication/",
+        "img": "FredericFauveau.jpg" ,
+        "titre": "VMEH02, « Un pas en avant » pour la Communication (22/03/2024)",
+        "text": "les benevole du 02 on accueilli Frédéric Fauveau, vice-président de VMEH."
+      }
+    ]
+
+  },
+  "03 – Allier": {
+    "coo": [46.25, 3.10],
+    "president": { "nom":"Dominique BARDIN",
+      "courriel": "vmeh03@orange.fr",
+      "tel": "06 82 10 81 22"
+    },
+    "bureau": [
+      {
+        "role": "Présidente ",
+        "nom":"Dominique BARDIN"
+
+      },
+      {
+        "role":"Vice-présidente",
+        "nom":"Jacqueline VALLET"
+      },
+      {
+        "role": "Secrétaire",
+        "nom":"Michel THIZY"
+      },
+      {
+        "role":"Trésorier",
+        "nom":"Jacqueline PISSOT"
+      }
+    ],
+    "sectionLocal": ["<strong>Établissements visités</strong>",
+      "<strong>MOULINS</strong>",
+      "Responsable : jacqueline.pissot@orange.fr",
+      "Centre Hospitalier MOULINS YZEURE",
+      "EHPAD Saint François",
+      "EHPAD La Gloriette",
+      "EHPAD L’Ermitage",
+      "EHPAD Les Magnolias",
+      "EHPAD Les Cèdres",
+      "EHPAD Les Tilleuls",
+      "EHPAD Les Mariniers",
+      "EHPAD La Source – Souvigny",
+
+      "<strong>SAINT-POURCAIN</strong>",
+      "Responsable : claude.bouchaudy@orange.fr",
+      "EHPAD Saint François",
+
+      "<strong>VICHY</strong>",
+      "Responsable : Dominique Bardin vmeh03@orange.fr",
+      "Centre Hospitalier Jacques Lacarin VICHY",
+      "EHPAD Le Lys – ViCHY",
+      "EHPAD Résidence les Jardins de VENDAT"
+    ]
+
+  },
+  "06 – Alpes-Maritimes":{
+    "coo": [43.50, 7.10],
+    "president": { "nom":"Albert URBANI",
+      "courriel": "alberturbani@yahoo.fr",
+      "tel": "06 11 18 96 29"
+    }
+  },
+  "07 – Ardèche":{
+    "coo": [44.40, 4.25],
+    "president": { "nom":"Françoise BALAŸ",
+      "courriel": "francoisebalay07@gmail.com",
+      "tel": "06 66 99 96 24"
+    }
+  },
+  "08 – Ardennes":{
+    "coo": [49.35, 4.40],
+    "bureau": [
+      {
+        "role":"Vice-présidente",
+        "nom":"Edith CARREL"
+      },
+      {
+        "role":"Courriel",
+        "nom":" edith.carrel08@gmail.com"
+      },
+      {
+        "role":"Tél",
+        "nom":"03 24 38 21 81"
+      },
+      {
+        "role":"Vice-présidente",
+        "nom":"Fernanda GUENNELON"
+      },
+      {
+        "role":"Courriel ",
+        "nom":"lucien.guennelon@gmail.com"
+      },
+      {
+        "role":"Tél",
+        "nom":"03 24 26 44 07"
+      }
+    ]
+
+  },
+  "09 – Ariège": {
+    "coo": [42.932629, 1.443469],
+    "president": { "nom":"Pierre De ROBERT",
+      "courriel": "pierre-de-robert@orange.fr",
+      "tel": "06 10 92 76 18"
+    }
+  },
+  "10 – Aube": {
+    "coo": [48.299999, 4.08333]
+  },
+  "11 – Aude": {
+    "coo": [43.183331, 3],
+    "president": { "nom":"Geneviève CANAPA",
+      "courriel": "vmeh11@outlook.fr",
+      "tel": "04 68 94 78 54 <p>Moblie : 07 83 00 81 31</p>"
+    }
+  },
+  "13 – Bouches-du-Rhône": {
+    "coo": [43.5911679, 5.3102505],
+    "president": { "nom":"Danièle TIRAN",
+      "courriel": "vmeh13@orange.fr",
+      "tel": " 04 91 50 72 39<p>Moblie : 06 50 13 55 34</p>"
+    },
+    "bureau": [
+      {
+        "role":"Secrétaire-Trésorière",
+        "nom":"Monique BLANCHARD-MORTUAIRE"
+      }
+    ]
+  },
+  "14 – Calvados": {
+    "coo": [49.02, 0.15],
+    "president": { "nom":"Monique KONCEWIEC ET Sylvie GAREAU",
+      "courriel": "koncewieczmonique@gmail.com",
+      "tel": "02 31 78 84 90<p>Moblie : 06 98 82 64 95</p>"
+    }
+  }
+}

@@ -621,6 +621,7 @@ footer li{
 
 .banniere{
     background-image:url(https://www.vmeh.fr/wp-content/uploads/2023/11/Bandeau-associations_departementales3.jpg);
+    background-size: cover;
     height: 250px; /* hauteur de la bannière */
     display: flex;
     justify-content: center;
