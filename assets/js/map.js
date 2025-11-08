@@ -84,11 +84,11 @@ function afficherAgence(titreAgence){
         history.replaceState(null, '', url);
     }
 
-	const grille = document.querySelector(".grille"); // on affiche les conteneur de l'agence
-    grille.classList.remove("cacher");
+	let cacher = document.querySelector(".grille"); // on affiche les conteneur de l'agence
+    cacher.classList.remove("cacher");
 
-	const image = document.getElementById("nomDepartement"); // on affiche l'image avec le nom du departement
-    image.classList.remove("cacher");
+    cacher = document.getElementById("nomDepartement"); // on affiche l'image avec le nom du departement
+    cacher.classList.remove("cacher");
 
 /////////////////////////////////on trouve l'agence////////////////////////////////////////////////
     const cacheData = localStorage.getItem("departementsData");
@@ -148,8 +148,15 @@ function afficherAgence(titreAgence){
 
     container = document.getElementById("carouselInner");
     if(agence.actualiter == null){
+        container.innerHTML = "";
+        container = document.getElementById("actu_texte");
         container.innerHTML = `<p class="label">info a venir</p>`;
+        cacher = document.getElementById("carrousel_actu");
+        cacher.classList.add("cacher");
+
     } else{
+        cacher = document.getElementById("carrousel_actu");
+        cacher.classList.remove("cacher");
         container.innerHTML = "";
         let first=true;
         for (let i in agence.actualiter){
