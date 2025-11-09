@@ -176,20 +176,20 @@ h1 {
 /*********************************CARROUSEL*********************************/
 
 .carousel{
-    width: 50%;
+    width: 90%;
 }
 .carousel-caption{
     text-shadow: 1px 1px black;
 }
 
 img{
-    max-height: 450px;
+    max-height: 550px;
 }
 #carrousel_portrait{
     width: 33%;
 }
 #carrousel_portrait img{
-    max-height: 600px;
+    max-height: 800px;
 }
 .btn-voir-articles {
     display: block;
@@ -208,6 +208,13 @@ img{
 
 .btn-voir-articles:hover {
     background-color: #2a7c49;
+}
+@media (min-width: 992px) {
+    .carousel{
+        width: 50%;
+    }
+
+
 }
 
 
