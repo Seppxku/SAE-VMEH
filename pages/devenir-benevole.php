@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -11,73 +12,7 @@
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-<header>
-    <nav class="navbar navbar-expand-xl">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html">
-                <img src="../assets/image/navbar/VMEH_Logo.webp"
-                     alt="Main verte qui soutient un coeur avec deux personnes à l'intérieur qui semblent s'entraider.
-                     Il y a en dessous écrit VMEH en noir suivi de la description de l'acronyme"
-                     height="100"
-                     width="150">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            L'ASSOCIATION
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="./histoire.html">HISTOIRE</a></li>
-                            <li><a class="dropdown-item" href="#">MISSIONS ET VALEURS</a></li>
-                            <li><a class="dropdown-item" href="#">NOTRE ORGANISATION</a></li>
-                            <li><a class="dropdown-item" href="./nos-associations-departementales.html">NOS ASSOCIATIONS DÉPARTEMENTALES</a></li>
-                            <li><a class="dropdown-item" href="#">NOS PARTENAIRES</a></li>
-                            <li><a class="dropdown-item" href="#">NOTRE DOCUMENTATION</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="../pages/carrousel.html" role="button" >
-                            ACTUALITÉS
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="./devenir-benevole.html">DEVENIR BÉNÉVOLE</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">NOS ACTIONS</a>
-                    </li>
-
-                </ul>
-                <div class="d-flex align-items-center justify-content-end gap-3 ms-auto">
-                    <a class="btn rounded-pill d-flex align-items-center text-start gap-2 px-3 px-lg-4 py-2" id="espace-membre" href="#">
-                        <img src="../assets/image/navbar/photo-profil-utiisateur.webp" alt="" height="30"
-                             width="30">Espace <br>membre
-                    </a>
-                    <a class="btn rounded-pill d-flex align-items-center text-start gap-2 text-white px-3 px-lg-4 py-2" id="faire-un-don" href="#">
-                        <img src="../assets/image/navbar/White-Heart-Emoji-PNG.webp"
-                             alt=""
-                             height="30"
-                             width="30"
-                        >Faire un <br>don
-                    </a>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <div class="d-flex justify-content-end">
-        <img src="../assets/image/navbar/ducoeur.webp"
-             alt="Du coeur et beaucoup d'écoute écrit sur un fil noir qui se déroule d'un coeur vibrant de couleurs rouges, jaunes et oranges"
-             class="img-fluid"
-        >
-    </div>
-
-</header>
+<?php require_once "./header.php" ?>
 
 <main>
                 <article id="devenir-benevole" class="mb-5">
@@ -174,7 +109,7 @@
                         <div id="videos">
                             <!-- Image cliquable -->
                             <a data-bs-toggle="modal" data-bs-target="#videoModal1" >
-                                <img src="../assets/image/devenir-benevole/retour-experience-video.webp" alt="Retour d'expérience">
+<img src="../assets/image/devenir-benevole/retour-experience-video.webp" alt="Retour d'expérience">
                             </a>
 
                             <!-- Modal avec la vidéo -->
@@ -241,7 +176,7 @@
                                     <div class="card mx-auto p-4 shadow-sm" style="max-width: 400px; background-color: #ffe9e0;">
                                         <img src="../assets/image/devenir-benevole/benevole1.webp" class="rounded-circle mb-3" width="120" height="120" alt="Photo bénévole">
                                         <p class="mb-3">
-                                            Ma plus grande joie, fierté c’est de donner mon temps et de passer des moments privilégiés avec des
+Ma plus grande joie, fierté c’est de donner mon temps et de passer des moments privilégiés avec des
                                             personnes qui ont réellement besoin. Ces expériences sont uniques et riches d’enseignement...
                                         </p>
                                         <h6 class="fw-bold mb-0">Merlin</h6>
@@ -254,7 +189,7 @@
                                     <div class="card mx-auto p-4 shadow-sm" style="max-width: 400px; background-color: #ffe9e0;">
                                         <img src="../assets/image/devenir-benevole/benevole3.webp" class="rounded-circle mb-3" width="120" height="120" alt="Photo bénévole">
                                         <p class="mb-3">
-                                            Être bénévole m’a appris à écouter, à comprendre et à relativiser. Ces moments d’échanges m’ont transformé.
+Être bénévole m’a appris à écouter, à comprendre et à relativiser. Ces moments d’échanges m’ont transformé.
                                         </p>
                                         <h6 class="fw-bold mb-0">Claire</h6>
                                         <small class="text-muted">Bénévole accompagnatrice</small>
@@ -266,7 +201,7 @@
                                     <div class="card mx-auto p-4 shadow-sm" style="max-width: 400px; background-color: #ffe9e0;">
                                         <img src="../assets/image/devenir-benevole/benevole2.webp" class="rounded-circle mb-3" width="120" height="120" alt="Photo bénévole">
                                         <p class="mb-3">
-                                            Ces visites sont des moments de partage sincères. Je repars toujours enrichi humainement.
+Ces visites sont des moments de partage sincères. Je repars toujours enrichi humainement.
                                         </p>
                                         <h6 class="fw-bold mb-0">Jean</h6>
                                         <small class="text-muted">Bénévole visiteur</small>
@@ -379,51 +314,7 @@
                 </article>
 </main>
 
-<footer>
-    <div class="footer-container">
-        <div class="footer-info">
-            <div class="footer-asso">
-                <div> <img src="../assets/image/navbar/VMEH_Logo.webp" alt="logo VMEH"></div>
-                <p><strong>Fédération Nationale VMEH <br> Hôpital La Collégiale AP-HP</strong>  <br> 33 rue du Fer à Moulin, 75005 Paris <br> contact@federationvmeh.fr</p>
-            </div>
-            <div class="footer-plan">
-                <h2>Plan du site :</h2>
-                <ul>
-                    <li><a>Actualités</a></li>
-                    <li><a>Nous soutenir</a></li>
-                    <li><a>Devenir bénévole</a></li>
-                    <li><a>Nos actions</a></li>
-                    <li><a>Nos associations départementales</a></li>
-                    <li><a>Nos partenaires</a></li>
-                </ul>
-            </div >
-            <div class="footer-reseaux">
-                <p>Suivez-nous sur :</p>
-                <div class="reseaux">
-                    <ul>
-                        <li> <a href="https://www.facebook.com/vmeh.national"><img src="../assets/image/reseaux/facebook.png" alt="logo Facebook"></a></li>
-                        <li> <a href="https://www.instagram.com/vmeh_national/"><img src="../assets/image/reseaux/instagram.png" alt="logo Instragram"></a></li>
-                        <li> <a href="https://www.linkedin.com/company/federation-vmeh-national/"><img src="../assets/image/reseaux/linkedin.png" alt="logo Linkedin"></a></li>
-                        <li> <a href="https://x.com/FederationVmeh"><img src="../assets/image/reseaux/twitter.png" alt="logo Twitter"></a></li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-        <div class="footer-mention">
-            <div class="droit-auteur">
-                <p>
-                    © 2023-
-                    2025 | Fédération Nationale VMEH – Tous droits réservés.<br>Site réalisé par Céline AUTRIVE, graphiste indépendante de <a href="https://www.ca-inspire.com" target="_blank" rel="noopener">CA-inspire</a></p>
-
-            </div>
-            <div class="mention-legale">
-                <p><a href="https://www.vmeh.fr/mentions-legales" title="Mentions légales">Mentions légales</a>&nbsp;| <a href="https://www.vmeh.fr/politique-de-cookies">Politique de cookies</a></p>
-
-            </div>
-        </div>
-    </div>
-</footer>
+<?php require_once "./footer.php"; ?>
 
 
 

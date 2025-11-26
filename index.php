@@ -20,7 +20,7 @@
 <header>
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">
+            <a class="navbar-brand" href="./index.php">
                 <img src="assets/image/navbar/VMEH_Logo.webp"
                      alt="Main verte qui soutient un coeur avec deux personnes à l'intérieur qui semblent s'entrainer.
                      Il y a en dessous écrit VMEH en noir suivi de la description de l'acronyme"
@@ -38,22 +38,22 @@
                             L'ASSOCIATION
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="pages/histoire.html">HISTOIRE</a></li>
+                            <li><a class="dropdown-item" href="pages/histoire.php">HISTOIRE</a></li>
                             <li><a class="dropdown-item" href="#">MISSIONS ET VALEURS</a></li>
                             <li><a class="dropdown-item" href="#">NOTRE ORGANISATION</a></li>
-                            <li><a class="dropdown-item" href="pages/nos-associations-departementales.html">NOS ASSOCIATIONS DÉPARTEMENTALES</a></li>
+                            <li><a class="dropdown-item" href="pages/association-departementale.php">NOS ASSOCIATIONS DÉPARTEMENTALES</a></li>
                             <li><a class="dropdown-item" href="#">NOS PARTENAIRES</a></li>
                             <li><a class="dropdown-item" href="#">NOTRE DOCUMENTATION</a></li>
                         </ul>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="pages/carrousel.html" role="button" >
+                        <a class="nav-link text-white" href="pages/actualite.php" role="button" >
                             ACTUALITÉS
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="pages/devenir-benevole.html">DEVENIR BÉNÉVOLE</a>
+                        <a class="nav-link text-white" href="pages/devenir-benevole.php">DEVENIR BÉNÉVOLE</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="#">NOS ACTIONS</a>
@@ -182,14 +182,14 @@
                 <div id="recherche-list">
 
                     <input
-                            type="search"
-                            id="recherche"
-                            name="name"
-                            required
-                            minlength="0"
-                            maxlength="25"
-                            size="15"
-                            placeholder="Recherche . . ."
+                        type="search"
+                        id="recherche"
+                        name="name"
+                        required
+                        minlength="0"
+                        maxlength="25"
+                        size="15"
+                        placeholder="Recherche . . ."
                     />
                     <ul id="liste-departements"></ul>
 
@@ -264,54 +264,7 @@
     </article>
 </main>
 
-<footer>
-
-    <section class="footer-container">
-        <section class="footer-info">
-            <section class="footer-asso">
-                <div> <img src="/assets/image/navbar/VMEH_Logo.webp" alt="logo VMEH"></div>
-                <p><strong>Fédération Nationale VMEH <br> Hôpital La Collégiale AP-HP</strong>  <br> 33 rue du Fer à Moulin, 75005 Paris <br> contact@federationvmeh.fr</p>
-            </section>
-            <section class="footer-plan">
-                <h2>Plan du site :</h2>
-                <ul>
-                    <li><a >Actualités</a></li>
-                    <li><a>Nous soutenir</a></li>
-                    <li><a href="pages/devenir-benevole.html">Devenir bénévole</a></li>
-                    <li><a>Nos actions</a></li>
-                    <li><a href="pages/nos-associations-departementales.html">Nos associations départementales</a></li>
-                    <li><a>Nos partenaires</a></li>
-                </ul>
-            </section >
-            <section class="footer-reseaux">
-                <p>Suivez-nous sur :</p>
-                <div class="reseaux">
-                    <ul>
-                        <li> <a href="https://www.facebook.com/vmeh.national"><img src="assets/image/reseaux/facebook.png" alt="logo Facebook"></a></li>
-                        <li> <a href="https://www.instagram.com/vmeh_national/"><img src="assets/image/reseaux/instagram.png" alt="logo Instragram"></a></li>
-                        <li> <a href="https://www.linkedin.com/company/federation-vmeh-national/"><img src="assets/image/reseaux/linkedin.png" alt="logo Linkedin"></a></li>
-                        <li> <a href="https://x.com/FederationVmeh"><img src="assets/image/reseaux/twitter.png" alt="logo Twitter"></a></li>
-                    </ul>
-                </div>
-            </section>
-
-        </section>
-        <section class="footer-mention">
-            <div class="droit-auteur">
-                <p>
-                    © 2023-
-                    2025 | Fédération Nationale VMEH – Tous droits réservés.<br>Site réalisé par Céline AUTRIVE, graphiste indépendante de <a href="https://www.ca-inspire.com" target="_blank" rel="noopener">CA-inspire</a></p>
-
-            </div>
-            <div class="mention-legale">
-                <p><a href="https://www.vmeh.fr/mentions-legales" title="Mentions légales">Mentions légales</a>&nbsp;| <a href="https://www.vmeh.fr/politique-de-cookies">Politique de cookies</a></p>
-
-            </div>
-        </section>
-    </section>
-
-
-</footer>
+<?php require_once "./pages/footer.php"; ?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
         crossorigin=""></script>
