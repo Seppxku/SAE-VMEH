@@ -12,7 +12,7 @@ html, body {
     font-size: 20px;
     line-height: 1.7em;
     font-weight: 500;
-    overflow-x: hidden; /* évite le scroll horizontal */
+    overflow-x: hidden;
 }
 
 nav {
@@ -26,7 +26,6 @@ nav {
 #faire-un-don {
     background-color: #D82727;
 }
-
 
 h1 {
     color: #3CAA64;
@@ -394,12 +393,6 @@ footer li{
     font-size: 1rem;
 }
 
-
-
-
-
-
-
 #videos {
     display: flex;
     flex-direction: column;
@@ -496,9 +489,6 @@ footer li{
     width: 2rem;
     height: 2rem;
 }
-
-
-
 
 .formulaire-rejoindre {
     background-color: #34A853;
@@ -641,9 +631,6 @@ footer li{
 #faire-un-don {
     white-space: nowrap;
 }
-
-
-
 
 
 
@@ -950,8 +937,11 @@ footer li{
 @media (min-width: 768px) and (max-width: 1200px) {
 
     h1{
-
         margin:auto;
+    }
+
+    #devenir-benevole h1 {
+        text-align: center;
     }
 
     /***************************************************************************/
