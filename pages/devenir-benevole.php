@@ -93,11 +93,8 @@
                                         <h3 class="formation-title">La formation terrain 👬</h3>
                                         <p>La formation terrain se déroule au sein des établissements en accompagnement de bénévoles confirmés.
                                         </p>
-
-
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </section>
@@ -109,7 +106,7 @@
                         <div id="videos">
                             <!-- Image cliquable -->
                             <a data-bs-toggle="modal" data-bs-target="#videoModal1" >
-<img src="../assets/image/devenir-benevole/retour-experience-video.webp" alt="Retour d'expérience">
+                            <img src="../assets/image/devenir-benevole/retour-experience-video.webp" alt="Retour d'expérience">
                             </a>
 
                             <!-- Modal avec la vidéo -->
@@ -126,12 +123,10 @@
                                 </div>
                             </div>
 
-                            <!-- Image cliquable -->
                             <a data-bs-toggle="modal" data-bs-target="#videoModal2">
                                 <img src="../assets/image/devenir-benevole/retour-experience-video.webp" alt="Retour d'expérience">
                             </a>
 
-                            <!-- Modal avec la vidéo -->
                             <div class="modal fade" id="videoModal2" tabindex="-1">
                                 <div class="modal-dialog modal-dialog-centered modal-lg">
                                     <div class="modal-content">
@@ -145,12 +140,11 @@
                                 </div>
                             </div>
 
-                            <!-- Image cliquable -->
+
                             <a data-bs-toggle="modal" data-bs-target="#videoModal3">
                                 <img src="../assets/image/devenir-benevole/retour-experience-video.webp" alt="Retour d'expérience">
                             </a>
 
-                            <!-- Modal avec la vidéo -->
                             <div class="modal fade" id="videoModal3" tabindex="-1">
                                 <div class="modal-dialog modal-dialog-centered modal-lg">
                                     <div class="modal-content">
@@ -170,10 +164,9 @@
                         <h2>Témoignages de bénévoles</h2>
                         <div id="carouselTemoignages" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
-
                                 <!-- Témoignage 1 -->
                                 <div class="carousel-item active">
-                                    <div class="card mx-auto p-4 shadow-sm" style="max-width: 400px; background-color: #ffe9e0;">
+                                    <div class="card mx-auto p-4 shadow-sm">
                                         <img src="../assets/image/devenir-benevole/benevole1.webp" class="rounded-circle mb-3" width="120" height="120" alt="Photo bénévole">
                                         <p class="mb-3">
 Ma plus grande joie, fierté c’est de donner mon temps et de passer des moments privilégiés avec des
@@ -186,7 +179,7 @@ Ma plus grande joie, fierté c’est de donner mon temps et de passer des moment
 
                                 <!-- Témoignage 2 -->
                                 <div class="carousel-item">
-                                    <div class="card mx-auto p-4 shadow-sm" style="max-width: 400px; background-color: #ffe9e0;">
+                                    <div class="card mx-auto p-4 shadow-sm">
                                         <img src="../assets/image/devenir-benevole/benevole3.webp" class="rounded-circle mb-3" width="120" height="120" alt="Photo bénévole">
                                         <p class="mb-3">
 Être bénévole m’a appris à écouter, à comprendre et à relativiser. Ces moments d’échanges m’ont transformé.
@@ -198,7 +191,7 @@ Ma plus grande joie, fierté c’est de donner mon temps et de passer des moment
 
                                 <!-- Témoignage 3 -->
                                 <div class="carousel-item">
-                                    <div class="card mx-auto p-4 shadow-sm" style="max-width: 400px; background-color: #ffe9e0;">
+                                    <div class="card mx-auto p-4 shadow-sm temoignageCard">
                                         <img src="../assets/image/devenir-benevole/benevole2.webp" class="rounded-circle mb-3" width="120" height="120" alt="Photo bénévole">
                                         <p class="mb-3">
 Ces visites sont des moments de partage sincères. Je repars toujours enrichi humainement.
@@ -223,7 +216,7 @@ Ces visites sont des moments de partage sincères. Je repars toujours enrichi hu
                             <!-- Petits points (indicateurs) -->
                             <div class="carousel-indicators position-relative mt-3">
                                 <button type="button" data-bs-target="#carouselTemoignages" data-bs-slide-to="0" class="active bg-warning"></button>
-                                <button type="button" data-bs-target="#carouselTemoignages" data-bs-slide-to="1"></button>
+                                <button type="button" data-bs-target="#carouselTemoignages" data-bs-slide-to="1" ></button>
                                 <button type="button" data-bs-target="#carouselTemoignages" data-bs-slide-to="2"></button>
                             </div>
                         </div>
