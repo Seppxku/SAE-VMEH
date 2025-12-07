@@ -17,9 +17,74 @@
 
 <body>
 <?php require_once "./header.php"; ?>
-<main id="actualite-page">
+<main id="actualite-page" >
+    <article class="info-menu" id="menu">
+        <h2>Catégorie</h2>
+        <div class="info-menu-categorie">
+            <a href="#national" class="list-categorie">VMEH au niveau National</a>
+            <a class="list-categorie" href="#region">VMEH en Region</a>
+            <a class="list-categorie" href="#presse">VMEH à la Presse</a>
+            <a class="list-categorie" href="#video">VMEH en Video</a>
+            <a class="list-categorie" href="#portrait">Portraits de VMEH</a>
+        </div>
+        <h2>Dernier article</h2>
+        <div class="info-menu-categorie">
+            <a class="list-categorie">Pourquoi être bénévole dans l’association VMEH ?</a>
+            <a class="list-categorie">VMEH36, animation de Mélanie d’Iss à l’Ehpad Les Reflets d’Argent</a>
+            <a class="list-categorie">VMEH61, portrait d’Arlette Marcadé, bénévole depuis 22 ans dans l’association</a>
+            <a class="list-categorie">VMEH48, Au revoir Marie-Thérèse ORLHAC</a>
+            <a class="list-categorie">VMEH42, votez pour la vidéo de Charlotte jusqu’au 11 novembre 2025</a>
+        </div>
+
+
+
+    </article>
     <article>
-        <div class="info-region ">
+        <div class="info-region " id="national">
+            <h1>VMEH au niveau National</h1>
+            <div class="info-carousel swiper">
+                <ul class="card-list swiper-wrapper">
+                    <li class="card-item swiper-slide">
+                        <a href="#" class="card-link">
+                            <img src="../assets/image/carrousel/national/journee_experience_patient.webp" class="card-img" alt="">
+                            <h3>Journée Expérience Patient 2024</h3>
+                            <p class="info-text">La Fédération Nationale VMEH a participé mardi 18 juin 2024 à
+                                la Journée de l’Expérience Patient, organisée par notre partenaire, l’Institut Français de
+                                l’Expérience Patient (IFEP).</p>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="#" class="card-link">
+                            <img src="../assets/image/carrousel/national/octobre_rose.webp" class="card-img" alt="">
+                            <h3>La Fédération Nationale VMEH s’engage pour Octobre Rose</h3>
+                            <p class="info-text">Octobre Rose, c’est le mois de sensibilisation au cancer du sein. Sensibiliser pour mieux prévenir !
+                                La Fédération Nationale s’engage dans cette mobilisation nationale</p>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="#" class="card-link">
+                            <img src="../assets/image/carrousel/national/Signature.webp" class="card-img" alt="">
+                            <h3>Signature du partenariat avec la FHF</h3>
+                            <p class="info-text">La Fédération Nationale VMEH a signé le 23 mai 2024 un partenariat stratégique avec la Fédération hospitalière de France (FHF) SANTEXPO 2024.</p>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="#" class="card-link">
+                            <img src="../assets/image/carrousel/national/vmeh_retour_ag_2025_7-400x250.webp" class="card-img" alt="">
+                            <h3>VMEH : Retour du congrès 2025</h3>
+                            <p class="info-text">Un congrès dans un lieu magnifique…</p>
+                        </a>
+                    </li>
+
+                </ul>
+                <div class="swiper-button swiper-button-prev"></div>
+                <div class="swiper-button swiper-button-next"></div>
+            </div>
+            <a href="https://www.vmeh.fr/category/vmeh-national/" class="btn-voir-articles">Voir tous les articles</a>
+        </div>
+    </article>
+    <article>
+        <div class="info-region " id="region">
             <h1>VMEH en Region</h1>
             <div class="info-carousel swiper">
                 <ul class="card-list swiper-wrapper">
@@ -56,11 +121,12 @@
                 <div class="swiper-button swiper-button-prev"></div>
                 <div class="swiper-button swiper-button-next"></div>
             </div>
+            <a href="https://www.vmeh.fr/category/vmeh-en-region/" class="btn-voir-articles">Voir tous les articles</a>
         </div>
     </article>
     <article>
-        <div class="info-region ">
-            <h1>VMEH en Presse</h1>
+        <div class="info-region " id="presse">
+            <h1>VMEH à la Presse</h1>
             <div class="info-carousel swiper">
                 <ul class="card-list swiper-wrapper">
                     <li class="card-item swiper-slide">
@@ -101,41 +167,75 @@
                 <div class="swiper-button swiper-button-next"></div>
             </div>
         </div>
+        <a href="https://www.vmeh.fr/category/vmeh-portraits-de-benevoles/" class="btn-voir-articles">Voir tous les articles</a>
     </article>
 
 
     <article>
         <h1>VMEH en Video</h1>
-        <section class="info-video">
+        <section class="info" id="video">
 
-            <div class="info-video-item">
+            <div class="info-item">
                 <a href="..">
                     <img src="../assets/image/carrousel/video/engagement-benevole_intro.webp" alt="image d'engagement">
-                    <div class="info-video-text">
+                    <div class="info-text">
                         <p>VMEH : Film sur l’engagement bénévole</p>
                     </div>
                 </a>
 
             </div>
-            <div class="info-video-item">
+            <div class="info-item">
                 <a>
                     <img src="../assets/image/carrousel/video/Journee-experience-patient.webp" alt="image d'engagement">
-                    <div class="info-video-text">
+                    <div class="info-text">
                         <p>VMEH était présente à la Journée de l’Expérience Patient 2024</p>
                     </div>
                 </a>
 
-            </div><div class="info-video-item">
+            </div><div class="info-item">
                 <a>
                     <img src="../assets/image/carrousel/video/voeux_2024_intro.webp" alt="image d'engagement">
-                    <div class="info-video-text">
+                    <div class="info-text">
                         <p>Vœux 2024 de la VMEH</p>
                     </div>
                 </a>
             </div>
         </section>
+        <a href="https://www.vmeh.fr/category/vmeh-en-video/" class="btn-voir-articles">Voir tous les articles</a>
+    </article>
+    <article>
+        <h1>Nos portrait</h1>
+        <section class="info" id="portrait">
+
+            <div class="info-item">
+                <a href="..">
+                    <img src="../assets/image/carrousel/portraits/VMEH72-Marie-BOULAY.webp" alt="Portrait de Marie Boulay, bénévole et présidente ">
+                    <div class="info-text">
+                        <p>Marie Boulay, bénévole et présidente <br> VMEH 72</p>
+                    </div>
+                </a>
+            </div>
+            <div class="info-item">
+                <a>
+                    <img src="../assets/image/carrousel/portraits/VMEH-94.webp" alt="Portrait du nouveau president de VMEH">
+                    <div class="info-text">
+                        <p>L'association VMEH 94 a un nouveau président</p>
+                    </div>
+                </a>
+
+            </div><div class="info-item">
+                <a>
+                    <img src="../assets/image/carrousel/portraits/VMEH972-Germaine-BODO.webp" alt="Portrait de Germaine Bodo, bénévole – VMEH 972">
+                    <div class="info-text">
+                        <p>Germaine Bodo, bénévole – VMEH 972</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <a href="https://www.vmeh.fr/category/vmeh-portraits-de-benevoles/" class="btn-voir-articles">Voir tous les articles</a>
     </article>
 
+<a href="#menu"> <img src="../assets/image/carrousel/icon/fleche.png" id="fleche-srollTop"> </a>
 
 </main>
 
