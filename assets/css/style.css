@@ -1243,6 +1243,7 @@ footer li{
     background-color: #FFDACC;
     padding: 10px;
     border-radius: 5px;
+    margin: 1.5em;
 
 }
 .info-menu h2{
@@ -1254,6 +1255,11 @@ footer li{
     flex-direction: row;
     padding: 5px;
     text-decoration: none;
+
+}
+
+.info-region{
+    padding: 1.5em;
 
 }
 .info-menu-categorie a{
@@ -1305,7 +1311,6 @@ footer li{
 
 .card-item h3{
     color: black;
-
 }
 .info-carousel{
     max-width: 1350px;
@@ -1358,14 +1363,31 @@ footer li{
 #fleche-srollTop{
     position: fixed;
     right: 5%;
-    top: 90%;
+    top: 85%;
     width: 70px;
+    z-index: 1;
 }
+
+#topnav_hamburger_icon,
+#topnav_responsive_menu {
+    display: none;
+}
+
+
 
 
 @media screen and (max-width: 768px) {
     .info-carousel{
         margin: 0 10px 25px;
+    }
+
+    .info{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #fleche-srollTop{
+        display: none;
     }
 
 

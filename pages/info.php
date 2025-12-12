@@ -38,14 +38,19 @@
 
 
 
+
+
     </article>
+
+
+
     <article>
         <div class="info-region " id="national">
             <h1>VMEH au niveau National</h1>
             <div class="info-carousel swiper">
                 <ul class="card-list swiper-wrapper">
                     <li class="card-item swiper-slide">
-                        <a href="#" class="card-link">
+                        <a href="https://www.vmeh.fr/journee-experience-patient-2024" class="card-link">
                             <img src="../assets/image/carrousel/national/journee_experience_patient.webp" class="card-img" alt="">
                             <h3>Journée Expérience Patient 2024</h3>
                             <p class="info-text">La Fédération Nationale VMEH a participé mardi 18 juin 2024 à
@@ -54,7 +59,7 @@
                         </a>
                     </li>
                     <li class="card-item swiper-slide">
-                        <a href="#" class="card-link">
+                        <a href="https://www.vmeh.fr/la-vmeh-soutient-octobre-rose"  class="card-link">
                             <img src="../assets/image/carrousel/national/octobre_rose.webp" class="card-img" alt="">
                             <h3>La Fédération Nationale VMEH s’engage pour Octobre Rose</h3>
                             <p class="info-text">Octobre Rose, c’est le mois de sensibilisation au cancer du sein. Sensibiliser pour mieux prévenir !
@@ -62,7 +67,7 @@
                         </a>
                     </li>
                     <li class="card-item swiper-slide">
-                        <a href="#" class="card-link">
+                        <a href="https://www.vmeh.fr/signature-du-partenariat-avec-la-fhf" class="card-link">
                             <img src="../assets/image/carrousel/national/Signature.webp" class="card-img" alt="">
                             <h3>Signature du partenariat avec la FHF</h3>
                             <p class="info-text">La Fédération Nationale VMEH a signé le 23 mai 2024 un partenariat stratégique avec la Fédération hospitalière de France (FHF) SANTEXPO 2024.</p>
@@ -89,28 +94,28 @@
             <div class="info-carousel swiper">
                 <ul class="card-list swiper-wrapper">
                     <li class="card-item swiper-slide">
-                        <a href="#" class="card-link">
+                        <a href="https://www.vmeh.fr/santa-monica" class="card-link">
                             <img src="../assets/image/carrousel/region/Arcachon_Nord.webp" class="card-img" alt="">
                             <h3>Santa Monica</h3>
                             <p class="info-text">La Directrice de l'Ehpad Santa Monica, Mme L'Hermite, nous a réservé un accueil particulièrement chaleureux et instructif lors de notre visite à la section très dynamique de Civray.</p>
                         </a>
                     </li>
                     <li class="card-item swiper-slide">
-                        <a href="#" class="card-link">
+                        <a href="https://www.vmeh.fr/libourne-une-section-locale-tres-active" class="card-link">
                             <img src="../assets/image/carrousel/region/Libourne.webp" class="card-img" alt="">
                             <h3>Libourne: une section locale très active</h3>
                             <p class="info-text">Placée sous l’entière responsabilité d’Yveline Bouetz, la section locale de Libourne est l’exemple même d’une entité qui sait à travers les années transmettre les valeurs d’humanité de notre mouvement.</p>
                         </a>
                     </li>
                     <li class="card-item swiper-slide">
-                        <a href="#" class="card-link">
+                        <a href="https://www.vmeh.fr/santa-monica/" class="card-link">
                             <img src="../assets/image/carrousel/region/Santa_Monica.webp" class="card-img" alt="">
-                            <h3>Sur le Bassin d’Arcachon Nord</h3>
-                            <p class="info-text">José Patanchon, « patriarche » bienveillant essaime les valeurs de la VMEH sur ce secteur.</p>
+                            <h3>Santa Monica</h3>
+                            <p class="info-text">La Directrice de l’Ehpad Santa Monica, Mme L’Hermite, nous a réservé un accueil particulièrement chaleureux et instructif lors de notre visite à la section très dynamique de Civray.</p>
                         </a>
                     </li>
                     <li class="card-item swiper-slide">
-                        <a href="#" class="card-link">
+                        <a href="https://www.vmeh.fr/vmeh-86-a-la-decouverte-de-nos-benevoles"  class="card-link">
                             <img src="../assets/image/carrousel/region/Vmeh_86.webp" class="card-img" alt="">
                             <h3>VMEH 86 : A la découverte de nos bénévoles</h3>
                             <p class="info-text">Viviane et Jean interviennent au Logis du Val de Boivre situé à Vouneuil sous Biard, charmant petit village en périphérie de Poitiers.</p>
@@ -130,7 +135,7 @@
             <div class="info-carousel swiper">
                 <ul class="card-list swiper-wrapper">
                     <li class="card-item swiper-slide">
-                        <a href="#" class="card-link">
+                        <a href="https://www.vmeh.fr/la-presse-locale-soutient-la-vmeh-86" class="card-link">
                             <img src="../assets/image/carrousel/presse/vmeh86.webp" class="card-img" alt="">
                             <h3>LA PRESSE LOCALE SOUTIENT LA VMEH 86</h3>
 
@@ -139,23 +144,22 @@
                         </a>
                     </li>
                     <li class="card-item swiper-slide">
-                        <a href="#" class="card-link">
+                        <a href="https://www.vmeh.fr/la-vmeh-de-la-chaleur-et-du-reconfort/" class="card-link">
                             <img src="../assets/image/carrousel/presse/La_Vmeh.webp" class="card-img" alt="">
                             <h3>La VMEH : de la chaleur et du réconfort</h3>
                             <p class="info-text">Découvrez l’article captivant sur la VMEH dans le magazine Seniors Actuels de décembre 2023 !</p>
                         </a>
                     </li>
                     <li class="card-item swiper-slide">
-                        <a href="#" class="card-link">
+                        <a href="https://www.vmeh.fr/la-vmeh-de-la-chaleur-et-du-reconfort" class="card-link">
                             <img src="../assets/image/carrousel/presse/Residence.webp" class="card-img" alt="">
                             <h3>La résidence La Houssaie de la Fondation Partage et Vie sensibilise au bénévolat</h3>
-                            <p class="info-text">VMEH 77, comme de nombreuses autres
-                                associations départementales de la Fédération Nationale VMEH,
+                            <p class="info-text">VMEH 77
                                 est présente dans les deux établissements Partage et Vie de la Seine et Marne (77).</p>
                         </a>
                     </li>
                     <li class="card-item swiper-slide">
-                        <a href="#" class="card-link">
+                        <a href="https://www.vmeh.fr/sur-le-bassin-darcachon-nord/" class="card-link">
                             <img src="../assets/image/carrousel/presse/VMEH33_Jose-Patanchon.webp" class="card-img" alt="">
                             <h3>Sur le Bassin d’Arcachon Nord</h3>
                             <p class="info-text">Un patriarche bienveillant essaime les valeurs de la VMEH sur le Bassin Nord d’Arcachon et donne toute liberté à ses bénévoles d’enrichir leur bénévolat</p>
@@ -176,7 +180,7 @@
         <section class="info" id="video">
 
             <div class="info-item">
-                <a href="..">
+                <a href="https://www.vmeh.fr/vmeh-film-sur-lengagement-benevole">
                     <img src="../assets/image/carrousel/video/engagement-benevole_intro.webp" alt="image d'engagement">
                     <div class="info-text">
                         <p>VMEH : Film sur l’engagement bénévole</p>
@@ -185,7 +189,7 @@
 
             </div>
             <div class="info-item">
-                <a>
+                <a href="https://www.vmeh.fr/vmeh-etait-presente-a-la-journee-de-lexperience-patient-2024">
                     <img src="../assets/image/carrousel/video/Journee-experience-patient.webp" alt="image d'engagement">
                     <div class="info-text">
                         <p>VMEH était présente à la Journée de l’Expérience Patient 2024</p>
@@ -193,7 +197,7 @@
                 </a>
 
             </div><div class="info-item">
-                <a>
+                <a href="https://www.vmeh.fr/voeux-2024-de-la-vmeh">
                     <img src="../assets/image/carrousel/video/voeux_2024_intro.webp" alt="image d'engagement">
                     <div class="info-text">
                         <p>Vœux 2024 de la VMEH</p>
@@ -208,7 +212,7 @@
         <section class="info" id="portrait">
 
             <div class="info-item">
-                <a href="..">
+                <a href="https://www.vmeh.fr/marie-boulay-benevole-et-presidente-vmeh-72">
                     <img src="../assets/image/carrousel/portraits/VMEH72-Marie-BOULAY.webp" alt="Portrait de Marie Boulay, bénévole et présidente ">
                     <div class="info-text">
                         <p>Marie Boulay, bénévole et présidente <br> VMEH 72</p>
@@ -216,7 +220,7 @@
                 </a>
             </div>
             <div class="info-item">
-                <a>
+                <a href="https://www.vmeh.fr/lassociation-vmeh-94-a-un-nouveau-president">
                     <img src="../assets/image/carrousel/portraits/VMEH-94.webp" alt="Portrait du nouveau president de VMEH">
                     <div class="info-text">
                         <p>L'association VMEH 94 a un nouveau président</p>
@@ -224,7 +228,7 @@
                 </a>
 
             </div><div class="info-item">
-                <a>
+                <a href="https://www.vmeh.fr/germaine-bodo-benevole-vmeh-972">
                     <img src="../assets/image/carrousel/portraits/VMEH972-Germaine-BODO.webp" alt="Portrait de Germaine Bodo, bénévole – VMEH 972">
                     <div class="info-text">
                         <p>Germaine Bodo, bénévole – VMEH 972</p>

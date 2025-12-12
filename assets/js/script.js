@@ -1,5 +1,5 @@
 new Swiper('.swiper', {
-    loop: true,
+    loop: false,
     spaceBetween:30,
 
 
@@ -28,3 +28,5 @@ new Swiper('.swiper', {
         },
     }
 });
+
+
