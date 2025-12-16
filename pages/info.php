@@ -35,17 +35,12 @@
             <a class="list-categorie">VMEH48, Au revoir Marie-Thérèse ORLHAC</a>
             <a class="list-categorie">VMEH42, votez pour la vidéo de Charlotte jusqu’au 11 novembre 2025</a>
         </div>
-
-
-
-
-
     </article>
 
 
 
     <article>
-        <div class="info-region " id="national">
+        <div class="info-container " id="national">
             <h1>VMEH au niveau National</h1>
             <div class="info-carousel swiper">
                 <ul class="card-list swiper-wrapper">
@@ -89,7 +84,7 @@
         </div>
     </article>
     <article>
-        <div class="info-region " id="region">
+        <div class="info-container " id="region">
             <h1>VMEH en Region</h1>
             <div class="info-carousel swiper">
                 <ul class="card-list swiper-wrapper">
@@ -130,7 +125,7 @@
         </div>
     </article>
     <article>
-        <div class="info-region " id="presse">
+        <div class="info-container " id="presse">
             <h1>VMEH à la Presse</h1>
             <div class="info-carousel swiper">
                 <ul class="card-list swiper-wrapper">
