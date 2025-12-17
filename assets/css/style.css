@@ -1017,10 +1017,10 @@ footer li{
     /***************************************************************************/
     /***************************ASSO-DEP.html***********************************/
 
-        .map-interactif-containt{
-            display: flex;
-            flex-direction: column;
-        }
+    .map-interactif-containt{
+        display: flex;
+        flex-direction: column;
+    }
 
     /********************************************************************************/
     /**********************asso departemental.html **********************************/
@@ -1187,7 +1187,7 @@ footer li{
     }
 
     .date-histoire{
-       max-width: 768px;
+        max-width: 768px;
     }
     /***************************************************************************/
     /***************************ASSO-DEP.html***********************************/
@@ -1285,7 +1285,7 @@ footer li{
     border-radius: 12px;
     text-decoration: none;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 10);
-   height: 650px;
+    height: 650px;
     background-color: white;
 }
 .card-list .card-item .card-link:active{
@@ -1393,4 +1393,3 @@ footer li{
 
 
 }
-
