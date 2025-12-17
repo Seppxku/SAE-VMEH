@@ -42,7 +42,7 @@
 
                 </ul>
                 <div class="d-flex align-items-center justify-content-end gap-3 ms-auto">
-                    <a class="btn rounded-pill d-flex align-items-center text-start gap-2 px-3 px-lg-4 py-2" id="espace-membre" href="../admin/login.php">
+                    <a class="btn rounded-pill d-flex align-items-center text-start gap-2 px-3 px-lg-4 py-2" id="espace-membre" href="../private/login.php">
                         <img src="../assets/image/navbar/photo-profil-utiisateur.webp" alt="" height="30"
                              width="30">Espace <br>membre
                     </a>
