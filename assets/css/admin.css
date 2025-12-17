@@ -108,3 +108,62 @@ main {
 /**************************fin Sidebar bootstrap**********************************/
 
 
+form{
+    margin: 2em auto ;
+    max-width: 400px;
+    border: 1px solid #000000;
+    border-radius: 2%;
+
+
+
+}
+
+.form-input {
+    padding: 10px;
+    margin-top: 2em;
+    border: 1px solid #000000;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 10);
+
+
+}
+.form-item,form > h2 {
+    padding: 10px;
+
+}
+form a{
+
+    color: black;
+    font-size: small;
+}
+
+.form-login{
+    display: flex;
+    flex-direction: row;
+
+
+}
+
+.form-login img{
+    width: auto;
+
+}
+
+.left{
+    width: 50%;
+
+    left: 0px;
+    height: 100%;
+}
+
+.right{
+    width: 50%;
+
+    right: 0px;
+    height: 100%;
+}
+#btn-submit{
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 10);
+    margin-top: 2em;
+    border: 1px solid #000000;
+}
+
