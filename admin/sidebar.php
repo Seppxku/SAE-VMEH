@@ -1,3 +1,6 @@
+<?php require_once 'logout.php'; ?>
+
+
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <symbol id="bootstrap" viewBox="0 0 118 94">
         <title>VMEH</title>
@@ -104,7 +107,7 @@
             <li><a class="dropdown-item" href="#">Paramètre</a></li>
             <li><a class="dropdown-item" href="#">Profil</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Se déconnecter</a></li>
+            <li><a class="dropdown-item" href="logout.php">Se déconnecter</a></li>
         </ul>
     </div>
 </div>
