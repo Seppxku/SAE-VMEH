@@ -1,3 +1,20 @@
+:root {
+    --primary-green: #3CAA64;
+    --secondary-green: #2a7c49;
+    --tertiary-green: #34A853;
+    --form-button-dark: #327C4D;
+    --search-list-green: #a8efa8;
+    --form-button-dark-hover: #223a33;
+    --member-area-yellow: #FAB900;
+    --donation-red: #D82727;
+    --key-numbers-bg: #FFDACC;
+    --partner-red: #f51818;
+    --legal-rose: #FFDACC;
+    --card-salmon: #ffe9e0;
+    --testimony-dark: #333;
+    --testimony-grey: #555;
+    --history-salmon: #FFDACC;
+}
 * {
     margin: 0;
     box-sizing: border-box;
@@ -12,30 +29,27 @@ html, body {
     font-size: 20px;
     line-height: 1.7em;
     font-weight: 500;
-    overflow-x: hidden; /* évite le scroll horizontal */
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 nav {
-    background-color: #3CAA64;
+    background-color: var(--primary-green);
 }
 
 #espace-membre {
-    background-color: #FAB900;
+    background-color: var(--member-area-yellow);
 }
 
 #faire-un-don {
-    background-color: #D82727;
+    background-color: var(--donation-red);
 }
 
-
 h1 {
-    color: #3CAA64;
+    color: var(--primary-green);
     text-decoration: none;
     font-weight: bold;
     margin-top: 1em;
-}
-
-.baseline{
 }
 
 /***************************************************************************/
@@ -52,18 +66,12 @@ h1 {
     max-width: 1280px;
     width: 80%;
     margin: auto;
-
-
 }
 
 .presentation_container p {
     padding-bottom: 1em;
     font-size: 18px;
 }
-
-
-
-
 
 
 /***************************************************************************/
@@ -76,7 +84,7 @@ h1 {
 }
 
 .bande{
-    background-color: #FFDACC;
+    background-color: var(--key-numbers-bg);
 
 }
 
@@ -90,22 +98,15 @@ h1 {
     padding: 1%;
 }
 
-
 .bande-contenu{
-
     margin: 0 15px;
     padding: 20px 0;
     align-content: flex-start;
-
 }
 
 .bande h3{
     font-size: xx-large;
 }
-
-
-
-
 
 /***************************************************************************/
 /*******************************PARTENAIRE**********************************/
@@ -118,13 +119,11 @@ h1 {
 
 .partenaire-contenu {
     display: flex;
-
     flex-direction: row;
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
     align-items: center;
-
     column-gap: 100px;
     margin: auto;
 }
@@ -135,31 +134,24 @@ h1 {
 }
 
 .partenaire img{
-
     width: 125px;
     height: 110px;
-
 }
-
-
 
 .partenaire-bouton{
     display: flex;
     justify-content: center;
-
 }
 
 .partenaire-bouton{
     display: flex;
-    background-color: #f51818;
+    background-color: var(--partner-red);
     border-radius: 30px;
     width: 15%;
     justify-content: center;
     align-items: center;
     margin: auto;
     padding: 1%;
-
-
 }
 
 .partenaire-bouton a{
@@ -167,36 +159,33 @@ h1 {
     font-size: larger;
     color: white !important;
     text-align: center;
-
 }
-
-
 
 /***************************************************************************/
 /*********************************CARROUSEL*********************************/
 
 .carousel{
-    width: 50%;
+    width: 90%;
 }
 .carousel-caption{
     text-shadow: 1px 1px black;
 }
 
 img{
-    max-height: 450px;
+    max-height: 550px;
 }
 #carrousel_portrait{
     width: 33%;
 }
 #carrousel_portrait img{
-    max-height: 600px;
+    max-height: 800px;
 }
 .btn-voir-articles {
     display: block;
     margin: 1em auto 2em auto; /* centré et espacé du carrousel */
     text-align: center;
     width: fit-content;
-    background-color: #3CAA64;
+    background-color: var(--primary-green);
     color: white;
     text-decoration: none;
     font-weight: 600;
@@ -207,9 +196,13 @@ img{
 }
 
 .btn-voir-articles:hover {
-    background-color: #2a7c49;
+    background-color: var(--secondary-green);
 }
-
+@media (min-width: 992px) {
+    .carousel{
+        width: 50%;
+    }
+}
 
 /***************************************************************************/
 /***********************************FOOTER**********************************/
@@ -217,17 +210,14 @@ img{
 footer{
     margin-top: 5%;
     color: #fff;
-    background: #3CAA64;
+    background: var(--primary-green);
     font-size:medium ;
-
-
 }
 
 .footer-container{
     padding-top:2%;
     display: flex;
     flex-direction: column;
-
 }
 
 .footer-info{
@@ -242,9 +232,8 @@ footer{
 
 .footer-plan a{
     text-decoration: none;
-    color: #ffffff;
+    color: #fff;
 }
-
 
 .footer-asso{
     display: flex;
@@ -255,13 +244,11 @@ footer{
     flex-direction: column;
 }
 
-
 footer img{
     max-width: 300px;
     max-height: 200px;
     position: relative;
 }
-
 
 footer ul{
     display: block;
@@ -269,13 +256,10 @@ footer ul{
     margin-block-start: 1em;
     margin-block-end: 1em;
     padding-inline-start: 40px;
-
 }
-
 
 footer li{
     display: list-item;
-
 }
 
 .footer-reseaux{
@@ -294,7 +278,6 @@ footer li{
     font-size: x-large;
 }
 
-
 .footer-reseaux li{
     display: inline-block;
 }
@@ -304,24 +287,20 @@ footer li{
     height: 50px;
 }
 
-
-
 .footer-mention{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     font-weight: 300;
     align-items: center;
-
 }
 
 .footer-mention a{
     color: white;
-
 }
 
 .mention-legale a{
-    text-decoration: #FFDACC !important;
+    text-decoration: var(--legal-rose) !important;
 }
 
 .footer-mention p{
@@ -333,8 +312,6 @@ footer li{
     unicode-bidi: isolate;
     font-size: 90%;
     line-height: 1em;
-
-
 }
 
 .mention-legale{
@@ -350,7 +327,7 @@ footer li{
 }
 
 #devenir-benevole h2 {
-    color: #3CAA64;
+    color: var(--primary-green);
     text-decoration: none;
     font-weight: bold;
     margin-top: 1em;
@@ -387,9 +364,6 @@ footer li{
     font-size: 1rem;
 }
 
-
-
-
 #videos {
     display: flex;
     flex-direction: column;
@@ -422,20 +396,18 @@ footer li{
 }
 
 #temoignages-de-benevoles h2 {
-    color: #3CAA64;
+    color: var(--primary-green);
     font-weight: 700;
     margin-bottom: 2rem;
 }
-
 
 #carouselTemoignages {
     max-width: 100%;
     width: 100%;
 }
 
-
 #carouselTemoignages .card {
-    background-color: #ffe9e0;
+    background-color: var(--card-salmon);
     border-radius: 12px;
     padding: 2rem;
     max-width: 350px;
@@ -446,8 +418,6 @@ footer li{
     overflow: hidden;
 }
 
-
-
 #carouselTemoignages .card img.rounded-circle {
     display: block;
     margin: 0 auto 1rem;
@@ -456,10 +426,9 @@ footer li{
     object-fit: cover;
 }
 
-
 #carouselTemoignages p {
     font-size: 1rem;
-    color: #333;
+    color: var(--testimony-dark);
     margin-bottom: 1rem;
 }
 
@@ -469,16 +438,14 @@ footer li{
 }
 
 #carouselTemoignages small {
-    color: #555;
+    color: var(--testimony-grey);
 }
-
 
 #carouselTemoignages img.rounded-circle {
     object-fit: cover;
     width: 100px;
     height: 100px;
 }
-
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -487,15 +454,12 @@ footer li{
     height: 2rem;
 }
 
-
-
-
 .formulaire-rejoindre {
-    background-color: #34A853;
+    background-color: var(--tertiary-green);
 }
 
 .form-card {
-    background-color: #34A853;
+    background-color: var(--tertiary-green);
     max-width: 400px;
     border-radius: 6px;
 }
@@ -514,12 +478,12 @@ footer li{
 }
 
 .btn-dark {
-    background-color: #327C4D;
+    background-color: var(--form-button-dark);
     border: none;
 }
 
 .btn-dark:hover {
-    background-color: #223a33;
+    background-color: var(--form-button-dark-hover);
 }
 
 .text-white-50 {
@@ -610,7 +574,7 @@ footer li{
     }
 
     .form-card button {
-        background-color: #2b7042;
+        background-color: var(--form-button-dark);
         border: none;
         padding: 1rem 3rem;
         font-size: 1.2rem;
@@ -621,31 +585,17 @@ footer li{
     }
 
     .form-card button:hover {
-        background-color: #225b36;
+        background-color: var(--form-button-dark-hover);
         transform: scale(1.03);
     }
-
-
-
-
-
-
-
-
-
 }
 
-
-
-
-
-
-
-
-
+#faire-un-don {
+    white-space: nowrap;
+}
 
 /********************************************************************************/
-/********************************Histoire.html **********************************/
+/********************************Histoire **********************************/
 
 .image-intro img{
     height: 50%;
@@ -653,12 +603,10 @@ footer li{
     background-color: rgba(251, 186, 0, 0.2);
     width: -webkit-fill-available;
 }
-/***************************************************************************/
-/********************************Histoire **********************************/
+
 .histoire{
     max-width: 1200px;
     margin: auto;
-
 }
 
 .histoire-texte{
@@ -676,7 +624,6 @@ footer li{
     height: auto;
     border-radius: 30px;
     margin:15px 10px 10px 10px;
-
 }
 
 .histoire-personnage{
@@ -684,19 +631,14 @@ footer li{
     flex-direction:row;
     padding: 1em;
     align-items: center;
-
 }
-
-
 
 /***************************************************************************/
 /***************************Frise chronologique*****************************/
 
 .frise-chrono{
-
     max-width: 1350px;
     margin:auto;
-
 }
 
 .frise-chrono-contenu{
@@ -704,7 +646,6 @@ footer li{
     position: relative;
     width: 50%;
     border-radius:6px;
-
 }
 
 .frise-chrono-contenu .frise-chrono{
@@ -716,7 +657,7 @@ footer li{
 
 .frise-chrono-text{
     padding: 30px 50px;
-    background: #FFDACC;
+    background: var(--history-salmon);
     position: relative;
     border-radius:6px;
 }
@@ -732,7 +673,6 @@ footer li{
 .frise-chrono img{
     position: absolute;
     width:60px;
-
     border-radius: 50%;
     right: -30px;
     top: 32px;
@@ -748,7 +688,7 @@ footer li{
     position: absolute;
     width: 2px;
     height: 100%;
-    background: #000000;
+    background: #000;
     top: 50px;
     left: 50%;
     margin-left: -1px;
@@ -763,7 +703,7 @@ footer li{
     z-index: -1;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-left: 15px solid #FFDACC;
+    border-left: 15px solid var(--history-salmon);
     right: -14px;
 }
 
@@ -775,7 +715,7 @@ footer li{
     z-index: -1;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-right: 15px solid #FFDACC;
+    border-right: 15px solid var(--history-salmon);
     left: -14px;
 }
 
@@ -791,16 +731,10 @@ footer li{
 
 /********************************************************************************/
 /***************************ASSO-DEPARTEMENT.html********************************/
-
-
-
 #map {
     height: 600px;
     width: 600px;
-
 }
-
-
 
 /***************************************************************************/
 /***************************map-interactif**********************************/
@@ -812,13 +746,11 @@ footer li{
 
 .intro-text{
     padding: 2% 2% 0;
-
 }
 
 .map-interactif{
     max-width: 1350px;
     margin:auto;
-
 }
 
 .map-interactif-containt{
@@ -831,7 +763,7 @@ footer li{
 #recherche-list {
     text-align: left;
     margin-top: 20px;
-    background-color: #a8efa8;
+    background-color: var(--search-list-green);
     padding: 15px;
     width: 300px;
     height: 400px;
@@ -840,14 +772,14 @@ footer li{
     flex-direction: column;
     align-items: center;
 }
+
 .barre-recherche{
     display: flex;
     flex-direction: row-reverse;
 }
 
 .barre-recherche button{
-    background-color: #a8efa8;
-
+    background-color: var(--search-list-green);
 }
 
 /* Input */
@@ -945,25 +877,21 @@ footer li{
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {
-
     h1{
-
         margin:auto;
     }
-
+    #devenir-benevole h1 {
+        text-align: center;
+    }
     /***************************************************************************/
     /*******************************PRESENTATION********************************/
     .presentation{
         text-align: center;
         width: 100%;
-
         background-image: url("../image/accueil/trois-bulles.svg") ;
         background-repeat: no-repeat;
         background-size: max(50%, 50%);
         background-position: right 4% top 10%;
-
-
-
     }
     /***************************************************************************/
     /*******************************CHIFFRE-CLE*********************************/
@@ -976,7 +904,6 @@ footer li{
 
     .bande-box{
         text-align: center;
-
         width: 65%;
         flex-direction: column;
         flex-wrap: wrap;
@@ -992,7 +919,6 @@ footer li{
         margin: 0 15px;
         padding: 20px 2%;
         align-content: center;
-
     }
 
     /***************************************************************************/
@@ -1000,20 +926,14 @@ footer li{
     .partenaire{
         padding-top: 1%;
         max-width: 1100px;
-
     }
-
 
     .partenaire-bouton {
         width: 40%;
     }
 
-
-
     /***************************************************************************/
     /*********************************CARROUSEL*********************************/
-
-
     .carousel{
         width: 50%;
     }
@@ -1031,7 +951,7 @@ footer li{
         margin: 1em auto 2em auto; /* centré et espacé du carrousel */
         text-align: center;
         width: fit-content;
-        background-color: #3CAA64;
+        background-color: var(--primary-green);
         color: white;
         text-decoration: none;
         font-weight: 600;
@@ -1042,17 +962,14 @@ footer li{
     }
 
     .btn-voir-articles:hover {
-        background-color: #2a7c49;
+        background-color: var(--secondary-green);
     }
-
-
 
     /***************************************************************************/
     /***********************************FOOTER**********************************/
 
     .footer {
         max-width: 1200px;
-
     }
 
     .footer-info {
@@ -1060,7 +977,6 @@ footer li{
         flex-direction: row;
         justify-content: center;
         align-items: center;
-
     }
 
     .footer-plan {
@@ -1072,7 +988,6 @@ footer li{
     .histoire {
         max-width: 1200px;
         margin: auto;
-
     }
 
     .histoire h1{
@@ -1090,7 +1005,6 @@ footer li{
         height: auto;
         border-radius: 30px;
         margin:15px 10px 10px 10px;
-
     }
 
     .histoire-personnage{
@@ -1098,18 +1012,15 @@ footer li{
         flex-direction:row;
         padding: 1em;
         align-items: center;
-
     }
 
     /***************************************************************************/
     /***************************ASSO-DEP.html***********************************/
 
-        .map-interactif-containt{
-            display: flex;
-            flex-direction: column;
-        }
-
-
+    .map-interactif-containt{
+        display: flex;
+        flex-direction: column;
+    }
 
     /********************************************************************************/
     /**********************asso departemental.html **********************************/
@@ -1124,44 +1035,26 @@ footer li{
     .grille-containt p{
         text-align: center;
     }
-
-
-
 }
 
-
-
 @media screen and (max-width: 768px)  {
-
-
-
-
     h1{
         text-align: center;
     }
-
-
-    //*body{
+    /*body{
         max-width: 768px;
-    }
-
+    }*/
 
     /***************************************************************************/
     /*******************************PRESENTATION********************************/
     .presentation{
         text-align: center;
         width: 100%;
-
-
         background-image: url("../image/accueil/trois-bulles.svg");
         background-repeat: no-repeat;
         background-size: max(50%, 50%);
         background-position: right 4% top 10%;
-
-
-
     }
-
 
     /***************************************************************************/
     /*******************************CHIFFRE-CLE*********************************/
@@ -1171,10 +1064,8 @@ footer li{
         margin: 0;
     }
 
-
     .bande h1 {
         padding-top: 5%;
-
     }
 
     .bande h3{
@@ -1195,39 +1086,27 @@ footer li{
     /*******************************PARTENAIRE**********************************/
 
     .partenaire {
-
         margin: 0;
-
     }
-
 
     .partenaire-contenu {
         display: flex;
         justify-content: center;
         width: 50%;
         margin: auto;
-
     }
 
     .partenaire-bouton {
-
-
         width: 30%;
         align-items: center;
         margin: auto;
         padding: 1%;
-
-
     }
-
-
-
     /***************************************************************************/
     /***********************************FOOTER**********************************/
 
     .footer {
         max-width: 768px;
-
     }
 
     .footer-info {
@@ -1243,29 +1122,21 @@ footer li{
     /*!***************************************************************************!*/
     /*!********************************Histoire **********************************!*/
 
-
     .histoire-texte{
         padding:2em;
     }
 
-
     /***************************************************************************/
     /***************************Frise chronologique*****************************/
 
-
     .frise-chrono-contenu{
-
         width: 100%;
         padding-right: 20px;
-
     }
-
 
     .frise-chrono-contenu .frise-chrono{
         display: flex;
         flex-direction: column;
-
-
     }
 
     .frise-chrono{
@@ -1273,15 +1144,12 @@ footer li{
         display: flex;
         flex-direction: column;
         align-items: center;
-
     }
 
     .frise-chrono-text{
-        background: #FFDACC;
+        background: var(--legal-rose);
         border-radius:6px;
     }
-
-
 
     .frise-chrono-contenu-gauche{
         left:0;
@@ -1291,17 +1159,13 @@ footer li{
         position: initial;
     }
 
-
-
     .frise-chrono::after{
         visibility: hidden;
-
-
         content: '';
         position: absolute;
         width: 2px;
         height: 100%;
-        background: #000000;
+        background: #000;
         top: 50px;
         left: 50%;
         margin-left: -1px;
@@ -1312,12 +1176,10 @@ footer li{
     }
     .frise-chrono-contenu-droite{
         left: 0;
-
     }
 
     .frise-chrono-gauche-fleche{
         visibility: hidden;
-
     }
 
     .frise-chrono-droite-fleche{
@@ -1325,17 +1187,15 @@ footer li{
     }
 
     .date-histoire{
-       max-width: 768px;
+        max-width: 768px;
     }
     /***************************************************************************/
     /***************************ASSO-DEP.html***********************************/
-
 
     #map {
         max-width: 700px;
         height: 300px;
         width: 300px;
-
     }
     .map-interactif{
         padding: 10px;
@@ -1364,7 +1224,171 @@ footer li{
         width: 80%;
         margin: 0 auto;
     }
+}
 
+
+/********************************************************************************/
+/**********************info.html **********************************/
+#actualite-page{
+    max-width: 1400px;
+    margin: auto;
+}
+
+.card-list .card-item {
+    list-style: none;
+    padding: 5px;
+}
+
+.info-menu{
+    background-color: #FFDACC;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 1.5em;
+
+}
+.info-menu h2{
+    color: var(--primary-green);
+}
+
+.info-menu-categorie {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    text-decoration: none;
+
+}
+
+.info-region{
+    padding: 1.5em;
+
+}
+.info-menu-categorie a{
+    text-decoration: none;
+    color: #666666;
+}
+.info-menu-categorie a:hover{
+    color: var(--primary-green);
+}
+.list-categorie{
+    margin:10px;
+    color: black;
+
+}
+
+
+
+
+.card-list .card-item .card-link{
+    user-select: none;
+    display: block;
+    padding: 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 10);
+    height: 650px;
+    background-color: white;
+}
+.card-list .card-item .card-link:active{
+    cursor: grabbing;
+}
+
+.card-list .card-link .card-img{
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-list .card-link .info-text {
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin: 16px 0 18px;
+    width: fit-content;
+    border-radius: 50px;
+    color: black;
+}
+
+.card-item h3{
+    color: black;
+}
+.info-carousel{
+    max-width: 1350px;
+    margin: 0 60px 35px;
+    padding: 20px 10px;
+    overflow: hidden;
+    background-color: #e5e1e1;
+    border-radius: 3px;
+}
+.swiper-button {
+    color: #3caa64;
+    margin: 10px;
+}
+
+
+.info{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.info-item{
+    width: 400px;
+    height: 500px;
+    margin:10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 50);
+    border-radius: 5% ;
+}
+
+
+.info-item  img{
+    width: 400px;
+    height: 400px;
+    border-radius: 5% 5% 0 0;
+    transition: transform 0.3s ease;
+}
+.info-text{
+    padding: 10px;
+    justify-items: center;
+    transition: transform 0.3s ease;
+}
+
+.info-item:hover .card-list:hover{
+    transform: scale(1.05);
+}
+
+.info-item a{
+    text-decoration: none;
+    color: black;
+}
+#fleche-srollTop{
+    position: fixed;
+    right: 5%;
+    top: 85%;
+    width: 70px;
+    z-index: 1;
+}
+
+#topnav_hamburger_icon,
+#topnav_responsive_menu {
+    display: none;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    .info-carousel{
+        margin: 0 10px 25px;
+    }
+
+    .info{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #fleche-srollTop{
+        display: none;
+    }
 
 
 
