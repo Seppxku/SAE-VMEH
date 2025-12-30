@@ -16,7 +16,7 @@
     <title>VMEH</title>
 </head>
 <body>
-<?php require_once "pages/header.php" ?>
+<?php require_once "public/header.php" ?>
 
 <main>
     <article>
@@ -104,7 +104,7 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
-                <a href="pages/carrousel.html" class="btn-voir-articles">Voir toutes les actualités</a>
+                <a href="public/carrousel.html" class="btn-voir-articles">Voir toutes les actualités</a>
             </div>
         </section>
 
@@ -197,7 +197,7 @@
     </article>
 </main>
 
-<?php require_once "./pages/footer.php"; ?>
+<?php require_once "./public/footer.php"; ?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
         crossorigin=""></script>

@@ -76,7 +76,7 @@ function afficherAgence(titreAgence){
 
     // si on est deja sur la page de la map on fait rien mais si on vien d'ailleur on va sur la page de la map
     if (document.title !== "VMEH - NOS ASSOCIATIONS DÉPARTEMENTALES") {
-        window.location.href = `./pages/association-departementale.php?agence=${encodeURIComponent(titreAgence)}`;
+        window.location.href = `../../public/association-departementale.php?agence=${encodeURIComponent(titreAgence)}`;
         return; // le reste va pas s'exec de toute façon mais au cas ou
     }else{
         const url = new URL(window.location);

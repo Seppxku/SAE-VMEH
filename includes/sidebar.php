@@ -1,5 +1,6 @@
-<?php require_once 'logout.php'; ?>
-
+<?php require_once 'logout.php';
+session_start();
+?>
 
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <symbol id="bootstrap" viewBox="0 0 118 94">
@@ -100,14 +101,17 @@
     <div class="dropdown">
         <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
             <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
-            <!--TODO mettre le pseudo en fonction du user -->
-            <strong>mdo</strong>
+            <?php
+
+            echo $_SESSION["username"];
+            ?>
+
         </a>
         <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
             <li><a class="dropdown-item" href="#">Paramètre</a></li>
             <li><a class="dropdown-item" href="#">Profil</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="logout.php">Se déconnecter</a></li>
+            <li><a class="dropdown-item" href="../admin/logout.php">Se déconnecter</a></li>
         </ul>
     </div>
 </div>

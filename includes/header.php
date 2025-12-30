@@ -1,64 +1,3 @@
-<?php
-
-$host = 'mysql-sae-vmeh.alwaysdata.net';
-$dbname = 'sae-vmeh_bd';
-$user = 'sae-vmeh';
-$password = 'j9nXanN5VsY7U6C';
-
-try {
-    $bdd = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $password);
-    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $bdd->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-
-} catch (PDOException $e) {
-    die("Erreur de connexion : " . $e->getMessage());
-}
-
-
-if($_SERVER["REQUEST_METHOD"] === "POST"){
-    $email = $_POST['email'];
-    $password = $_POST['motdepasse'];
-
-    if($email != "" || $password != ""){
-        //TODO Faire un systeme de token
-        $token = bin2hex(random_bytes(32));
-
-        $req = $bdd->query('SELECT * FROM Benevole WHERE MailBenevole = "'.$email.'" AND MotDePasse = "'.$password.'"');
-        $rep = $req->fetch();
-
-        if(!empty($rep)){
-            //$bdd->exec("UPDATE users SET Benevole = '$token' WHERE MailBenevole = '$email' and  motdepasse = '$password'");
-            setcookie("token", $token, time() + 3600);
-            setcookie("username", $email, time() + 3600);
-
-            header('Location: dashboard.php');
-            exit();
-
-        }
-    }
-}
-
-?>
-
-
-
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-          crossorigin="anonymous">
-    <link href="../assets/css/admin.css" rel="stylesheet">
-    <title>VMEH</title>
-</head>
-
-
 <header>
     <nav class="navbar navbar-expand-xl">
         <div class="container-fluid">
@@ -80,22 +19,22 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
                             L'ASSOCIATION
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="./histoire.php">HISTOIRE</a></li>
+                            <li><a class="dropdown-item" href="../public/histoire.php">HISTOIRE</a></li>
                             <li><a class="dropdown-item" href="#">MISSIONS ET VALEURS</a></li>
                             <li><a class="dropdown-item" href="#">NOTRE ORGANISATION</a></li>
-                            <li><a class="dropdown-item" href="./association-departementale.php">NOS ASSOCIATIONS DÉPARTEMENTALES</a></li>
+                            <li><a class="dropdown-item" href="../public/association-departementale.php">NOS ASSOCIATIONS DÉPARTEMENTALES</a></li>
                             <li><a class="dropdown-item" href="#">NOS PARTENAIRES</a></li>
                             <li><a class="dropdown-item" href="#">NOTRE DOCUMENTATION</a></li>
                         </ul>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="../pages/actualite.php" role="button" >
+                        <a class="nav-link text-white" href="../public/actualite.php" role="button" >
                             ACTUALITÉS
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="./devenir-benevole.php">DEVENIR BÉNÉVOLE</a>
+                        <a class="nav-link text-white" href="../public/devenir-benevole.php">DEVENIR BÉNÉVOLE</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="#">NOS ACTIONS</a>
@@ -118,38 +57,11 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
             </div>
         </div>
     </nav>
-
-
-</header>
-<body>
-<div class="form-login">
-    <form class="left"  action="" method="post">
-        <h2>Connectez-vous à l'espace réservé VMEH</h2>
-        <div class="form-item">
-            <input class="form-input form-control" type="email" name="email" placeholder="Email">
-        </div>
-        <div class="form-item" >
-            <input class="form-input form-control" type="password" name="motdepasse" placeholder="Mot de passe">
-
-        </div>
-        <div class="form-item" >
-            <button class="form-item form-control " id="btn-submit" type="submit">Se connecter</button>
-            <a href="#" >Créer un compte</a>
-
-        </div>
-
-    </form>
-    <div class="right" >
+    <div class="d-flex justify-content-end">
         <img src="../assets/image/navbar/ducoeur.webp"
              alt="Du coeur et beaucoup d'écoute écrit sur un fil noir qui se déroule d'un coeur vibrant de couleurs rouges, jaunes et oranges"
              class="img-fluid"
         >
     </div>
-</div>
 
-</body>
-<?php require_once "../pages/footer.php"; ?>
-
-
-</html>
-
+</header>
