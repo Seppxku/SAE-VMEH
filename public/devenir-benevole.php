@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-<?php require_once "./header.php" ?>
+<?php require_once "../includes/header.php" ?>
 
 <main>
                 <article id="devenir-benevole" class="mb-5">
@@ -307,7 +307,7 @@ Ces visites sont des moments de partage sincères. Je repars toujours enrichi hu
                 </article>
 </main>
 
-<?php require_once "./footer.php"; ?>
+<?php require_once "../includes/footer.php"; ?>
 
 
 

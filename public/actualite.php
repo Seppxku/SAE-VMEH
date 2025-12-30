@@ -9,7 +9,7 @@
 </head>
 
 <body>
-<?php require_once "./header.php"; ?>
+<?php require_once "../includes/header.php"; ?>
 <main class="main-carrousel d-flex flex-column justify-content-center align-items-center" >
 
     <div id="carrousel_region" class="carousel slide">
@@ -224,7 +224,7 @@
     </div>
 
 </main>
-<?php require_once "./footer.php"; ?>
+<?php require_once "../includes/footer.php"; ?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 

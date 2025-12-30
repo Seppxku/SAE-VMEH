@@ -23,7 +23,7 @@
 
 </head>
 <main>
-    <?php require_once "sidebar.php"; ?>
+    <?php require_once "../includes/sidebar.php"; ?>
 
 
 

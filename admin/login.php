@@ -82,10 +82,10 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
                             L'ASSOCIATION
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="./histoire.php">HISTOIRE</a></li>
+                            <li><a class="dropdown-item" href="../public/histoire.php">HISTOIRE</a></li>
                             <li><a class="dropdown-item" href="#">MISSIONS ET VALEURS</a></li>
                             <li><a class="dropdown-item" href="#">NOTRE ORGANISATION</a></li>
-                            <li><a class="dropdown-item" href="./association-departementale.php">NOS ASSOCIATIONS DÉPARTEMENTALES</a></li>
+                            <li><a class="dropdown-item" href="../public/association-departementale.php">NOS ASSOCIATIONS DÉPARTEMENTALES</a></li>
                             <li><a class="dropdown-item" href="#">NOS PARTENAIRES</a></li>
                             <li><a class="dropdown-item" href="#">NOTRE DOCUMENTATION</a></li>
                         </ul>
@@ -150,7 +150,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 </div>
 
 </body>
-<?php require_once "../public/footer.php"; ?>
+<?php require_once "../includes/footer.php"; ?>
 
 
 </html>

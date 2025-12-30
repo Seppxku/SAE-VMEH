@@ -15,7 +15,7 @@
     <title>VMEH - NOS ASSOCIATIONS DÉPARTEMENTALES</title>
 </head>
 <body>
-<?php require_once "./header.php" ?>
+<?php require_once "../includes/header.php" ?>
 <main>
 
     <section class="banniere">
@@ -97,7 +97,7 @@
     </section>
     <!-- fini de la section cacher-->
 </main>
-<?php require_once "./footer.php" ?>
+<?php require_once "../includes/footer.php" ?>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
         crossorigin=""></script>
 <script src="../assets/js/map.js"></script>
