@@ -1,3 +1,46 @@
+<?php
+
+$host = 'mysql-sae-vmeh.alwaysdata.net';
+$dbname = 'sae-vmeh_bd';
+$user = 'sae-vmeh';
+$password = 'j9nXanN5VsY7U6C';
+
+try {
+    $bdd = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $password);
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $bdd->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
+} catch (PDOException $e) {
+    die("Erreur de connexion : " . $e->getMessage());
+}
+
+
+if($_SERVER["REQUEST_METHOD"] === "POST"){
+    $email = $_POST['email'];
+    $password = $_POST['motdepasse'];
+
+    if($email != "" || $password != ""){
+        //TODO Faire un systeme de token
+        $token = bin2hex(random_bytes(32));
+
+        $req = $bdd->query('SELECT * FROM Benevole WHERE MailBenevole = "'.$email.'" AND MotDePasse = "'.$password.'"');
+        $rep = $req->fetch();
+
+        if(!empty($rep)){
+            //$bdd->exec("UPDATE users SET Benevole = '$token' WHERE MailBenevole = '$email' and  motdepasse = '$password'");
+            setcookie("token", $token, time() + 3600);
+            setcookie("username", $email, time() + 3600);
+
+            header('Location: dashboard.php');
+            exit();
+
+        }
+    }
+}
+
+?>
+
+
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -15,32 +58,7 @@
     <title>VMEH</title>
 </head>
 
-<?php
-//TODO faire la connection avec la bdd
 
-if($_SERVER["REQUEST_METHOD"] == "POST"){
-    $email = $_POST['email'];
-    $password = $_POST['motdepasse'];
-
-    if($email != "" || $password != ""){
-        $token = bin2hex(random_bytes(32));
-
-        //$req = $bdd->prepare("SELECT * FROM users WHERE email = :email and mdp = :motdepasse");
-        //$rep = $req->fetch()
-        //TODO verifier si il est dans la bdd
-
-        //$bdd->exec("UPDATE users SET token = '$token' WHERE email = '$email' and  motdepasse = '$password'");
-        setcookie("token", $token, time() + 3600);
-        setcookie("username", $email, time() + 3600);
-
-        header('Location: dashboard.php');
-        exit();
-    }
-}
-
-
-
-?>
 <header>
     <nav class="navbar navbar-expand-xl">
         <div class="container-fluid">
