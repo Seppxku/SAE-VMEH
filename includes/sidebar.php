@@ -79,13 +79,13 @@ session_start();
             </a>
         </li>
         <li>
-            <a href="#" class="nav-link text-white">
+            <a href="../admin/mission_liste.php" class="nav-link text-white">
                 <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg>
                 Événement
             </a>
         </li>
         <li>
-            <a href="#" class="nav-link text-white">
+            <a href="../admin/benevole_liste.php" class="nav-link text-white">
                 <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
                 Bénévole
             </a>
