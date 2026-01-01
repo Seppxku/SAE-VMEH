@@ -27,13 +27,15 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         $rep = $req->fetch();
 
         if(!empty($rep)){
+            session_start();
+            $_SESSION['connected'] = 1;
             //$bdd->exec("UPDATE users SET Benevole = '$token' WHERE MailBenevole = '$email' and  motdepasse = '$password'");
             $nom = $bdd->query('SELECT NomBenevole FROM Benevole WHERE MailBenevole = "'.$email.'" ');
             $_SESSION['username'] = $nom->fetchColumn();
             setcookie("token", $token, time() + 3600);
-            setcookie("username", $email, time() + 3600);
+            setcookie("email", $email, time() + 3600);
 
-            header('Location: dashboard.php');
+            header('Location: accueil.php');
             exit();
 
         }
