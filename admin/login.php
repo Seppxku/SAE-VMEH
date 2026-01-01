@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 $host = 'mysql-sae-vmeh.alwaysdata.net';
 $dbname = 'sae-vmeh_bd';
 $user = 'sae-vmeh';
@@ -35,7 +35,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
             setcookie("token", $token, time() + 3600);
             setcookie("email", $email, time() + 3600);
 
-            header('Location: accueil.php');
+            header('Location: ./accueil.php');
             exit();
 
         }
