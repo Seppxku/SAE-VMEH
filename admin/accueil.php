@@ -1,4 +1,12 @@
+<?php
+require 'functions/auth.php';
 
+
+
+user_connect();
+
+
+?>
 
 <!doctype html>
 <html lang="fr">

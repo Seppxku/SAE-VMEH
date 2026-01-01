@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 $host = 'mysql-sae-vmeh.alwaysdata.net';
 $dbname = 'sae-vmeh_bd';
 $user = 'sae-vmeh';
@@ -14,6 +14,14 @@ try {
     die("Erreur de connexion : " . $e->getMessage());
 }
 
+//$email = $_COOKIE['email'];
+//$token = $_COOKIE['token'];
+//$req = $bdd->query("SELECT Token FROM `Benevole` WHERE `mailBenevole` = '$email'AND `token` = '$token'");
+//$req = $req->fetch();
+//if(empty($rep)) {
+//    header('Location: login.php');
+//}
+
 
 if($_SERVER["REQUEST_METHOD"] === "POST"){
     $email = $_POST['email'];
@@ -27,13 +35,16 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         $rep = $req->fetch();
 
         if(!empty($rep)){
-            //$bdd->exec("UPDATE users SET Benevole = '$token' WHERE MailBenevole = '$email' and  motdepasse = '$password'");
+            session_start();
+            $_SESSION['connected'] = 1;
+
+            $bdd->exec("UPDATE Benevole SET token = '$token' WHERE MailBenevole = '$email' and  motdepasse = '$password'");
             $nom = $bdd->query('SELECT NomBenevole FROM Benevole WHERE MailBenevole = "'.$email.'" ');
             $_SESSION['username'] = $nom->fetchColumn();
             setcookie("token", $token, time() + 3600);
-            setcookie("username", $email, time() + 3600);
+            setcookie("email", $email, time() + 3600);
 
-            header('Location: dashboard.php');
+            header('Location: accueil.php');
             exit();
 
         }
