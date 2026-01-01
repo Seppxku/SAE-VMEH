@@ -39,6 +39,7 @@ function sortLink($col, $label, $current_order, $current_dir) {
     <title>Liste des Missions - VMEH</title>
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.css" rel="stylesheet">
     <link href="../assets/css/admin.css" rel="stylesheet">
 </head>
 <body>
@@ -47,61 +48,67 @@ function sortLink($col, $label, $current_order, $current_dir) {
     <?php include "../includes/sidebar.php"; ?>
 
     <main class="container-fluid p-4">
+        <div class="container mt-4">
 
-        <div class="d-flex justify-content-between align-items-center mb-4">
-            <h1 class="h3">Gestion des Missions</h1>
-            <a href="benevoles_ajouter.php" class="btn btn-success">
-                <i class="fas fa-plus"></i> Nouvelle Mission
-            </a>
-        </div>
+            <button class="btn btn-primary mb-3" id="btnAddEvent">
+                ➕ Ajouter un événement / mission
+            </button>
 
-        <div class="card shadow-sm">
-            <div class="card-body p-0">
-                <div class="table-responsive">
-                    <table class="table table-striped table-hover mb-0">
-                        <thead class="table-dark">
-                        <tr>
-                            <th><?= sortLink('TitreMission ', 'Mission ', $order_by, $order_dir) ?></th>
-                            <th><?= sortLink('LieuMission ', 'Lieu', $order_by, $order_dir) ?></th>
-                            <th><?= sortLink('CatégorieMission ', 'Catégorie', $order_by, $order_dir) ?></th>
-                            <th><?= sortLink('DateHeureDébutMission ', 'Commencer le ', $order_by, $order_dir) ?></th>
-                            <th class="text-end">Actions</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <?php foreach($missions as $m): ?>
-                            <tr>
-                                <td>
-                                    <strong><?= htmlspecialchars($m['TitreMission']) ?></strong>
-                                </td>
-                                <td><?= htmlspecialchars($m['LieuMission']) ?></td>
-                                <td><?= htmlspecialchars($m['CatégorieMission']) ?></td>
-                                <td><?= date("d/m/Y", strtotime($m['DateHeureDébutMission'])) ?></td>
-
-                                <td class="text-end">
-                                    <a href="missions_modifier.php?id=<?= $m['IdMission '] ?>" class="btn btn-sm btn-primary" title="Modifier">
-                                        <i class="fas fa-edit"></i>
-                                    </a>
-
-                                    <?php if($_SESSION['role'] === 'Admin'): ?>
-                                        <a href="missions_supprimer.php?id=<?= $m['IdMission '] ?>"
-                                           class="btn btn-sm btn-danger"
-                                           onclick="return confirm('Supprimer cette mission définitivement ?');"
-                                           title="Supprimer">
-                                            <i class="fas fa-trash-alt"></i>
-                                        </a>
-                                    <?php endif; ?>
-                                </td>
-                            </tr>
-                        <?php endforeach; ?>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+            <div id="calendar"></div>
         </div>
     </main>
 </div>
+<div class="modal fade" id="addEventModal" tabindex="-1">
+    <div class="modal-dialog">
+        <form class="modal-content" id="addEventForm">
+            <div class="modal-header">
+                <h5 class="modal-title">Ajouter un événement / mission</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label class="form-label">Titre</label>
+                    <input type="text" class="form-control" name="titre" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Description</label>
+                    <textarea class="form-control" name="description"></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Type</label>
+                    <select class="form-select" name="type" required>
+                        <option value="mission">Mission</option>
+                        <option value="evenement">Événement</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Date début</label>
+                    <input type="date" class="form-control" name="date_debut" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Date fin</label>
+                    <input type="date" class="form-control" name="date_fin">
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-success">Enregistrer</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    Annuler
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="../assets/js/calendar.js"></script>
 
 <script src="../assets/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js"></script>
 </body>
 </html>
