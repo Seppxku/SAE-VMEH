@@ -1,50 +1,38 @@
 <?php
+session_start();
 
-$host = 'mysql-sae-vmeh.alwaysdata.net';
-$dbname = 'sae-vmeh_bd';
-$user = 'sae-vmeh';
-$password = 'j9nXanN5VsY7U6C';
-
-try {
-    $bdd = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $password);
-    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $bdd->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-
-} catch (PDOException $e) {
-    die("Erreur de connexion : " . $e->getMessage());
-}
+require_once '../config/db.php';
 
 
-if($_SERVER["REQUEST_METHOD"] === "POST"){
+$error_message = "";
+
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $email = $_POST['email'];
     $password = $_POST['motdepasse'];
 
-    if($email != "" || $password != ""){
-        //TODO Faire un systeme de token
-        $token = bin2hex(random_bytes(32));
+    if (!empty($email) && !empty($password)) {
+        $sql = "SELECT * FROM Benevole WHERE MailBenevole = :email";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([':email' => $email]);
+        $user = $stmt->fetch();
 
-        $req = $bdd->query('SELECT * FROM Benevole WHERE MailBenevole = "'.$email.'" AND MotDePasse = "'.$password.'"');
-        $rep = $req->fetch();
+        if ($user && password_verify($password, $user['MotDePasse'])) {
 
-        if(!empty($rep)){
-            session_start();
-            $_SESSION['connected'] = 1;
-            //$bdd->exec("UPDATE users SET Benevole = '$token' WHERE MailBenevole = '$email' and  motdepasse = '$password'");
-            $nom = $bdd->query('SELECT NomBenevole FROM Benevole WHERE MailBenevole = "'.$email.'" ');
-            $_SESSION['username'] = $nom->fetchColumn();
-            setcookie("token", $token, time() + 3600);
-            setcookie("email", $email, time() + 3600);
+            $_SESSION['user_id'] = $user['IdBenevole'];
+            $_SESSION['prenom'] = $user['PrenomBenevole'];
+            $_SESSION['role'] = $user['RoleBenevole'];
 
-            header('Location: ./accueil.php');
+            header('Location: accueil.php');
             exit();
-
+        } else {
+            $error_message = "Email ou mot de passe incorrect.";
         }
+    } else {
+        $error_message = "Veuillez remplir tous les champs.";
     }
 }
-
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -156,4 +144,3 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 
 
 </html>
-

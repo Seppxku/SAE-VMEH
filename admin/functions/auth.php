@@ -2,17 +2,16 @@
 
 function isConnected () : bool
 {
-    if(session_status() === PHP_SESSION_NONE){
+    if (session_status() === PHP_SESSION_NONE) {
         session_start();
     }
-    return !empty($_SESSION['connected']);
+    return isset($_SESSION['user_id']);
 }
 
-
-
-function user_connect(){
-    if(!isConnected()){
-        header('location: ../login.php');
+function user_connect() {
+    if (!isConnected()) {
+        header('Location: login.php');
         exit();
     }
 }
+?>

@@ -1,12 +1,7 @@
 <?php
-
-session_start();
-require 'functions/auth.php';
-
-
+require_once 'functions/auth.php';
 
 user_connect();
-
 
 ?>
 
@@ -34,10 +29,6 @@ user_connect();
 </head>
 <main>
     <?php require_once "../includes/sidebar.php"; ?>
-
-
-
-
 </main>
 
 </html>
