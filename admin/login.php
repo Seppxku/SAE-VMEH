@@ -87,7 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="./devenir-benevole.php">DEVENIR BÉNÉVOLE</a>
+                        <a class="nav-link text-white" href="../public/devenir-benevole.php">DEVENIR BÉNÉVOLE</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="#">NOS ACTIONS</a>
