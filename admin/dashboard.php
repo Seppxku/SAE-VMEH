@@ -5,8 +5,6 @@ require_once '../config/db.php';
 
 user_connect();
 
-// --- 1. KPIs ---
-
 // Nombre total de bénévoles
 $stmt = $pdo->query("SELECT COUNT(*) FROM Benevole");
 $nbBenevoles = $stmt->fetchColumn();
@@ -29,10 +27,7 @@ $nbParticipating = $stmt->fetchColumn();
 $nbNonParticipating = $nbBenevoles - $nbParticipating;
 $tauxParticipation = $nbBenevoles > 0 ? round(($nbParticipating / $nbBenevoles) * 100, 1) : 0;
 
-// --- 2. Data for Charts ---
 
-// Répartition par Age (Calculated from DateDeNaissanceBenevole)
-// Ranges: <18, 18-35, 36-50, 51-65, >65
 $sqlAge = "
     SELECT 
         CASE 
@@ -65,83 +60,18 @@ $profData = $pdo->query($sqlProf)->fetchAll(PDO::FETCH_KEY_PAIR);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tableau de Bord - VMEH</title>
     
-    <!-- Bootstrap & CSS -->
+  
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="../assets/css/admin.css" rel="stylesheet">
     
-    <!-- Chart.js -->
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <style>
-        @media print {
-            @page {
-                size: landscape;
-                margin: 0.5cm;
-            }
-            body {
-                -webkit-print-color-adjust: exact !important;
-                print-color-adjust: exact !important;
-                background-color: white !important;
-            }
-            
-            /* Hide non-essential elements */
-            .sidebar, .btn-print, header, .navbar, .no-print {
-                display: none !important;
-            }
 
-            /* Adjust Main Container */
-            main {
-                margin: 0 !important;
-                padding: 10px !important;
-                width: 100% !important;
-                max-width: 100% !important;
-            }
-
-            /* Force Grid Layout for Print - mimics col-6 behavior */
-            .row {
-                display: flex !important;
-                flex-wrap: wrap !important;
-            }
-            
-            /* Force 4 columns per row for KPIs and Charts to fit 8 items on one page if possible, 
-               or at least 2 per row to save space. Let's try 4 items per row (25%) */
-            .col-xl-3, .col-md-6 {
-                flex: 0 0 25% !important;
-                max-width: 25% !important;
-                width: 25% !important;
-                padding: 10px !important;
-            }
-            
-            /* Reduce card separation and shadow */
-            .card {
-                border: 1px solid #ccc !important;
-                box-shadow: none !important;
-                break-inside: avoid;
-            }
-            
-            /* Adjust Chart Size for Print */
-            canvas {
-                max-height: 200px !important; 
-                width: 100% !important;
-            }
-            
-            /* Ensure text is black */
-            body, h1, h2, h3, h4, h5, p {
-                color: #000 !important;
-            }
-            .text-white {
-                color: #fff !important; /* Keep white text on colored cards if backgrounds print */
-            }
-        }
-        .card-header {
-            font-weight: 600;
-        }
-    </style>
 </head>
 <body>
 
 <div class="d-flex">
-    <!-- Sidebar (Hidden on print) -->
     <div class="sidebar no-print d-flex">
         <?php require_once "../includes/sidebar.php"; ?>
     </div>
@@ -150,12 +80,12 @@ $profData = $pdo->query($sqlProf)->fetchAll(PDO::FETCH_KEY_PAIR);
         <div class="container-fluid">
             <h1 class="h3 mb-5 text-center">Tableau de Bord</h1>
 
-            <!-- Unified Gallery Grid -->
+          
             <div class="row g-4 mb-5">
                 
-                <!-- KPI 1: Adherents -->
+              
                 <div class="col-12 col-md-6 col-xl-3">
-                    <div class="card text-white bg-primary shadow-sm h-100" style="min-height: 300px;">
+                    <div class="card text-white bg-primary shadow-sm h-100 kpi-card">
                         <div class="card-body d-flex flex-column justify-content-center align-items-center text-center p-4">
                             <h5 class="card-title">Nombre d'Adhérents</h5>
                             <p class="card-text display-6 fw-bold my-3"><?= $nbBenevoles ?></p>
@@ -164,9 +94,9 @@ $profData = $pdo->query($sqlProf)->fetchAll(PDO::FETCH_KEY_PAIR);
                     </div>
                 </div>
 
-                <!-- KPI 2: Missions -->
+               
                 <div class="col-12 col-md-6 col-xl-3">
-                    <div class="card text-white bg-success shadow-sm h-100" style="min-height: 300px;">
+                    <div class="card text-white bg-success shadow-sm h-100 kpi-card">
                         <div class="card-body d-flex flex-column justify-content-center align-items-center text-center p-4">
                             <h5 class="card-title">Missions Réalisées</h5>
                             <p class="card-text display-6 fw-bold my-3"><?= $nbMissions ?></p>
@@ -175,9 +105,9 @@ $profData = $pdo->query($sqlProf)->fetchAll(PDO::FETCH_KEY_PAIR);
                     </div>
                 </div>
 
-                <!-- KPI 3: Nouveaux -->
+                
                 <div class="col-12 col-md-6 col-xl-3">
-                    <div class="card text-dark bg-warning shadow-sm h-100" style="min-height: 300px;">
+                    <div class="card text-dark bg-warning shadow-sm h-100 kpi-card">
                         <div class="card-body d-flex flex-column justify-content-center align-items-center text-center p-4">
                             <h5 class="card-title">Nouveaux Inscrits</h5>
                             <p class="card-text display-6 fw-bold my-3"><?= $nbNouveaux ?></p>
@@ -186,9 +116,9 @@ $profData = $pdo->query($sqlProf)->fetchAll(PDO::FETCH_KEY_PAIR);
                     </div>
                 </div>
 
-                <!-- KPI 4: Dons & Cotisations -->
+               
                 <div class="col-12 col-md-6 col-xl-3">
-                    <div class="card text-white bg-info shadow-sm h-100" style="min-height: 300px;">
+                    <div class="card text-white bg-info shadow-sm h-100 kpi-card">
                         <div class="card-body d-flex flex-column justify-content-center align-items-center text-center p-4">
                             <h5 class="card-title">Dons et Cotisations</h5>
                             <p class="card-text display-6 fw-bold my-3"><?= number_format($totalDons, 0, ',', ' ') ?> €</p>
@@ -197,48 +127,48 @@ $profData = $pdo->query($sqlProf)->fetchAll(PDO::FETCH_KEY_PAIR);
                     </div>
                 </div>
 
-                <!-- Chart: Taux de Participation -->
+                
                 <div class="col-12 col-md-6 col-xl-3">
                     <div class="card shadow-sm h-100">
                         <div class="card-header bg-white text-center border-0 pt-3"><strong>Taux de Participation</strong></div>
                         <div class="card-body d-flex align-items-center justify-content-center p-2">
-                             <div style="width: 100%; height: 300px;">
+                             <div class="chart-container">
                                 <canvas id="participationChart"></canvas>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Chart 1: Age -->
+                
                 <div class="col-12 col-md-6 col-xl-3">
                     <div class="card shadow-sm h-100">
                         <div class="card-header bg-white text-center border-0 pt-3"><strong>Répartition par Âge</strong></div>
                         <div class="card-body d-flex align-items-center justify-content-center p-2">
-                            <div style="width: 100%; height: 300px;">
+                            <div class="chart-container">
                                 <canvas id="ageChart"></canvas>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Chart 2: Origine -->
+                
                 <div class="col-12 col-md-6 col-xl-3">
                     <div class="card shadow-sm h-100">
                         <div class="card-header bg-white text-center border-0 pt-3"><strong>Origine Géographique</strong></div>
                         <div class="card-body d-flex align-items-center justify-content-center p-2">
-                            <div style="width: 100%; height: 300px;">
+                            <div class="chart-container">
                                 <canvas id="origineChart"></canvas>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Chart 3: Professions -->
+                
                 <div class="col-12 col-md-6 col-xl-3">
                     <div class="card shadow-sm h-100">
                         <div class="card-header bg-white text-center border-0 pt-3"><strong>Professions</strong></div>
                         <div class="card-body d-flex align-items-center justify-content-center p-2">
-                            <div style="width: 100%; height: 300px;">
+                            <div class="chart-container">
                                 <canvas id="profChart"></canvas>
                             </div>
                         </div>
@@ -263,7 +193,7 @@ $profData = $pdo->query($sqlProf)->fetchAll(PDO::FETCH_KEY_PAIR);
 <script src="../assets/js/bootstrap.bundle.min.js"></script>
 
 <script>
-    // Data injection from PHP
+   
     const ageLabels = <?= json_encode(array_keys($ageData)); ?>;
     const ageValues = <?= json_encode(array_values($ageData)); ?>;
 
@@ -275,9 +205,9 @@ $profData = $pdo->query($sqlProf)->fetchAll(PDO::FETCH_KEY_PAIR);
 
     const participationValues = [<?= $nbParticipating ?>, <?= $nbNonParticipating ?>];
 
-    // --- Charts Configuration ---
+    
 
-    // 1. Age (Bar Chart)
+
     new Chart(document.getElementById('ageChart'), {
         type: 'bar',
         data: {
@@ -302,7 +232,7 @@ $profData = $pdo->query($sqlProf)->fetchAll(PDO::FETCH_KEY_PAIR);
         }
     });
 
-    // 2. Origine (Bar Chart - Vertical)
+    
     new Chart(document.getElementById('origineChart'), {
         type: 'bar',
         data: {
@@ -327,7 +257,6 @@ $profData = $pdo->query($sqlProf)->fetchAll(PDO::FETCH_KEY_PAIR);
         }
     });
 
-    // 3. Participation (Doughnut)
     new Chart(document.getElementById('participationChart'), {
         type: 'doughnut',
         data: {
@@ -343,7 +272,6 @@ $profData = $pdo->query($sqlProf)->fetchAll(PDO::FETCH_KEY_PAIR);
         options: { responsive: true, maintainAspectRatio: false }
     });
 
-    // 4. Professions (Horizontal Bar)
     new Chart(document.getElementById('profChart'), {
         type: 'bar',
         data: {
