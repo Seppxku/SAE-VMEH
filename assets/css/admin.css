@@ -138,10 +138,13 @@ form {
 
 }
 
-.form-item,
+.form-item {
+    padding: 10px;
+}
+
 form>h2 {
     padding: 10px;
-
+    text-align: center;
 }
 
 form a {
