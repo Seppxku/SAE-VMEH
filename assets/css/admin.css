@@ -180,6 +180,9 @@ form a {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 10);
     margin-top: 2em;
     border: 1px solid #000000;
+    height: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 /**************************Dashboard**********************************/
