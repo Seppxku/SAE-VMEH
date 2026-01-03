@@ -100,7 +100,7 @@
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Juvenile_Ragdoll.jpg/1200px-Juvenile_Ragdoll.jpg" alt="" width="32" height="32" class="rounded-circle me-2">
             <?php
 
-            echo $_SESSION["username"];
+            echo isset($_SESSION["prenom"]) ? $_SESSION["prenom"] : "Utilisateur";
             ?>
 
         </a>
