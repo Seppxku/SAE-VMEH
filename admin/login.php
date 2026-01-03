@@ -126,7 +126,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         </div>
         <div class="form-item" >
             <button class="form-item form-control " id="btn-submit" type="submit">Se connecter</button>
-            <a href="#" >Créer un compte</a>
+            <a href="../public/devenir-benevole.php#comment-devenir-benevole" >Créer un compte</a>
 
         </div>
 
