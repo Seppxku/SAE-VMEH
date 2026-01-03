@@ -19,7 +19,6 @@ user_connect();
 
     <main class="w-100 p-5 text-center d-flex align-items-center justify-content-center" style="min-height: 100vh;">
         <div>
-            <!-- Fallback image if wikipedia one blocks, but using a generic placeholder or no image is safer if internet is flaky. Keeping user's style. -->
             <h1 class="display-4 fw-bold">Bienvenue sur l'espace Administration</h1>
             <p class="lead text-muted">Gérez les bénévoles, les missions et visualisez les statistiques de l'association.</p>
             <div class="mt-4">
