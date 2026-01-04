@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             ':lieu' => $lieu,
             ':categorie' => $categorie,
             ':nb_benevoles' => $nb_benevoles,
-            'id_responsable' => $id_responsable
+            ':id_responsable' => $id_responsable
         ]);
 
 
@@ -55,4 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     }
 }
+
+header('Content-Type: application/json');
+echo json_encode(['success' => true]);
 

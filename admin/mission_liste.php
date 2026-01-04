@@ -119,7 +119,7 @@ $benevoles = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <!-- DATE FIN (MISSION SEULEMENT) -->
                 <div class="mb-3" id="dateFinGroup">
                     <label class="form-label">Date / Heure de fin</label>
-                    <input type="datetime-local" class="form-control" name="date_fin" id="dateFin">
+                    <input type="datetime-local" class="form-control" name="date_fin" id="dateFin" required>
                 </div>
 
                 <!-- LIEU -->
@@ -132,17 +132,17 @@ $benevoles = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <div id="missionFields">
                     <div class="mb-3">
                         <label class="form-label">Catégorie de mission</label>
-                        <input type="text" class="form-control" name="categorie">
+                        <input type="text" class="form-control" name="categorie" >
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label">Nombre de bénévoles attendus</label>
-                        <input type="number" class="form-control" name="nb_benevoles" min="1">
+                        <input type="number" class="form-control" name="nb_benevoles" min="1" >
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label">Bénévole assigné</label>
-                        <select class="form-select" name="id_responsable" required>
+                        <select class="form-select" name="id_responsable" >
                             <option value="">— Sélectionner un bénévole —</option>
                             <?php foreach ($benevoles as $b): ?>
                                 <option value="<?= $b['IdBenevole'] ?>">
@@ -157,12 +157,12 @@ $benevoles = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <div id="evenementFields" style="display:none">
                     <div class="mb-3">
                         <label class="form-label">Thème de l'événement</label>
-                        <input type="text" class="form-control" name="theme">
+                        <input type="text" class="form-control" name="theme" >
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label">Type d'événement</label>
-                        <input type="text" class="form-control" name="type_evenement">
+                        <input type="text" class="form-control" name="type_evenement" >
                     </div>
                 </div>
 
