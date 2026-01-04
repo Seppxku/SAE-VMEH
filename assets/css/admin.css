@@ -118,6 +118,15 @@ main {
 
 /**************************fin Sidebar bootstrap**********************************/
 
+#calendar {
+    position: relative;
+    z-index: 1;
+}
+
+main {
+    position: relative;
+    z-index: 1;
+}
 
 form {
     margin: 2em auto;

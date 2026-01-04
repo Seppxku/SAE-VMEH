@@ -1,4 +1,4 @@
-let calendar; // 🌍 variable globale
+let calendar;
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -8,8 +8,11 @@ document.addEventListener('DOMContentLoaded', function () {
         initialView: 'dayGridMonth',
         locale: 'fr',
         themeSystem: 'bootstrap5',
+
         events: '../../admin/load_events.php',
+
         eventClick: function(info) {
+            console.log('event cliqué', info.event);
             const e = info.event;
 
             let html = `
@@ -34,18 +37,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     calendar.render();
 
-    // 🔹 MODAL
+    //MODAL
     var addModal = new bootstrap.Modal(
         document.getElementById('addEventModal')
     );
 
-    // 🔹 BOUTON
+    //BOUTON
     document.getElementById('btnAddEvent').addEventListener('click', function () {
         document.getElementById('addEventForm').reset();
         addModal.show();
     });
 
-    // 🔹 FORMULAIRE
+    //FORMULAIRE
     document.getElementById('addEventForm').addEventListener('submit', function (e) {
         e.preventDefault();
 
@@ -62,6 +65,35 @@ document.addEventListener('DOMContentLoaded', function () {
                     alert('Erreur lors de l’enregistrement');
                 }
             });
+        location.reload()
     });
 
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const missionRadio = document.getElementById("typeMission");
+    const evenementRadio = document.getElementById("typeEvenement");
+
+    const missionFields = document.getElementById("missionFields");
+    const evenementFields = document.getElementById("evenementFields");
+    const dateFinGroup = document.getElementById("dateFinGroup");
+    const dateFinInput = document.getElementById("dateFin");
+
+    function toggleFields() {
+        if (evenementRadio.checked) {
+            missionFields.style.display = "none";
+            evenementFields.style.display = "block";
+            dateFinGroup.style.display = "none";
+            dateFinInput.value = "";
+        } else {
+            missionFields.style.display = "block";
+            evenementFields.style.display = "none";
+            dateFinGroup.style.display = "block";
+        }
+    }
+
+    missionRadio.addEventListener("change", toggleFields);
+    evenementRadio.addEventListener("change", toggleFields);
+
+    toggleFields();
 });
