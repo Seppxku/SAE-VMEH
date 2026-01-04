@@ -43,12 +43,41 @@ document.addEventListener('DOMContentLoaded', function () {
         `;
             }
 
+            html+=`
+            <?php if($_SESSION['role'] === 'Admin'): ?>
+                <button class="btn btn-danger mb-3" id="btnSuprrEvent" data-event-id="${e.id}" data-event-type="${e.extendedProps.type}">
+                    suprimer l'evenement
+                </button>
+            <?php endif; ?>
+            `;
+
             // Injecter le contenu dans le modal
             document.getElementById('modalBody').innerHTML = html;
             document.getElementById('modalTitle').innerText = e.title;
 
             // Ouvrir le modal
             new bootstrap.Modal(document.getElementById('eventModal')).show();
+
+            const btnSuppr = document.getElementById('btnSuprrEvent');
+            if (btnSuppr) {
+                btnSuppr.addEventListener('click', function() {
+                    const eventId = this.getAttribute('data-event-id');
+                    const eventType = this.getAttribute('data-event-type');
+
+                    fetch('delete_event.php', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                        body: `id=${encodeURIComponent(eventId)}&type=${encodeURIComponent(eventType)}`
+                    })
+                        .then(response => response.text())
+                        .then(data => {
+                            alert(data); // Message renvoyé par PHP
+                            calendar.refetchEvents(); // Rafraîchir le calendrier
+                            bootstrap.Modal.getInstance(document.getElementById('eventModal')).hide(); // Fermer le modal
+                        })
+                        .catch(err => console.error(err));
+                });
+            }
         }
     });
 
@@ -83,6 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
     });
+
 
     const missionRadio = document.getElementById("typeMission");
     const evenementRadio = document.getElementById("typeEvenement");
