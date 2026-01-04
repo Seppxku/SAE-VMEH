@@ -142,7 +142,7 @@ $benevoles = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                     <div class="mb-3">
                         <label class="form-label">Bénévole assigné</label>
-                        <select class="form-select" name="benevole_id" required>
+                        <select class="form-select" name="id_responsable" required>
                             <option value="">— Sélectionner un bénévole —</option>
                             <?php foreach ($benevoles as $b): ?>
                                 <option value="<?= $b['IdBenevole'] ?>">

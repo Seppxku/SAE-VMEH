@@ -15,12 +15,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $date_fin = $_POST['date_fin'];
         $categorie = $_POST['categorie'] ?? null;
         $nb_benevoles = $_POST['nb_benevoles'] ?? null;
-        $id_benevole = $_POST['id_benevoles'] ;
+        $id_responsable = $_POST['id_responsable'] ;
 
         $sql="INSERT INTO Mission (TitreMission , DescriptionMission , DateHeureDebutMission ,
-                    DateHeureFinMission , LieuMission , CategorieMission , NbBenevolesAttendusMission,IdBenevole)
+                    DateHeureFinMission , LieuMission , CategorieMission , NbBenevolesAttendusMission,IdResponsable)
                 VALUES
-                (:titre, :description, :date_debut, :date_fin, :lieu, :categorie, :nb_benevoles,:id_benevole)";
+                (:titre, :description, :date_debut, :date_fin, :lieu, :categorie, :nb_benevoles,:id_responsable)";
 
         $stmt = $pdo->prepare($sql);
         $stmt->execute([
@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             ':lieu' => $lieu,
             ':categorie' => $categorie,
             ':nb_benevoles' => $nb_benevoles,
-            'id_benevole' => $id_benevole
+            'id_responsable' => $id_responsable
         ]);
 
 
