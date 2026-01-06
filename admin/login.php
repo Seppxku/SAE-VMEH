@@ -19,12 +19,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         if ($user && password_verify($password, $user['MotDePasse'])) {
 
-            $_SESSION['user_id'] = $user['IdBenevole'];
-            $_SESSION['prenom'] = $user['PrenomBenevole'];
-            $_SESSION['role'] = $user['RoleBenevole'];
+            if ($user['EstValide'] == 0) {
+                $error = "Votre compte est en attente de validation par un administrateur.";
+            } else {
 
-            header('Location: accueil.php');
-            exit();
+                $_SESSION['user_id'] = $user['IdBenevole'];
+                $_SESSION['nom'] = $user['PrenomBenevole'] . " " . $user['NomBenevole'];
+                $_SESSION['role'] = $user['RoleBenevole'];
+
+                header("Location: accueil.php");
+                exit();
+            }
         } else {
             $error_message = "Email ou mot de passe incorrect.";
         }

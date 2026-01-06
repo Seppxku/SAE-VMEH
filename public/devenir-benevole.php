@@ -1,4 +1,83 @@
+<?php
+session_start();
 
+require_once '../config/db.php';
+
+$message = "";
+$messageType = "";
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
+    $prenom = htmlspecialchars($_POST['prenom']);
+    $nom = htmlspecialchars($_POST['nom']);
+    $sexe = htmlspecialchars($_POST['sexe']);
+    $naissance = $_POST['naissance'];
+    $email = htmlspecialchars($_POST['mail']);
+    $tel = htmlspecialchars($_POST['tel']);
+    $profession = htmlspecialchars($_POST['profession']);
+    $adresse = htmlspecialchars($_POST['adresse']);
+    $cp = htmlspecialchars($_POST['codePostal']);
+    $ville = htmlspecialchars($_POST['ville']);
+    $mdp = $_POST['password'];
+    $confirmMdp = $_POST['confirmPassword'];
+
+    if ($email !== $confirmMail = $_POST['confirmMail']) {
+        $message = "Les emails ne correspondent pas.";
+        $messageType = "danger";
+    } elseif ($mdp !== $confirmMdp) {
+        $message = "Les mots de passe ne correspondent pas.";
+        $messageType = "danger";
+    } else {
+        $stmt = $pdo->prepare("SELECT IdBenevole FROM Benevole WHERE MailBenevole = ?");
+        $stmt->execute([$email]);
+
+        if ($stmt->rowCount() > 0) {
+            $message = "Cet email est déjà utilisé.";
+            $messageType = "danger";
+        } else {
+            $mdpHash = password_hash($mdp, PASSWORD_DEFAULT);
+
+            $sql = "INSERT INTO Benevole (
+                        NomBenevole, PrenomBenevole, Sexe, 
+                        DateDeNaissanceBenevole, MailBenevole, TelBenevole, 
+                        ProfessionBenevole, Adresse, CodePostal, VilleBenevole, 
+                        MotDePasse, RoleBenevole, EstValide, DateInscriptionBenevole
+                    ) VALUES (
+                        :nom, :prenom, :sexe, 
+                        :naissance, :mail, :tel, 
+                        :profession, :adresse, :cp, :ville, 
+                        :mdp, 'Benevole', 0, NOW()
+                    )";
+
+            $stmt = $pdo->prepare($sql);
+
+            try {
+                $stmt->execute([
+                        ':nom' => $nom,
+                        ':prenom' => $prenom,
+                        ':sexe' => $sexe,
+                        ':naissance' => $naissance,
+                        ':mail' => $email,
+                        ':tel' => $tel,
+                        ':profession' => $profession,
+                        ':adresse' => $adresse,
+                        ':cp' => $cp,
+                        ':ville' => $ville,
+                        ':mdp' => $mdpHash
+                ]);
+
+                $message = "Inscription réussie ! Votre compte est en attente de validation par un administrateur.";
+                $messageType = "success";
+                $_POST = [];
+
+            } catch (PDOException $e) {
+                $message = "Erreur technique : " . $e->getMessage();
+                $messageType = "danger";
+            }
+        }
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>

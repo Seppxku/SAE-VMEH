@@ -93,13 +93,25 @@
                 Profil
             </a>
         </li>
+        <?php
+        if(isset($_SESSION['role']) && $_SESSION['role'] === 'Admin'):
+            ?>
+
+            <div class="sidebar-heading text-muted text-uppercase fs-6 fw-bold px-3 mt-3 mb-1">
+                Administration
+            </div>
+
+            <a href="candidatures.php" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold">
+                <i class="fas fa-bell me-2"></i>Candidatures
+            </a>
+
+        <?php endif; ?>
     </ul>
     <hr>
     <div class="dropdown">
         <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Juvenile_Ragdoll.jpg/1200px-Juvenile_Ragdoll.jpg" alt="" width="32" height="32" class="rounded-circle me-2">
             <?php
-
             echo isset($_SESSION["prenom"]) ? $_SESSION["prenom"] : "Utilisateur";
             ?>
 
