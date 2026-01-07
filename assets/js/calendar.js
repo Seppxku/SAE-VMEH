@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         events: '../../admin/load_events.php',
 
-        eventClick: function(info) { // le html qui va s'afficher quand on click sur l'event
+        eventClick: function(info) {
             const e = info.event;
 
             // Fonction pour formater date et heure
@@ -31,49 +31,47 @@ document.addEventListener('DOMContentLoaded', function () {
         <p><strong>Date / Heure de fin :</strong> ${formatDateTime(e.end)}</p>
     `;
 
-            // Ajout des infos spécifiques selon le type
+            // Infos spécifiques selon le type
             if (e.extendedProps.type === 'mission') {
                 html += `
             <p><strong>Catégorie :</strong> ${e.extendedProps.categorie || '-'}</p>
             <p><strong>Bénévoles attendus :</strong> ${e.extendedProps.nbBenevoles || '-'}</p>
+            <p><strong>Bénévoles assignés :</strong><br>
+                ${e.extendedProps.benevoles
+                    ? e.extendedProps.benevoles
+                    : '<em>Aucun bénévole assigné</em>'}
+            </p>
         `;
             } else if (e.extendedProps.type === 'evenement') {
                 html += `
             <p><strong>Thème :</strong> ${e.extendedProps.theme || '-'}</p>
         `;
             }
-            if (e.extendedProps.type === 'mission') {
-                html += `
-        <p><strong>Catégorie :</strong> ${e.extendedProps.categorie || '-'}</p>
-        <p><strong>Bénévoles attendus :</strong> ${e.extendedProps.nbBenevoles || '-'}</p>
-        <p><strong>Bénévoles assignés :</strong><br>
-            ${e.extendedProps.benevoles
-                    ? e.extendedProps.benevoles
-                    : '<em>Aucun bénévole assigné</em>'}
-        </p>
-                `;
-            }
 
-            html+=`
-            <?php if($_SESSION['role'] === 'Admin'): ?>
-                <button class="btn btn-danger mb-3" id="btnSuprrEvent" data-event-id="${e.id}" data-event-type="${e.extendedProps.type}">
-                    suprimer l'evenement
-                </button>
-            <?php endif; ?>
-            `;
+            // Si admin, bouton supprimer
+            if (window.userRole === 'Admin') { // Assure-toi d'avoir défini window.userRole en JS
+                html += `
+            <button class="btn btn-danger mb-3" id="btnSupprEvent">
+                Supprimer l'événement
+            </button>
+        `;
+            }
 
             // Injecter le contenu dans le modal
             document.getElementById('modalBody').innerHTML = html;
             document.getElementById('modalTitle').innerText = e.title;
 
             // Ouvrir le modal
-            new bootstrap.Modal(document.getElementById('eventModal')).show();
+            const modalInstance = new bootstrap.Modal(document.getElementById('eventModal'));
+            modalInstance.show();
 
-            const btnSuppr = document.getElementById('btnSuprrEvent');
+            // Gestion du bouton supprimer
+            const btnSuppr = document.getElementById('btnSupprEvent');
             if (btnSuppr) {
                 btnSuppr.addEventListener('click', function() {
-                    const eventId = this.getAttribute('data-event-id');
-                    const eventType = this.getAttribute('data-event-type');
+                    // On utilise directement les extendedProps
+                    const eventId = e.id;
+                    const eventType = e.extendedProps.type;
 
                     fetch('delete_event.php', {
                         method: 'POST',
@@ -84,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         .then(data => {
                             alert(data); // Message renvoyé par PHP
                             calendar.refetchEvents(); // Rafraîchir le calendrier
-                            bootstrap.Modal.getInstance(document.getElementById('eventModal')).hide(); // Fermer le modal
+                            modalInstance.hide(); // Fermer le modal
                         })
                         .catch(err => console.error(err));
                 });

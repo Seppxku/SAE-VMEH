@@ -49,6 +49,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     ':idBenevole' => $idBenevole
                 ]);
             }
+
+            $sqlAssign = "UPDATE Benevole SET DisponibiliteBenevole = 1
+                  WHERE IdBenevole = :idBenevole";
+
+            $stmtAssign = $pdo->prepare($sqlAssign);
+
+            foreach ($id_assigne as $idBenevole) {
+                $stmtAssign->execute([
+                    ':idBenevole' => $idBenevole
+                ]);
+            }
         }
 
 

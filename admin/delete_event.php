@@ -22,11 +22,16 @@ if (isset($_POST['id'], $_POST['type'])) {
         echo "Type invalide.";
         exit;
     }
+    $sql = "DELETE FROM Assigner WHERE IdMission = :id";
+    $stmt = $pdo->prepare($sql);
+        $stmt->execute([':id' => $id]);
 
     // On concatène le nom de colonne directement dans la requête
     $sql = "DELETE FROM $table WHERE $id_column = :id";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([':id' => $id]);
+
+
 
     echo ucfirst($type) . " supprimé avec succès !";
 } else {

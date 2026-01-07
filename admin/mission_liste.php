@@ -47,7 +47,7 @@ $benevoles = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <link href="../assets/css/admin.css" rel="stylesheet">
 </head>
 <body>
-
+<script>window.userRole = "<?= $_SESSION['role'] ?>";</script>
 <div class="d-flex">
     <?php include "../includes/sidebar.php"; ?>
 
