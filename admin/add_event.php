@@ -34,6 +34,22 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             ':id_responsable' => $id_responsable
         ]);
 
+        $idMission = $pdo->lastInsertId();
+
+        if (!empty($id_assigne)) {
+            $sqlAssign = "INSERT INTO Assign (IdMission, IdBenevole)
+                  VALUES (:idMission, :idBenevole)";
+
+            $stmtAssign = $pdo->prepare($sqlAssign);
+
+            foreach ($id_assigne as $idBenevole) {
+                $stmtAssign->execute([
+                    ':idMission' => $idMission,
+                    ':idBenevole' => $idBenevole
+                ]);
+            }
+        }
+
 
     } elseif ($type === "evenement") {
         $theme = $_POST['theme'] ?? null;
