@@ -281,3 +281,18 @@ form a {
         color: #000 !important;
     }
 }
+
+.form-changement{
+    border: none;
+}
+
+form input , button{
+    border: rgb(33 37 41) solid 1px ;
+    border-radius: 0.5em;
+    margin: 0.5em;
+}
+
+#mdpChangement{
+    display: flex;
+    flex-direction: column;
+}

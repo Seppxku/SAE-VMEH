@@ -87,12 +87,6 @@
                 Bénévole
             </a>
         </li>
-        <li>
-            <a href="#" class="nav-link text-white">
-                <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
-                Profil
-            </a>
-        </li>
         <?php
         if(isset($_SESSION['role']) && $_SESSION['role'] === 'Admin'):
             ?>
@@ -114,7 +108,6 @@
             <?php
             echo isset($_SESSION["prenom"]) ? $_SESSION["prenom"] : "Utilisateur";
             ?>
-
         </a>
         <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
             <li><a class="dropdown-item" href="#">Paramètre</a></li>
