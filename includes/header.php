@@ -29,7 +29,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="../public/actualite.php" role="button" >
+                        <a class="nav-link text-white" href="../public/info.php" role="button" >
                             ACTUALITÉS
                         </a>
                     </li>

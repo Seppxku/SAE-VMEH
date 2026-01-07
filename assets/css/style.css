@@ -1372,6 +1372,9 @@ footer li{
 #topnav_responsive_menu {
     display: none;
 }
+#devenir-benevole , ul {
+    padding: 0;
+}
 
 
 
@@ -1380,6 +1383,7 @@ footer li{
     .info-carousel{
         margin: 0 10px 25px;
     }
+
 
     .info{
         display: flex;
@@ -1390,6 +1394,13 @@ footer li{
         display: none;
     }
 
+    .info-item {
+        margin: 10px 0;
+    }
+
+    .info-menu-categorie {
+        flex-direction: column;
+    }
 
 
 }
