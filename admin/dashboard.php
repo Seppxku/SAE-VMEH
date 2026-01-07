@@ -6,7 +6,7 @@ require_once '../config/db.php';
 user_connect();
 
 // Nombre total de bénévoles
-$stmt = $pdo->query("SELECT COUNT(*) FROM Benevole");
+$stmt = $pdo->query("SELECT COUNT(*) FROM Benevole where EstValide = 1");
 $nbBenevoles = $stmt->fetchColumn();
 
 // Missions réalisées (Date fin passée)
@@ -14,7 +14,7 @@ $stmt = $pdo->query("SELECT COUNT(*) FROM Mission WHERE DateHeureFinMission < NO
 $nbMissions = $stmt->fetchColumn();
 
 // Nouveaux inscrits (ce mois-ci)
-$stmt = $pdo->query("SELECT COUNT(*) FROM Benevole WHERE MONTH(DateInscriptionBenevole) = MONTH(CURRENT_DATE()) AND YEAR(DateInscriptionBenevole) = YEAR(CURRENT_DATE())");
+$stmt = $pdo->query("SELECT COUNT(*) FROM Benevole WHERE MONTH(DateInscriptionBenevole) = MONTH(CURRENT_DATE()) AND YEAR(DateInscriptionBenevole) = YEAR(CURRENT_DATE()) and EstValide = 1");
 $nbNouveaux = $stmt->fetchColumn();
 
 // Montant total des dons
@@ -59,11 +59,11 @@ $profData = $pdo->query($sqlProf)->fetchAll(PDO::FETCH_KEY_PAIR);
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tableau de Bord - VMEH</title>
-    
-  
+
+
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="../assets/css/admin.css" rel="stylesheet">
-    
+
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -80,10 +80,10 @@ $profData = $pdo->query($sqlProf)->fetchAll(PDO::FETCH_KEY_PAIR);
         <div class="container-fluid">
             <h1 class="h3 mb-5 text-center">Tableau de Bord</h1>
 
-          
+
             <div class="row g-4 mb-5">
-                
-              
+
+
                 <div class="col-12 col-md-6 col-xl-3">
                     <div class="card text-white bg-primary shadow-sm h-100 kpi-card">
                         <div class="card-body d-flex flex-column justify-content-center align-items-center text-center p-4">
@@ -94,7 +94,7 @@ $profData = $pdo->query($sqlProf)->fetchAll(PDO::FETCH_KEY_PAIR);
                     </div>
                 </div>
 
-               
+
                 <div class="col-12 col-md-6 col-xl-3">
                     <div class="card text-white bg-success shadow-sm h-100 kpi-card">
                         <div class="card-body d-flex flex-column justify-content-center align-items-center text-center p-4">
@@ -105,7 +105,7 @@ $profData = $pdo->query($sqlProf)->fetchAll(PDO::FETCH_KEY_PAIR);
                     </div>
                 </div>
 
-                
+
                 <div class="col-12 col-md-6 col-xl-3">
                     <div class="card text-dark bg-warning shadow-sm h-100 kpi-card">
                         <div class="card-body d-flex flex-column justify-content-center align-items-center text-center p-4">
@@ -116,7 +116,7 @@ $profData = $pdo->query($sqlProf)->fetchAll(PDO::FETCH_KEY_PAIR);
                     </div>
                 </div>
 
-               
+
                 <div class="col-12 col-md-6 col-xl-3">
                     <div class="card text-white bg-info shadow-sm h-100 kpi-card">
                         <div class="card-body d-flex flex-column justify-content-center align-items-center text-center p-4">
@@ -127,19 +127,19 @@ $profData = $pdo->query($sqlProf)->fetchAll(PDO::FETCH_KEY_PAIR);
                     </div>
                 </div>
 
-                
+
                 <div class="col-12 col-md-6 col-xl-3">
                     <div class="card shadow-sm h-100">
                         <div class="card-header bg-white text-center border-0 pt-3"><strong>Taux de Participation</strong></div>
                         <div class="card-body d-flex align-items-center justify-content-center p-2">
-                             <div class="chart-container">
+                            <div class="chart-container">
                                 <canvas id="participationChart"></canvas>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                
+
                 <div class="col-12 col-md-6 col-xl-3">
                     <div class="card shadow-sm h-100">
                         <div class="card-header bg-white text-center border-0 pt-3"><strong>Répartition par Âge</strong></div>
@@ -151,7 +151,7 @@ $profData = $pdo->query($sqlProf)->fetchAll(PDO::FETCH_KEY_PAIR);
                     </div>
                 </div>
 
-                
+
                 <div class="col-12 col-md-6 col-xl-3">
                     <div class="card shadow-sm h-100">
                         <div class="card-header bg-white text-center border-0 pt-3"><strong>Origine Géographique</strong></div>
@@ -163,7 +163,7 @@ $profData = $pdo->query($sqlProf)->fetchAll(PDO::FETCH_KEY_PAIR);
                     </div>
                 </div>
 
-                
+
                 <div class="col-12 col-md-6 col-xl-3">
                     <div class="card shadow-sm h-100">
                         <div class="card-header bg-white text-center border-0 pt-3"><strong>Professions</strong></div>
@@ -176,7 +176,7 @@ $profData = $pdo->query($sqlProf)->fetchAll(PDO::FETCH_KEY_PAIR);
                 </div>
 
             </div>
-            
+
             <div class="d-flex justify-content-center mb-5 pt-5 btn-print">
                 <button onclick="window.print()" class="btn btn-outline-primary btn-lg">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-printer me-2" viewBox="0 0 16 16">
@@ -193,7 +193,7 @@ $profData = $pdo->query($sqlProf)->fetchAll(PDO::FETCH_KEY_PAIR);
 <script src="../assets/js/bootstrap.bundle.min.js"></script>
 
 <script>
-   
+
     const ageLabels = <?= json_encode(array_keys($ageData)); ?>;
     const ageValues = <?= json_encode(array_values($ageData)); ?>;
 
@@ -205,7 +205,7 @@ $profData = $pdo->query($sqlProf)->fetchAll(PDO::FETCH_KEY_PAIR);
 
     const participationValues = [<?= $nbParticipating ?>, <?= $nbNonParticipating ?>];
 
-    
+
 
 
     new Chart(document.getElementById('ageChart'), {
@@ -220,8 +220,8 @@ $profData = $pdo->query($sqlProf)->fetchAll(PDO::FETCH_KEY_PAIR);
                 borderWidth: 1
             }]
         },
-        options: { 
-            responsive: true, 
+        options: {
+            responsive: true,
             maintainAspectRatio: false,
             scales: {
                 y: {
@@ -232,7 +232,7 @@ $profData = $pdo->query($sqlProf)->fetchAll(PDO::FETCH_KEY_PAIR);
         }
     });
 
-    
+
     new Chart(document.getElementById('origineChart'), {
         type: 'bar',
         data: {
@@ -245,8 +245,8 @@ $profData = $pdo->query($sqlProf)->fetchAll(PDO::FETCH_KEY_PAIR);
                 borderWidth: 1
             }]
         },
-        options: { 
-            responsive: true, 
+        options: {
+            responsive: true,
             maintainAspectRatio: false,
             scales: {
                 y: {
@@ -264,7 +264,7 @@ $profData = $pdo->query($sqlProf)->fetchAll(PDO::FETCH_KEY_PAIR);
             datasets: [{
                 data: participationValues,
                 backgroundColor: [
-                    '#28a745', '#e9ecef' 
+                    '#28a745', '#e9ecef'
                 ],
                 borderWidth: 1
             }]

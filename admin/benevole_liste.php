@@ -4,9 +4,31 @@ require_once 'functions/auth.php';
 user_connect();
 require_once '../config/db.php';
 
-$sql = "SELECT * FROM Benevole ORDER BY NomBenevole ASC";
+$order_by = 'NomBenevole';
+$order_dir = 'ASC';
+
+if (isset($_GET['sort'])) {
+    $colonnes_autorisees = ['NomBenevole', 'VilleBenevole', 'DateDeNaissanceBenevole', 'SoldeCotisation'];
+    if (in_array($_GET['sort'], $colonnes_autorisees)) {
+        $order_by = $_GET['sort'];
+    }
+}
+if (isset($_GET['dir']) && $_GET['dir'] === 'DESC') {
+    $order_dir = 'DESC';
+}
+
+$sql = "SELECT * FROM Benevole where EstValide = 1 ORDER BY $order_by $order_dir";
 $stmt = $pdo->query($sql);
 $benevoles = $stmt->fetchAll();
+
+function sortLink($col, $label, $current_order, $current_dir) {
+    $new_dir = ($current_order === $col && $current_dir === 'ASC') ? 'DESC' : 'ASC';
+    $icon = '';
+    if ($current_order === $col) {
+        $icon = ($current_dir === 'ASC') ? ' <i class="fas fa-sort-up"></i>' : ' <i class="fas fa-sort-down"></i>';
+    }
+    return '<a href="?sort=' . $col . '&dir=' . $new_dir . '" class="text-white text-decoration-none fw-bold">' . $label . $icon . '</a>';
+}
 ?>
 
 <!DOCTYPE html>
@@ -22,59 +44,103 @@ $benevoles = $stmt->fetchAll();
     <?php if(file_exists("../includes/sidebar.php")) include "../includes/sidebar.php"; ?>
 
     <div class="container-fluid p-4">
-        <h2 class="mb-4">Annuaire des Bénévoles</h2>
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2>Annuaire des Bénévoles</h2>
+            <span class="badge bg-primary fs-6"><?= count($benevoles) ?> inscrit(s)</span>
+        </div>
 
         <div class="card shadow">
-            <div class="card-body">
-                <table class="table table-striped table-hover align-middle">
-                    <thead class="table-dark">
-                    <tr>
-                        <th>Nom / Prénom</th>
-                        <th>Contact</th>
-                        <th>Ville</th>
-                        <th>Cotisation (Solde)</th>
-                        <th class="text-end">Actions</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <?php foreach($benevoles as $b): ?>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover align-middle mb-0">
+                        <thead class="table-dark text-white">
                         <tr>
-                            <td>
-                                <strong><?= htmlspecialchars($b['NomBenevole']) ?></strong> <?= htmlspecialchars($b['PrenomBenevole']) ?>
-                                <br>
-                                <small class="text-muted"><?= htmlspecialchars($b['RoleBenevole']) ?></small>
-                            </td>
-                            <td>
-                                <a href="mailto:<?= htmlspecialchars($b['MailBenevole']) ?>"><?= htmlspecialchars($b['MailBenevole']) ?></a><br>
-                                <small><?= htmlspecialchars($b['TelBenevole'] ?? '') ?></small>
-                            </td>
-                            <td><?= htmlspecialchars($b['VilleBenevole']) ?></td>
-                            <td>
-                                <?php
-                                $solde = floatval($b['SoldeCotisation']);
-                                if($solde < 0) {
-                                    echo "<span class='badge bg-danger'>Dette : $solde €</span>";
-                                } elseif($solde > 0) {
-                                    echo "<span class='badge bg-success'>Avance : +$solde €</span>";
-                                } else {
-                                    echo "<span class='badge bg-secondary'>À jour (0 €)</span>";
-                                }
-                                ?>
-                            </td>
-                            <td class="text-end">
-
-                                <?php if($_SESSION['role'] === 'Admin'): ?>
-                                    <a href="benevoles_supprimer.php?id=<?= $b['IdBenevole'] ?>"
-                                       class="btn btn-danger btn-sm"
-                                       onclick="return confirm('Supprimer définitivement ce bénévole ?');">
-                                        <i class="fas fa-trash"></i>
-                                    </a>
-                                <?php endif; ?>
-                            </td>
+                            <th><?= sortLink('NomBenevole', 'Identité', $order_by, $order_dir) ?></th>
+                            <th>Contact & Profession</th>
+                            <th><?= sortLink('VilleBenevole', 'Ville', $order_by, $order_dir) ?></th>
+                            <?php if(isset($_SESSION['role']) && $_SESSION['role'] === 'Admin'): ?>
+                            <th><?= sortLink('SoldeCotisation', 'Cotisation', $order_by, $order_dir) ?></th>
+                            <?php endif; ?>
+                            <th class="text-end">Disponibilité</th>
+                            <th class="text-end">Actions</th>
                         </tr>
-                    <?php endforeach; ?>
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                        <?php if (count($benevoles) === 0): ?>
+                            <tr><td colspan="6" class="text-center py-4 text-muted">Aucun bénévole trouvé.</td></tr>
+                        <?php endif; ?>
+
+                        <?php foreach($benevoles as $b): ?>
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="rounded-circle bg-secondary text-white d-flex justify-content-center align-items-center me-3" style="width: 40px; height: 40px;">
+                                            <?= strtoupper(substr($b['PrenomBenevole'], 0, 1)) . strtoupper(substr($b['NomBenevole'], 0, 1)) ?>
+                                        </div>
+                                        <div>
+                                            <strong><?= htmlspecialchars($b['NomBenevole']) ?></strong> <?= htmlspecialchars($b['PrenomBenevole']) ?>
+                                            <br>D
+                                            <small class="text-muted"><?= htmlspecialchars($b['RoleBenevole']) ?></small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="small">
+                                        <i class="fas fa-briefcase text-muted me-1"></i> <?= htmlspecialchars($b['ProfessionBenevole'] ?? 'Non renseigné') ?>
+                                    </div>
+                                    <div class="small mt-1">
+                                        <a href="mailto:<?= htmlspecialchars($b['MailBenevole']) ?>" class="text-decoration-none">
+                                            <i class="fas fa-envelope me-1"></i> <?= htmlspecialchars($b['MailBenevole']) ?>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <i class="fas fa-map-marker-alt text-danger me-1"></i>
+                                    <?= htmlspecialchars($b['VilleBenevole']) ?>
+                                </td>
+                                <?php if(isset($_SESSION['role']) && $_SESSION['role'] === 'Admin'): ?>
+                                    <td>
+                                        <?php
+                                            $solde = floatval($b['SoldeCotisation']);
+                                            if($solde < 0) {
+                                            echo "<span class='badge bg-danger'>Dette : $solde €</span>";
+                                        } elseif($solde > 0) {
+                                            echo "<span class='badge bg-success'>+$solde €</span>";
+                                        } else {
+                                            echo "<span class='badge bg-secondary'>À jour</span>";
+                                        }
+                                        ?>
+                                    </td>
+                                <?php endif; ?>
+                                <td class="text-center">
+                                    <?php if ($b['DisponibiliteBenevole'] == 0): ?>
+                                        <span class="badge bg-success"><i class="fas fa-check"></i> Disponible</span>
+                                    <?php endif; ?>
+
+                                    <?php if ($b['DisponibiliteBenevole'] == 1): ?>
+                                        <span class="badge bg-secondary"><i class="fas fa-times"></i> Indisponible</span>
+                                    <?php endif; ?>
+                                </td>
+                                <td class="text-end">
+                                    <?php if ((isset($_SESSION['role']) && $_SESSION['role'] === 'Admin') || (isset($_SESSION['user_id']) && $_SESSION['user_id'] == $b['IdBenevole'])): ?>
+                                        <a href="profil_voir.php?id=<?= $b['IdBenevole'] ?>" class="btn btn-outline-primary btn-sm me-1" title="Voir le profil">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
+                                    <?php endif; ?>
+
+                                    <?php if(isset($_SESSION['role']) && $_SESSION['role'] === 'Admin'): ?>
+                                        <a href="benevoles_supprimer.php?id=<?= $b['IdBenevole'] ?>"
+                                           class="btn btn-outline-danger btn-sm"
+                                           onclick="return confirm('Supprimer définitivement ce bénévole ?');" title="Supprimer">
+                                            <i class="fas fa-trash"></i>
+                                        </a>
+                                    <?php endif; ?>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
