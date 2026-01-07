@@ -42,6 +42,17 @@ document.addEventListener('DOMContentLoaded', function () {
             <p><strong>Thème :</strong> ${e.extendedProps.theme || '-'}</p>
         `;
             }
+            if (e.extendedProps.type === 'mission') {
+                html += `
+        <p><strong>Catégorie :</strong> ${e.extendedProps.categorie || '-'}</p>
+        <p><strong>Bénévoles attendus :</strong> ${e.extendedProps.nbBenevoles || '-'}</p>
+        <p><strong>Bénévoles assignés :</strong><br>
+            ${e.extendedProps.benevoles
+                    ? e.extendedProps.benevoles
+                    : '<em>Aucun bénévole assigné</em>'}
+        </p>
+                `;
+            }
 
             html+=`
             <?php if($_SESSION['role'] === 'Admin'): ?>

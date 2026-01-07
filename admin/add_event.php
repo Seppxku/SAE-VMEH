@@ -16,6 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $categorie = $_POST['categorie'] ?? null;
         $nb_benevoles = $_POST['nb_benevoles'] ?? null;
         $id_responsable = $_POST['id_responsable'] ;
+        $id_assigne = $_POST['id_assigne'] ?? [];
 
         $sql="INSERT INTO Mission (TitreMission , DescriptionMission , DateHeureDebutMission ,
                     DateHeureFinMission , LieuMission , CategorieMission , NbBenevolesAttendusMission,IdResponsable)
@@ -37,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $idMission = $pdo->lastInsertId();
 
         if (!empty($id_assigne)) {
-            $sqlAssign = "INSERT INTO Assign (IdMission, IdBenevole)
+            $sqlAssign = "INSERT INTO Assigner (IdMission, IdBenevole)
                   VALUES (:idMission, :idBenevole)";
 
             $stmtAssign = $pdo->prepare($sqlAssign);
