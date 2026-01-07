@@ -73,6 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     const eventId = e.id;
                     const eventType = e.extendedProps.type;
 
+
                     fetch('delete_event.php', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },

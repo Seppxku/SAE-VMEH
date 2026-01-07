@@ -110,7 +110,7 @@
             ?>
         </a>
         <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-            <li><a class="dropdown-item" href="#">Paramètre</a></li>
+            <li><a class="dropdown-item" href="../admin/parametre.php">Paramètre</a></li>
             <li><a class="dropdown-item" href="#">Profil</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="../admin/logout.php">Se déconnecter</a></li>
