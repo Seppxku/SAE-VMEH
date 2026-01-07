@@ -151,6 +151,16 @@ $benevoles = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             <?php endforeach; ?>
                         </select>
                     </div>
+                    <div class="mb-3">
+                        <label class="form-label">Bénévole(s) assigné(s)</label>
+                        <select class="form-select" name="id_assigne[]" multiple>
+                            <?php foreach ($benevoles as $b): ?>
+                                <option value="<?= $b['IdBenevole'] ?>">
+                                    <?= htmlspecialchars($b['PrenomBenevole'] . ' ' . $b['NomBenevole']) ?>
+                                </option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
                 </div>
 
                 <!-- CHAMPS EVENEMENT -->
