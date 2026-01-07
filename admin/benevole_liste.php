@@ -58,7 +58,10 @@ function sortLink($col, $label, $current_order, $current_dir) {
                             <th><?= sortLink('NomBenevole', 'Identité', $order_by, $order_dir) ?></th>
                             <th>Contact & Profession</th>
                             <th><?= sortLink('VilleBenevole', 'Ville', $order_by, $order_dir) ?></th>
+                            <?php if(isset($_SESSION['role']) && $_SESSION['role'] === 'Admin'): ?>
                             <th><?= sortLink('SoldeCotisation', 'Cotisation', $order_by, $order_dir) ?></th>
+                            <?php endif; ?>
+                            <th class="text-end">Disponibilité</th>
                             <th class="text-end">Actions</th>
                         </tr>
                         </thead>
@@ -95,19 +98,35 @@ function sortLink($col, $label, $current_order, $current_dir) {
                                     <i class="fas fa-map-marker-alt text-danger me-1"></i>
                                     <?= htmlspecialchars($b['VilleBenevole']) ?>
                                 </td>
-                                <td>
-                                    <?php
-                                    $solde = floatval($b['SoldeCotisation']);
-                                    if($solde < 0) {
-                                        echo "<span class='badge bg-danger'>Dette : $solde €</span>";
-                                    } elseif($solde > 0) {
-                                        echo "<span class='badge bg-success'>+$solde €</span>";
-                                    } else {
-                                        echo "<span class='badge bg-secondary'>À jour</span>";
-                                    }
-                                    ?>
+                                <?php if(isset($_SESSION['role']) && $_SESSION['role'] === 'Admin'): ?>
+                                    <td>
+                                        <?php
+                                            $solde = floatval($b['SoldeCotisation']);
+                                            if($solde < 0) {
+                                            echo "<span class='badge bg-danger'>Dette : $solde €</span>";
+                                        } elseif($solde > 0) {
+                                            echo "<span class='badge bg-success'>+$solde €</span>";
+                                        } else {
+                                            echo "<span class='badge bg-secondary'>À jour</span>";
+                                        }
+                                        ?>
+                                    </td>
+                                <?php endif; ?>
+                                <td class="text-center">
+                                    <?php if ($b['DisponibiliteBenevole'] == 0): ?>
+                                        <span class="badge bg-success"><i class="fas fa-check"></i> Disponible</span>
+                                    <?php endif; ?>
+
+                                    <?php if ($b['DisponibiliteBenevole'] == 1): ?>
+                                        <span class="badge bg-secondary"><i class="fas fa-times"></i> Indisponible</span>
+                                    <?php endif; ?>
                                 </td>
                                 <td class="text-end">
+                                    <?php if ((isset($_SESSION['role']) && $_SESSION['role'] === 'Admin') || (isset($_SESSION['user_id']) && $_SESSION['user_id'] == $b['IdBenevole'])): ?>
+                                        <a href="profil_voir.php?id=<?= $b['IdBenevole'] ?>" class="btn btn-outline-primary btn-sm me-1" title="Voir le profil">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
+                                    <?php endif; ?>
 
                                     <?php if(isset($_SESSION['role']) && $_SESSION['role'] === 'Admin'): ?>
                                         <a href="benevoles_supprimer.php?id=<?= $b['IdBenevole'] ?>"
