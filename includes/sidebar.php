@@ -91,7 +91,7 @@
         if(isset($_SESSION['role']) && $_SESSION['role'] === 'Admin'):
             ?>
 
-            <div class="sidebar-heading text-muted text-uppercase fs-6 fw-bold px-3 mt-3 mb-1">
+            <div class="sidebar-heading text-uppercase fs-6 fw-bold px-3 mt-3 mb-1 text-white">
                 Administration
             </div>
 

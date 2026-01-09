@@ -2,7 +2,6 @@
 session_start();
 require_once '../config/db.php';
 require_once 'functions/auth.php';
-
 user_connect();
 
 

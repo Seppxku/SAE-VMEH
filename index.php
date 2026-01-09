@@ -104,7 +104,7 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
-                <a href="public/carrousel.html" class="btn-voir-articles">Voir toutes les actualités</a>
+                <a href="public/info.php" class="btn-voir-articles">Voir toutes les actualités</a>
             </div>
         </section>
 
