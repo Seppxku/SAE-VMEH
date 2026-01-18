@@ -186,9 +186,6 @@ function sortLink($col, $label, $current_order, $current_dir) {
                                 </td>
 
                                 <td class="text-end">
-                                    <?php if ($isAdmin || $isMe): ?>
-                                        <a href="profil_voir.php?id=<?= $b['IdBenevole'] ?>" class="btn btn-outline-primary btn-sm me-1"><i class="fas fa-eye"></i></a>
-                                    <?php endif; ?>
 
                                     <?php if($isAdmin): ?>
                                         <a href="benevoles_supprimer.php?id=<?= $b['IdBenevole'] ?>" class="btn btn-outline-danger btn-sm" onclick="return confirm('Supprimer définitivement ?');"><i class="fas fa-trash"></i></a>
